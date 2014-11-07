@@ -25,13 +25,9 @@ void setup()
 	EICRA |= (1 << ISC01);  // interrupt at faling edge of Ext0
 	EIMSK |= (1 << INT0);   // Enabling invterrupt
 */
-	TCCR2A = 0;             // TIMER2 for time counting
-	TCCR2B = (1 << CS21);   // presacle 8
-	TCNT2 = 0;
-
-	TIMSK2 = (1 << TOIE2);  // enabling invterrupt for timer2
-
-	sei();
+	TCCR1A = 0;             // TIMER2 for time counting
+	TCCR1B = (1 << CS11);   // presacle 8
+	TCNT1 = 0;
 }
 
 /***********************************************************************************************
@@ -39,13 +35,6 @@ void setup()
 /* */
 
 volatile uint16_t tcount = 0;
-
-#define NOW (((uint32_t)tcount) << 8) | TCNT2
-
-ISR(TIMER2_OVF_vect)
-{
-	tcount++;
-}
 
 /***********************************************************************************************
 /* software pin switch for pwm channels
@@ -142,14 +131,14 @@ void loop()
 
 	for (;;)
 	{
-		uint32_t time_in = NOW;
+		uint16_t time_in = TCNT1;
 
 		while (digitalRead(2) == HIGH) __asm__("nop\n\t");
 		while (digitalRead(2) == LOW) __asm__("nop\n\t");
 //		while (INPORT & CHECK_MASK) __asm__("nop\n\t");
 //		while (INPORT & CHECK_MASK == 0) __asm__("nop\n\t");
 
-		uint32_t time_out = NOW;
+		uint16_t time_out = TCNT1;
 
 		if (time_out - time_in > 5000)
 		{
