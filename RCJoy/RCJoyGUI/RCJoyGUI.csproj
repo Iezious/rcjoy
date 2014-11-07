@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9440DD9B-A9F7-47EE-88AD-F543CB9800A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tahorg.RCJoyGUI</RootNamespace>
+    <AssemblyName>RCJoyGUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;STM32 nMEGA2560</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;STM32</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug Port407|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug Port407\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;STM32 nMEGA2560</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsFormsToolkit">
+      <HintPath>..\packages\wfToolkit.0.4.0\lib\net40\WindowsFormsToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasePanels\DesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasePanels\DesignPanel.Designer.cs">
+      <DependentUpon>DesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasePanels\DraggableElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasePanels\DraggableElement.Designer.cs">
+      <DependentUpon>DraggableElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasePanels\IPanelInterfaces.cs" />
+    <Compile Include="BasePanels\LinkPoint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BasePanels\LinkPoint.Designer.cs">
+      <DependentUpon>LinkPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasePanels\ValidatePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasePanels\ValidatePanel.Designer.cs">
+      <DependentUpon>ValidatePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CodeGenerator.mega.cs" />
+    <Compile Include="Data\CodeGeneratorContext.cs" />
+    <Compile Include="Data\CompilationCheckException.cs" />
+    <Compile Include="Data\CodeGenerator.stm.cs" />
+    <Compile Include="Data\ComProgrammer.cs" />
+    <Compile Include="Data\DescriptionParser.cs" />
+    <Compile Include="Data\FRAMMapper.cs" />
+    <Compile Include="Data\ModelInfo.cs" />
+    <Compile Include="Data\PortData.cs" />
+    <Compile Include="Data\ProjectSettings.cs" />
+    <Compile Include="Dialogs\EEPMapDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EEPMapDialog.Designer.cs">
+      <DependentUpon>EEPMapDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EEPROMMapVariablePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EEPROMMapVariablePanel.Designer.cs">
+      <DependentUpon>EEPROMMapVariablePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FlashBoardDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FlashBoardDialog.Designer.cs">
+      <DependentUpon>FlashBoardDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\STM32ProjectSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\STM32ProjectSettings.Designer.cs">
+      <DependentUpon>STM32ProjectSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ValidatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\HatToButtonMapperDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\HatToButtonMapperDesignPanel.Designer.cs">
+      <DependentUpon>HatToButtonMapperDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\HatToButtonMapperDesignPanelValuePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\HatToButtonMapperDesignPanelValuePanel.Designer.cs">
+      <DependentUpon>HatToButtonMapperDesignPanelValuePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\FlightMode\FlightModeModePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\FlightMode\FlightModeModePanel.Designer.cs">
+      <DependentUpon>FlightModeModePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\FlightMode\FlightModeOutChannel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\FlightMode\FlightModeOutChannel.Designer.cs">
+      <DependentUpon>FlightModeOutChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Menu\MenuActionsDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Menu\MenuActionsDesignPanel.Designer.cs">
+      <DependentUpon>MenuActionsDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Menu\MenuEnterDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Menu\MenuEnterDesignPanel.Designer.cs">
+      <DependentUpon>MenuEnterDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\FlightMode\FlightModeDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\FlightMode\FlightModeDesignPanel.Designer.cs">
+      <DependentUpon>FlightModeDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\ModelOut\FMPPMOutDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\ModelOut\FMPPMOutDesignPanel.Designer.cs">
+      <DependentUpon>FMPPMOutDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\PPMMapperExChannerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\PPMMapperExChannerPanel.Designer.cs">
+      <DependentUpon>PPMMapperExChannerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\PPMMapperExDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\PPMMapperExDesignPanel.Designer.cs">
+      <DependentUpon>PPMMapperExDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\ModeTrimmerMixerDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\ModeTrimmerMixerDesignPanel.Designer.cs">
+      <DependentUpon>ModeTrimmerMixerDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\TrimmerEmulatorDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\TrimmerEmulatorDesignPanel.Designer.cs">
+      <DependentUpon>TrimmerEmulatorDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\TrimmerMixerDesignPanelEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\TrimmerMixerDesignPanelEx.Designer.cs">
+      <DependentUpon>TrimmerMixerDesignPanelEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Variables\ConstantDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Variables\ConstantDesignPanel.Designer.cs">
+      <DependentUpon>ConstantDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STM\STMCodeBlock.cs" />
+    <Compile Include="STM\STMCommand.cs" />
+    <Compile Include="STM\STMMemoryWriter.cs" />
+    <Compile Include="STM\STMModel.cs" />
+    <Compile Include="STM\STMProgram.cs" />
+    <Compile Include="Data\XTensions.cs" />
+    <Compile Include="Dialogs\CreateJoystickDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CreateJoystickDialog.Designer.cs">
+      <DependentUpon>CreateJoystickDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreateModelDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CreateModelDialog.Designer.cs">
+      <DependentUpon>CreateModelDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\JoyPanels\AxlePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\JoyPanels\AxlePanel.Designer.cs">
+      <DependentUpon>AxlePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\JoyPanels\BaseControlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\JoyPanels\BaseControlPanel.Designer.cs">
+      <DependentUpon>BaseControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\JoystickConfig.cs" />
+    <Compile Include="Dialogs\JoyPanels\DummyPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\JoyPanels\DummyPanel.Designer.cs">
+      <DependentUpon>DummyPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\JoyPanels\HatPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\JoyPanels\HatPanel.Designer.cs">
+      <DependentUpon>HatPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ParseJoyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ParseJoyDialog.Designer.cs">
+      <DependentUpon>ParseJoyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SetProjectSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SetProjectSettingsDialog.Designer.cs">
+      <DependentUpon>SetProjectSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmMain.Designer.cs">
+      <DependentUpon>fmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\JoyPanels\ButtonsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\JoyPanels\ButtonsPanel.Designer.cs">
+      <DependentUpon>ButtonsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgrammingPanels\Buttons\ButtonHoldDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\ButtonHoldDesignPanel.Designer.cs">
+      <DependentUpon>ButtonHoldDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\LogicalButtonDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\LogicalButtonDesignPanel.Designer.cs">
+      <DependentUpon>LogicalButtonDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\ValueMapperDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\ValueMapperDesignPanel.Designer.cs">
+      <DependentUpon>ValueMapperDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\ValueMapperDesignPanelValuePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\ValueMapperDesignPanelValuePanel.Designer.cs">
+      <DependentUpon>ValueMapperDesignPanelValuePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\ValueSwitcherDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\ValueSwitcherDesignPanel.Designer.cs">
+      <DependentUpon>ValueSwitcherDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\ValueSwitcherDesignPanelValuePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Buttons\ValueSwitcherDesignPanelValuePanel.Designer.cs">
+      <DependentUpon>ValueSwitcherDesignPanelValuePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Joystick\AxlePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Joystick\AxlePanel.Designer.cs">
+      <DependentUpon>AxlePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Joystick\BaseJoystickValuePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Joystick\BaseJoystickValuePanel.Designer.cs">
+      <DependentUpon>BaseJoystickValuePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Joystick\ButtonPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Joystick\ButtonPanel.Designer.cs">
+      <DependentUpon>ButtonPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Joystick\HatPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Joystick\HatPanel.Designer.cs">
+      <DependentUpon>HatPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Joystick\JoystickDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Joystick\JoystickDesignPanel.Designer.cs">
+      <DependentUpon>JoystickDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Mixers\AilRudderMixerDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Mixers\AilRudderMixerDesignPanel.Designer.cs">
+      <DependentUpon>AilRudderMixerDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\ModelOut\ModelSelectorDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\ModelOut\ModelSelectorDesignPanel.Designer.cs">
+      <DependentUpon>ModelSelectorDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\PPMMaperChannelPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\PPMMaperChannelPanel.Designer.cs">
+      <DependentUpon>PPMMaperChannelPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\PPMMaperDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\PPMMaperDesignPanel.Designer.cs">
+      <DependentUpon>PPMMaperDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\TrimmerMixerDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\TrimmerMixerDesignPanel.Designer.cs">
+      <DependentUpon>TrimmerMixerDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Mixers\ThElevMixerDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Mixers\ThElevMixerDesignPanel.Designer.cs">
+      <DependentUpon>ThElevMixerDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Mixers\FlaperonMixerDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Mixers\FlaperonMixerDesignPanel.Designer.cs">
+      <DependentUpon>FlaperonMixerDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Mixers\VTailMixerDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Mixers\VTailMixerDesignPanel.Designer.cs">
+      <DependentUpon>VTailMixerDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Mixers\DeltaMixerDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Mixers\DeltaMixerDesignPanel.Designer.cs">
+      <DependentUpon>DeltaMixerDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\ModelOut\ModelChannelPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\ModelOut\ModelChannelPanel.Designer.cs">
+      <DependentUpon>ModelChannelPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\ModelOut\PPMOutDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\ModelOut\PPMOutDesignPanel.Designer.cs">
+      <DependentUpon>PPMOutDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\InvertorDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\InvertorDesignPanel.Designer.cs">
+      <DependentUpon>InvertorDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\ExpDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\ExpDesignPanel.Designer.cs">
+      <DependentUpon>ExpDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\ValueAxisModifierDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Modifiers\ValueAxisModifierDesignPanel.Designer.cs">
+      <DependentUpon>ValueAxisModifierDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Variables\EEPVarDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Variables\EEPVarDesignPanel.Designer.cs">
+      <DependentUpon>EEPVarDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Variables\TempVarDesignPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgrammingPanels\Variables\TempVarDesignPanel.Designer.cs">
+      <DependentUpon>TempVarDesignPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="STM\STMStringConstant.cs" />
+    <Compile Include="STM\STMVariable.cs" />
+    <EmbeddedResource Include="BasePanels\DesignPanel.resx">
+      <DependentUpon>DesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasePanels\DraggableElement.resx">
+      <DependentUpon>DraggableElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateJoystickDialog.resx">
+      <DependentUpon>CreateJoystickDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateModelDialog.resx">
+      <DependentUpon>CreateModelDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EEPMapDialog.resx">
+      <DependentUpon>EEPMapDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EEPROMMapVariablePanel.resx">
+      <DependentUpon>EEPROMMapVariablePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FlashBoardDialog.resx">
+      <DependentUpon>FlashBoardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\JoyPanels\AxlePanel.resx">
+      <DependentUpon>AxlePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\JoyPanels\BaseControlPanel.resx">
+      <DependentUpon>BaseControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\JoyPanels\DummyPanel.resx">
+      <DependentUpon>DummyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\JoyPanels\HatPanel.resx">
+      <DependentUpon>HatPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ParseJoyDialog.resx">
+      <DependentUpon>ParseJoyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SetProjectSettingsDialog.resx">
+      <DependentUpon>SetProjectSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\STM32ProjectSettings.resx">
+      <DependentUpon>STM32ProjectSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmMain.resx">
+      <DependentUpon>fmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\JoyPanels\ButtonsPanel.resx">
+      <DependentUpon>ButtonsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Buttons\ButtonHoldDesignPanel.resx">
+      <DependentUpon>ButtonHoldDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Buttons\LogicalButtonDesignPanel.resx">
+      <DependentUpon>LogicalButtonDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Buttons\HatToButtonMapperDesignPanel.resx">
+      <DependentUpon>HatToButtonMapperDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Buttons\ValueMapperDesignPanel.resx">
+      <DependentUpon>ValueMapperDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Buttons\HatToButtonMapperDesignPanelValuePanel.resx">
+      <DependentUpon>HatToButtonMapperDesignPanelValuePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Buttons\ValueMapperDesignPanelValuePanel.resx">
+      <DependentUpon>ValueMapperDesignPanelValuePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Buttons\ValueSwitcherDesignPanel.resx">
+      <DependentUpon>ValueSwitcherDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Buttons\ValueSwitcherDesignPanelValuePanel.resx">
+      <DependentUpon>ValueSwitcherDesignPanelValuePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\FlightMode\FlightModeModePanel.resx">
+      <DependentUpon>FlightModeModePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\FlightMode\FlightModeOutChannel.resx">
+      <DependentUpon>FlightModeOutChannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Joystick\AxlePanel.resx">
+      <DependentUpon>AxlePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Joystick\BaseJoystickValuePanel.resx">
+      <DependentUpon>BaseJoystickValuePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Joystick\ButtonPanel.resx">
+      <DependentUpon>ButtonPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Joystick\HatPanel.resx">
+      <DependentUpon>HatPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Joystick\JoystickDesignPanel.resx">
+      <DependentUpon>JoystickDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Menu\MenuActionsDesignPanel.resx">
+      <DependentUpon>MenuActionsDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Menu\MenuEnterDesignPanel.resx">
+      <DependentUpon>MenuEnterDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Mixers\AilRudderMixerDesignPanel.resx">
+      <DependentUpon>AilRudderMixerDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\FlightMode\FlightModeDesignPanel.resx">
+      <DependentUpon>FlightModeDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\ModelOut\ModelSelectorDesignPanel.resx">
+      <DependentUpon>ModelSelectorDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\ModelOut\FMPPMOutDesignPanel.resx">
+      <DependentUpon>FMPPMOutDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Modifiers\PPMMaperChannelPanel.resx">
+      <DependentUpon>PPMMaperChannelPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Modifiers\PPMMaperDesignPanel.resx">
+      <DependentUpon>PPMMaperDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Modifiers\PPMMapperExChannerPanel.resx">
+      <DependentUpon>PPMMapperExChannerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Modifiers\PPMMapperExDesignPanel.resx">
+      <DependentUpon>PPMMapperExDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Modifiers\ModeTrimmerMixerDesignPanel.resx">
+      <DependentUpon>ModeTrimmerMixerDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Modifiers\TrimmerEmulatorDesignPanel.resx">
+      <DependentUpon>TrimmerEmulatorDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Modifiers\TrimmerMixerDesignPanelEx.resx">
+      <DependentUpon>TrimmerMixerDesignPanelEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Modifiers\TrimmerMixerDesignPanel.resx">
+      <DependentUpon>TrimmerMixerDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Mixers\ThElevMixerDesignPanel.resx">
+      <DependentUpon>ThElevMixerDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Mixers\FlaperonMixerDesignPanel.resx">
+      <DependentUpon>FlaperonMixerDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Mixers\VTailMixerDesignPanel.resx">
+      <DependentUpon>VTailMixerDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Mixers\DeltaMixerDesignPanel.resx">
+      <DependentUpon>DeltaMixerDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\ModelOut\ModelChannelPanel.resx">
+      <DependentUpon>ModelChannelPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\ModelOut\PPMOutDesignPanel.resx">
+      <DependentUpon>PPMOutDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Modifiers\InvertorDesignPanel.resx">
+      <DependentUpon>InvertorDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Modifiers\ExpDesignPanel.resx">
+      <DependentUpon>ExpDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Modifiers\ValueAxisModifierDesignPanel.resx">
+      <DependentUpon>ValueAxisModifierDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Variables\ConstantDesignPanel.resx">
+      <DependentUpon>ConstantDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Variables\EEPVarDesignPanel.resx">
+      <DependentUpon>EEPVarDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammingPanels\Variables\TempVarDesignPanel.resx">
+      <DependentUpon>TempVarDesignPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,78 @@
+#ifndef _DEF_H_
+#define _DEF_H_
+
+#define TIMER_SCALE 2
+#define DEAD_TIME 300
+#define FRAME_SYNC_LENGTH 4500
+#define PPM_CHAN_LENGTH 2000
+
+#define AXE_MIN 0
+#define AXE_MIDDLE 500
+#define AXE_MAX 1000
+
+#define XBEE_BAUD 115200
+
+#ifdef PPM_TIMER_1A
+	
+#define PPM_TIMER_OCR OCR1A
+#define PPM_TIMER_VECTOR TIMER1_COMPA_vect
+#define PPM_TIMER_INITA	TCCR1A = (0<<WGM10) | (0<<WGM11) | (0<<COM1A1) | (1<<COM1A0) | (0<<COM1B1) | (0<<COM1B0)
+#define PPM_TIMER_INITB	TCCR1B = (0<<ICNC1) | (0<<ICES1)| (0<<CS10) | (1<<CS11) | (0<<CS12) | (0<<WGM13)| (1<<WGM12)
+#define PPM_TIMER_INITMSK TIMSK1 = (1<<OCIE1A) | (0<<OCIE1B) | (0<<TOIE1)
+#define PPM_PORT_SETUP DDRB |= (1 << DDB5)
+
+#define PPM_TIMER_FRAMESTART TCCR1A = (0<<WGM10) | (0<<WGM11) | (1<<COM1A1) | (1<<COM1A0) | (0<<COM1B1) | (0<<COM1B0)
+#define PPM_TIMER_FRAMESECONDARY TCCR1A = (0<<WGM10) | (0<<WGM11) | (0<<COM1A1) | (1<<COM1A0) | (0<<COM1B1) | (0<<COM1B0); 
+
+#endif
+
+#ifdef PPM_TIMER_3A
+
+#define PPM_TIMER_OCR OCR3A
+#define PPM_TIMER_VECTOR TIMER3_COMPA_vect
+#define PPM_TIMER_INITA	TCCR3A = (0<<WGM30) | (0<<WGM31) | (0<<COM3A1) | (1<<COM3A0) | (0<<COM3B1) | (0<<COM3B0) | (0<<COM3C0) | (0<<COM3C1)
+#define PPM_TIMER_INITB	TCCR3B = (0<<ICNC3) | (0<<ICES3)| (0<<CS30) | (1<<CS31) | (0<<CS32) | (0<<WGM33)| (1<<WGM32)
+#define PPM_TIMER_INITMSK TIMSK3 |= (1<<OCIE3A) | (0<<OCIE3B) | (0<<OCIE3C) | (0<<TOIE3) 
+#define PPM_TIMER_FRAMESTART TCCR3A = (0<<WGM30) | (0<<WGM31) | (1<<COM3A1) | (1<<COM3A0) | (0<<COM3B1) | (0<<COM3B0) | (0<<COM3C0) | (0<<COM3C1)
+#define PPM_TIMER_FRAMESECONDARY TCCR3A = (0<<WGM30) | (0<<WGM31) | (0<<COM3A1) | (1<<COM3A0) | (0<<COM3B1) | (0<<COM3B0) | (0<<COM3C0) | (0<<COM3C1) 
+#define PPM_PORT_SETUP DDRE |= (1 << DDE3)
+
+#endif
+
+
+#ifdef PPM_TIMER_4A
+
+#define PPM_TIMER_OCR OCR4A
+#define PPM_TIMER_VECTOR TIMER4_COMPA_vect
+#define PPM_TIMER_INITA	TCCR4A = (1<<COM4A0) 
+#define PPM_TIMER_INITB	TCCR4B =  (1<<CS41) | (1<<WGM42)
+#define PPM_TIMER_INITMSK TIMSK4 |= (1<<OCIE4A)
+#define PPM_PORT_SETUP DDRH |= (1 << DDH3)
+
+#define PPM_TIMER_FRAMESTART TCCR4A =  (1<<COM4A1) | (1<<COM4A0) 
+#define PPM_TIMER_FRAMESECONDARY TCCR4A =  (1<<COM4A0) 
+
+
+#endif
+
+
+#ifdef PPM_TIMER_5A
+
+#define PPM_TIMER_OCR OCR5A
+#define PPM_TIMER_VECTOR TIMER5_COMPA_vect 
+#define PPM_TIMER_INITA	TCCR5A = (1<<COM5A0)
+#define PPM_TIMER_INITB	TCCR5B =  (1<<CS51) | (1<<WGM52)
+#define PPM_TIMER_INITMSK TIMSK5 = (1<<OCIE5A)
+#define PPM_PORT_SETUP DDRL |= (1 << DDL3)
+
+
+#define PPM_TIMER_FRAMESTART TCCR5A =(1<<COM5A1) | (1<<COM5A0)
+#define PPM_TIMER_FRAMESECONDARY TCCR5A = (1<<COM5A0)
+
+#endif
+
+typedef uint16_t idx_t;
+typedef uint16_t data_t;
+typedef int16_t axis_t;
+
+#endif

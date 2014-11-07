@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PWMCollector", "PWMCollector\PWMCollector.vcxproj", "{3F232412-7F63-4202-91EF-50CC0821A0D2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PWM2PPMConverter", "PWM2PPMConverter\PWM2PPMConverter.vcxproj", "{9295319A-8BA5-4532-BF58-5810EFA873CB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PPM2PWMOnBoardConverter", "PPM2PWMOnBoardConverter\PPM2PWMOnBoardConverter.vcxproj", "{16DE6585-1203-4EA1-9E0E-0383FF042EF3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rcjoy.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = PWMCollector\\PWMCollector.vcxproj
+		SccProjectName1 = PWMCollector
+		SccLocalPath1 = PWMCollector
+		SccProjectUniqueName2 = PWM2PPMConverter\\PWM2PPMConverter.vcxproj
+		SccProjectName2 = PWM2PPMConverter
+		SccLocalPath2 = PWM2PPMConverter
+		SccProjectUniqueName3 = PPM2PWMOnBoardConverter\\PPM2PWMOnBoardConverter.vcxproj
+		SccProjectName3 = PPM2PWMOnBoardConverter
+		SccLocalPath3 = PPM2PWMOnBoardConverter
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F232412-7F63-4202-91EF-50CC0821A0D2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F232412-7F63-4202-91EF-50CC0821A0D2}.Debug|Win32.Build.0 = Debug|Win32
+		{3F232412-7F63-4202-91EF-50CC0821A0D2}.Release|Win32.ActiveCfg = Release|Win32
+		{3F232412-7F63-4202-91EF-50CC0821A0D2}.Release|Win32.Build.0 = Release|Win32
+		{9295319A-8BA5-4532-BF58-5810EFA873CB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9295319A-8BA5-4532-BF58-5810EFA873CB}.Debug|Win32.Build.0 = Debug|Win32
+		{9295319A-8BA5-4532-BF58-5810EFA873CB}.Release|Win32.ActiveCfg = Release|Win32
+		{9295319A-8BA5-4532-BF58-5810EFA873CB}.Release|Win32.Build.0 = Release|Win32
+		{16DE6585-1203-4EA1-9E0E-0383FF042EF3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{16DE6585-1203-4EA1-9E0E-0383FF042EF3}.Debug|Win32.Build.0 = Debug|Win32
+		{16DE6585-1203-4EA1-9E0E-0383FF042EF3}.Release|Win32.ActiveCfg = Release|Win32
+		{16DE6585-1203-4EA1-9E0E-0383FF042EF3}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

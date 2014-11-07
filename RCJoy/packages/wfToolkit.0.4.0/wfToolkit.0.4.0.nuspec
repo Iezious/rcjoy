@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>wfToolkit</id>
+    <version>0.4.0</version>
+    <title>Windows Forms Toolkit</title>
+    <authors>Sébastien Ferrand</authors>
+    <owners>Sébastien Ferrand</owners>
+    <licenseUrl>http://wftoolkit.codeplex.com/license</licenseUrl>
+    <projectUrl>http://wftoolkit.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Currently available controls :
+Extenders 
+BalloonTipExtender: provide a extender to show balloon for TextBoxBase controls; 
+CueTextExtender: provide a extender to add cue text for TextBoxBase and ComboBox controls; 
+ValidatorExtender: provide a simple way to validate user entries (like ASP.net);
+Controls 
+ColorPalette is a control showing a customizable list of color; 
+SplitButton is a button control that propose a context menu for alternate options (like Microsoft Word open file dialog); 
+TabControl is a extend TabControl with many properties and events to improve experience; 
+NotificationForm can be use as base for create notification like Microsoft Outlook;</description>
+    <summary>This project will provide many controls and tools for developping with Windows Forms.</summary>
+    <releaseNotes>Add MVVM base pattern, Command Manager (ICommand), Extension method for DataBinding, Model validation by ValidatorAttribute</releaseNotes>
+    <copyright>Sébastien Ferrand, 2011</copyright>
+    <language />
+    <tags>controls windows forms toolkit</tags>
+  </metadata>
+</package>
