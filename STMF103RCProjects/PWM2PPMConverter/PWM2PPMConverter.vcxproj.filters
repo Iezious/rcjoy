@@ -99,7 +99,7 @@
     <ClCompile Include="PPMGenerator.c" />
     <ClCompile Include="SysTimer.c" />
     <ClCompile Include="PWMTimerReader.c" />
-    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\Startup\startup_stm32f10x_md.c">
+    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\Startup\startup_stm32f10x_cl.c">
       <Filter>Resource files\Device-specific files</Filter>
     </ClCompile>
   </ItemGroup>

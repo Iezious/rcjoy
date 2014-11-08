@@ -2,8 +2,8 @@
 <EmbeddedProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
   <BspID>com.sysprogs.arm.stm32</BspID>
-  <McuID>STM32F107VC</McuID>
-  <MCUDefinitionFile>devices\STM32F1xxxx_CL.xml</MCUDefinitionFile>
+  <McuID>STM32F103C8</McuID>
+  <MCUDefinitionFile>C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\devices\STM32F1xxxx_MD.xml</MCUDefinitionFile>
   <MCUProperties>
     <Entries>
       <KeyValue>

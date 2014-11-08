@@ -15,17 +15,17 @@ AR := $(TOOLCHAIN_ROOT)/bin/arm-eabi-ar.exe
 OBJCOPY := $(TOOLCHAIN_ROOT)/bin/arm-eabi-objcopy.exe
 
 #Additional flags
-PREPROCESSOR_MACROS += stm32_flash_layout STM32F103C8 STM32F10X_MD
-INCLUDE_DIRS += $(BSP_ROOT)/STM32F1xxxx/CMSIS/CM3/CoreSupport $(BSP_ROOT)/STM32F1xxxx/CMSIS/CM3/DeviceSupport/ST/STM32F10x $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc
+PREPROCESSOR_MACROS += ARM_MATH_CM4 stm32_flash_layout STM32F407ZE STM32F407xx
+INCLUDE_DIRS += . $(BSP_ROOT)/STM32F4xxxx-HAL/CMSIS/Device/ST/STM32F4xx/Include $(BSP_ROOT)/STM32F4xxxx-HAL/CMSIS/Include $(BSP_ROOT)/STM32F4xxxx-HAL/CMSIS/RTOS $(BSP_ROOT)/STM32F4xxxx-HAL/STM32F4xx_HAL_Driver/Inc
 LIBRARY_DIRS += 
 LIBRARY_NAMES += 
 ADDITIONAL_LINKER_INPUTS += 
 MACOS_FRAMEWORKS += 
 LINUX_PACKAGES += 
 
-CFLAGS += -mcpu=cortex-m3 -mthumb
-CXXFLAGS += -mcpu=cortex-m3 -mthumb
-ASFLAGS += -mcpu=cortex-m3 -mthumb
-LDFLAGS += -mcpu=cortex-m3 -mthumb  -T$(BSP_ROOT)/STM32F1xxxx/LinkerScripts/STM32F103x8_flash.lds
-COMMONFLAGS += 
+CFLAGS += -mcpu=cortex-m4 -mthumb
+CXXFLAGS += -mcpu=cortex-m4 -mthumb
+ASFLAGS += -mcpu=cortex-m4 -mthumb
+LDFLAGS += -mcpu=cortex-m4 -mthumb  -T$(BSP_ROOT)/STM32F4xxxx-HAL/LinkerScripts/STM32F407xE_flash.lds
+COMMONFLAGS +=  -mfloat-abi=soft
 

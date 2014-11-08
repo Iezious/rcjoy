@@ -9,22 +9,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PWM2PPMConverter", "PWM2PPM
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PPM2PWMOnBoardConverter", "PPM2PWMOnBoardConverter\PPM2PWMOnBoardConverter.vcxproj", "{16DE6585-1203-4EA1-9E0E-0383FF042EF3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "F4PWMConverter", "F4PWMConverter\F4PWMConverter.vcxproj", "{24250F12-B27B-4AD6-B5FE-630ADB7DADBB}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://rcjoy.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = PWMCollector\\PWMCollector.vcxproj
-		SccProjectName1 = PWMCollector
-		SccLocalPath1 = PWMCollector
-		SccProjectUniqueName2 = PWM2PPMConverter\\PWM2PPMConverter.vcxproj
-		SccProjectName2 = PWM2PPMConverter
-		SccLocalPath2 = PWM2PPMConverter
-		SccProjectUniqueName3 = PPM2PWMOnBoardConverter\\PPM2PWMOnBoardConverter.vcxproj
-		SccProjectName3 = PPM2PWMOnBoardConverter
-		SccLocalPath3 = PPM2PWMOnBoardConverter
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
@@ -42,6 +29,10 @@ Global
 		{16DE6585-1203-4EA1-9E0E-0383FF042EF3}.Debug|Win32.Build.0 = Debug|Win32
 		{16DE6585-1203-4EA1-9E0E-0383FF042EF3}.Release|Win32.ActiveCfg = Release|Win32
 		{16DE6585-1203-4EA1-9E0E-0383FF042EF3}.Release|Win32.Build.0 = Release|Win32
+		{24250F12-B27B-4AD6-B5FE-630ADB7DADBB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{24250F12-B27B-4AD6-B5FE-630ADB7DADBB}.Debug|Win32.Build.0 = Debug|Win32
+		{24250F12-B27B-4AD6-B5FE-630ADB7DADBB}.Release|Win32.ActiveCfg = Release|Win32
+		{24250F12-B27B-4AD6-B5FE-630ADB7DADBB}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

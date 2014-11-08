@@ -5,7 +5,6 @@
 	It is needed for IntelliSense to parse other header files correctly.
 */
 #ifdef _MSC_VER
-#define STM32F10X_MD 1
 #define __DBL_MIN_EXP__ (-1021)
 #define __HQ_FBIT__ 15
 #define __UINT_LEAST16_MAX__ 65535
@@ -82,9 +81,9 @@
 #define __SIZEOF_INT__ 4
 #define __SIZEOF_POINTER__ 4
 #define __GCC_ATOMIC_CHAR16_T_LOCK_FREE 2
-#define STM32F103C8 1
 #define __USACCUM_IBIT__ 8
 #define __USER_LABEL_PREFIX__ 
+#define STM32F10X_HD 1
 #define __STDC_HOSTED__ 1
 #define __LDBL_HAS_INFINITY__ 1
 #define __LFRACT_MIN__ (-0.5LR-0.5LR)
@@ -107,6 +106,7 @@
 #define __DECIMAL_DIG__ 17
 #define __LFRACT_EPSILON__ 0x1P-31LR
 #define __ULFRACT_MIN__ 0.0ULR
+#define STM32F103VC 1
 #define __LDBL_HAS_QUIET_NAN__ 1
 #define __ULACCUM_IBIT__ 32
 #define __UACCUM_EPSILON__ 0x1P-16UK
@@ -205,6 +205,7 @@
 #define __SIZE_TYPE__ unsigned int
 #define __UINT64_MAX__ 18446744073709551615ULL
 #define __UDQ_FBIT__ 64
+#define DEBUG 1
 #define __INT8_TYPE__ signed char
 #define __thumb__ 1
 #define __ELF__ 1
@@ -360,7 +361,6 @@
 #define __QQ_IBIT__ 0
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
-#define DEBUG 
 #endif
 
 // --- Include directories begin --- //

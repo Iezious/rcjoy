@@ -12,6 +12,9 @@
     <Filter Include="Libraries">
       <UniqueIdentifier>{22e6c8e6-7e5d-4665-9aad-371e297a115f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource files\Device-specific files">
+      <UniqueIdentifier>{a39773df-3f2a-4087-8624-6fb271d1a143}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -22,9 +25,6 @@
       <Filter>Libraries</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\STM32F10x_StdPeriph_Driver\src\misc.c">
-      <Filter>Libraries</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\Startup\startup_stm32f10x_md.c">
       <Filter>Libraries</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c">
@@ -95,6 +95,9 @@
     </ClCompile>
     <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c">
       <Filter>Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\Startup\startup_stm32f10x_hd.c">
+      <Filter>Resource files\Device-specific files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

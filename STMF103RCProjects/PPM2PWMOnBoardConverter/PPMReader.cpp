@@ -31,7 +31,7 @@ void timerInit()
 	timer_ic.TIM_ICPolarity = TIM_ICPolarity_Rising;
 	timer_ic.TIM_ICSelection = TIM_ICSelection_DirectTI;
 	timer_ic.TIM_ICPrescaler = TIM_ICPSC_DIV1;
-	timer_ic.TIM_ICFilter = 0;
+	timer_ic.TIM_ICFilter = 1;
 	timer_ic.TIM_Channel = TIM_Channel_4;
 
 	TIM_ICInit(TIM1, &timer_ic);
@@ -40,13 +40,14 @@ void timerInit()
 	TIM1->DIER = 0;
 
 
-	TIM_ITConfig(TIM1, TIM_IT_CC4 | TIM_IT_Update, ENABLE);
+	TIM_ITConfig(TIM1, TIM_IT_CC4, ENABLE);
+//	TIM_ITConfig(TIM1, TIM_IT_CC4 | TIM_IT_Update, ENABLE);
 	
 	NVIC_SetPriority(TIM1_CC_IRQn, 2);
 	NVIC_EnableIRQ(TIM1_CC_IRQn);
 
-	NVIC_SetPriority(TIM1_UP_IRQn, 4);
-	NVIC_EnableIRQ(TIM1_UP_IRQn);
+//	NVIC_SetPriority(TIM1_UP_IRQn, 4);
+//	NVIC_EnableIRQ(TIM1_UP_IRQn);
 }
 
 
@@ -63,6 +64,7 @@ static bool sync = false;
 
 extern "C" 
 {
+	/*
 	void TIM1_UP_IRQHandler()
 	{
 		if (TIM_GetITStatus(TIM1, TIM_IT_Update) != RESET)
@@ -73,7 +75,7 @@ extern "C"
 			channel = 0;
 		}
 	}
-
+	*/
 	void TIM1_CC_IRQHandler()
 	{
 		if (TIM_GetITStatus(TIM1, TIM_IT_CC4) != RESET)
