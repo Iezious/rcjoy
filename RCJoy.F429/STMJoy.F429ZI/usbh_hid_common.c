@@ -5,7 +5,7 @@
 
 
 uint8_t usb_buffer[256];
-uint8_t usb_repd_buffer[1024];
+uint8_t usb_repd_buffer[2048];
 uint16_t usb_rep_desc_len;
 uint16_t usb_rep_len;
 volatile uint8_t usb_data_valid = FALSE;
@@ -21,6 +21,8 @@ uint16_t ProductID;
 uint8_t debug_buffer[DEBUG_BUFFER_LEN];
 volatile uint32_t debug_buffer_pos = 0;
 volatile uint32_t debug_buffer_active = 0;
+
+extern USBH_HandleTypeDef hUsbHostHS;
 
 #endif
 
@@ -130,6 +132,27 @@ void USBGetCollectedDebug(uint8_t** b, uint32_t *len)
 {
 	*len = DEBUG_BUFFER_LEN;
 	*b = debug_buffer;
+}
+
+void USBGetStatuses(uint8_t *b)
+{
+	b[0] = hUsbHostHS.gState;
+	b[1] = hUsbHostHS.EnumState;
+	b[2] = hUsbHostHS.RequestState;
+	b[3] = hUsbHostHS.Control.state;
+	b[4] = hUsbHostHS.device.speed;
+
+	if (hUsbHostHS.pActiveClass)
+	{
+		HID_HandleTypeDef *HID_Handle = hUsbHostHS.pActiveClass->pData;
+		b[5] = HID_Handle->state;
+		b[6] = HID_Handle->ctl_state;
+	}
+	else
+	{
+		b[5] = 0;
+		b[6] = 0;
+	}
 }
 
 #endif

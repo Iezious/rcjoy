@@ -20,6 +20,7 @@ uint16_t USB_HID_GetReportLength();
 
 void  USBStartCollectingDebug();
 void USBGetCollectedDebug(uint8_t** b, uint32_t *len);
+void USBGetStatuses(uint8_t *b);
 
 #endif
 
