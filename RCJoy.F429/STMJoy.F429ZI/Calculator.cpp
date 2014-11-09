@@ -167,11 +167,11 @@ void GetUSBDebugCOllected(uint8_t* b, uint32_t l, uint8_t **ab, uint32_t *al)
 
 void GetUSBStateBytes(uint8_t* b, uint32_t l, uint8_t **ab, uint32_t *al)
 {
-	static u8 USBStates[6];
+	static u8 USBStates[8];
 	USBGetStatuses(USBStates);
 
 	*ab = USBStates;
-	*al = 6;
+	*al = 8;
 }
 
 
