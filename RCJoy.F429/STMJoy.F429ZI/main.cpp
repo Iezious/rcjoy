@@ -154,7 +154,10 @@ int main(void)
 
 	for (;;)
 	{
-		HAL_Delay(4);
+		if (USB_Poll_Time == 0)
+			HAL_Delay(4);
+		else
+			HAL_Delay(USB_Poll_Time);
 
 		MX_USB_HOST_Process();
 

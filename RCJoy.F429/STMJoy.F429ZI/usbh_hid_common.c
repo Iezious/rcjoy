@@ -10,6 +10,8 @@ uint16_t usb_rep_desc_len;
 uint16_t usb_rep_len;
 volatile uint8_t usb_data_valid = FALSE;
 
+uint16_t USB_Poll_Time = 4;
+
 
 uint16_t VendorID;
 uint16_t ProductID;
@@ -35,6 +37,7 @@ USBH_StatusTypeDef USBH_HID_CommonInit(USBH_HandleTypeDef *phost)
 
 	VendorID = phost->device.DevDesc.idVendor;
 	ProductID = phost->device.DevDesc.idProduct;
+	USB_Poll_Time = HID_Handle->poll;
 }
 
 

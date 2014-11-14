@@ -19,6 +19,11 @@ namespace Tahorg.RCJoyGUI.ProgrammingPanels.Buttons
             get { return short.Parse(tbCase.Text); }
         }
 
+        public LinkPoint ButtonLink
+        {
+            get {  return lnkButton;}
+        }
+
         public ushort Index
         {
             get { return _Index; }

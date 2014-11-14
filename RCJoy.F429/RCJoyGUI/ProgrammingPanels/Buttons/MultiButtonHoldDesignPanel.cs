@@ -170,9 +170,13 @@ namespace Tahorg.RCJoyGUI.ProgrammingPanels.Buttons
                     _DataIndex
                 };
 
-            args.AddRange(__Panels.Select(panel => (IConvertible)panel.Value));
+            foreach (var panel in __Panels)
+            {
+                args.Add(panel.ButtonLink.LinkedTo.DataMapIdx);
+                args.Add(panel.Value);
+            }
 
-            context.ModelCode.Commands.Add(new STMCommand(0x0C, args.ToArray()));
+            context.ModelCode.Commands.Add(new STMCommand(0x35, args.ToArray()));
 
 
             base.GenerateSTMCode(context, prog);

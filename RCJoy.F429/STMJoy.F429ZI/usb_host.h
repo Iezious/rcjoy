@@ -57,6 +57,7 @@ void MX_USB_HOST_Process(void);
 
 
 extern ApplicationTypeDef Appli_state;
+extern uint16_t USB_Poll_Time;
 
 
 #ifdef __cplusplus
