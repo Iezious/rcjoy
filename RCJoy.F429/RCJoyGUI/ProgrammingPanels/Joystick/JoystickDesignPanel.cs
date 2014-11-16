@@ -57,7 +57,7 @@ namespace Tahorg.RCJoyGUI.ProgrammingPanels
         private void AddPanel(BaseJoystickValuePanel panel, int BitsCounter)
         {
             int top = __Panels.Count == 0
-                          ? labelHead.Bottom + 2
+                          ? rbParsed.Bottom + 4
                           : __Panels.Last().Bottom + 2;
 
             panel.Top = top;
@@ -171,12 +171,12 @@ namespace Tahorg.RCJoyGUI.ProgrammingPanels
 
         public override void TakeData(int[] data)
         {
-#if STM32 && !STM32F429
+            if(!rbParsed.Checked) return;
+            
             foreach (var panel in __Panels)
             {
                 panel.TakeData(data);
             }
-#endif
         }
 
 #if STM32
@@ -193,12 +193,12 @@ namespace Tahorg.RCJoyGUI.ProgrammingPanels
 
         public override void TakeJoyData(byte[] jdata)
         {
-#if STM32F429
+            if (!rbRaw.Checked) return;
+
             foreach (var panel in __Panels)
             {
                 panel.TakeJoyData(jdata);
             }
-#endif
         }
 
         public override void LinkIndex(ref int Counter)
