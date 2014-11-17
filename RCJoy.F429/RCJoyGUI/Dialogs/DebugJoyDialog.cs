@@ -64,6 +64,9 @@ namespace Tahorg.RCJoyGUI.Dialogs
                 string.Format("Host->device.speed:{0:X2}", bytes[4]),
                 string.Format("HID->State:{0:X2}", bytes[5]),
                 string.Format("HID->ContrlolState:{0:X2}", bytes[6]),
+                string.Format("ReportLength:{0:0}", bytes[7]),
+                string.Format("MiltiRerport:{0:0}", bytes[8]),
+                string.Format("DataFlow:{0:0}", bytes[9]),
             };
         }
 

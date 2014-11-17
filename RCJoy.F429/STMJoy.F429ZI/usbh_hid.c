@@ -372,7 +372,7 @@ static USBH_StatusTypeDef USBH_HID_Process(USBH_HandleTypeDef *phost)
   case HID_INIT:
     HID_Handle->Init(phost); 
   case HID_IDLE:
-    if(USBH_HID_GetReport (phost,
+/*    if(USBH_HID_GetReport (phost,
                            0x01,
                             0,
                             HID_Handle->pData,
@@ -384,7 +384,8 @@ static USBH_StatusTypeDef USBH_HID_Process(USBH_HandleTypeDef *phost)
     }
     
     break;
-    
+  */
+	  HID_Handle->state = HID_SYNC;
   case HID_SYNC:
 
     /* Sync with start of Even Frame */
