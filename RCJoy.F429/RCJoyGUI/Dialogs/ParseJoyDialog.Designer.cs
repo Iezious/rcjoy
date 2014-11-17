@@ -33,13 +33,13 @@
             this.btnComRead = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tbValues = new System.Windows.Forms.TextBox();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.tbProduct = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbVendor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbValues = new System.Windows.Forms.TextBox();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -105,6 +105,40 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Enter values manually";
             // 
+            // tbProduct
+            // 
+            this.tbProduct.Location = new System.Drawing.Point(307, 164);
+            this.tbProduct.Name = "tbProduct";
+            this.tbProduct.Size = new System.Drawing.Size(100, 20);
+            this.tbProduct.TabIndex = 12;
+            this.tbProduct.Text = "0000";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(241, 167);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Product ID";
+            // 
+            // tbVendor
+            // 
+            this.tbVendor.Location = new System.Drawing.Point(67, 164);
+            this.tbVendor.Name = "tbVendor";
+            this.tbVendor.Size = new System.Drawing.Size(100, 20);
+            this.tbVendor.TabIndex = 10;
+            this.tbVendor.Text = "0000";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 167);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Vendor ID";
+            // 
             // tbValues
             // 
             this.tbValues.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -136,38 +170,6 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // tbProduct
-            // 
-            this.tbProduct.Location = new System.Drawing.Point(307, 164);
-            this.tbProduct.Name = "tbProduct";
-            this.tbProduct.Size = new System.Drawing.Size(100, 20);
-            this.tbProduct.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(241, 167);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Product ID";
-            // 
-            // tbVendor
-            // 
-            this.tbVendor.Location = new System.Drawing.Point(67, 164);
-            this.tbVendor.Name = "tbVendor";
-            this.tbVendor.Size = new System.Drawing.Size(100, 20);
-            this.tbVendor.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 167);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Vendor ID";
             // 
             // ParseJoyDialog
             // 
