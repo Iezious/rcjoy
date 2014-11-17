@@ -132,6 +132,7 @@
     <ClCompile Include="Calculator.cpp" />
     <ClCompile Include="ComCom.cpp" />
     <ClCompile Include="ComProg.cpp" />
+    <ClCompile Include="DescriptorParser.cpp" />
     <ClCompile Include="EEPRom.cpp" />
     <ClCompile Include="font12.c" />
     <ClCompile Include="font16.c" />
@@ -263,6 +264,7 @@
     <ClInclude Include="ComProg.h" />
     <ClInclude Include="conf.h" />
     <ClInclude Include="def.h" />
+    <ClInclude Include="DescriptorParser.h" />
     <ClInclude Include="EEPRom.h" />
     <ClInclude Include="font12.h" />
     <ClInclude Include="font16.h" />

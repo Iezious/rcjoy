@@ -12,9 +12,14 @@ volatile uint8_t usb_data_valid = FALSE;
 
 uint16_t USB_Poll_Time = 4;
 
+uint8_t Report_Total_Length;
+uint8_t IsMultiReport;
+volatile uint8_t CurrentReportShift = 0;
 
 uint16_t VendorID;
 uint16_t ProductID;
+
+extern void ParseReportDescriptor(uint8_t *report, uint16_t len, uint16_t* bitlen, uint8_t *mreport);
 
 #ifdef DEBUG_USB
 
@@ -81,6 +86,11 @@ void USB_HID_ReportReadCallback(USBH_HandleTypeDef *phost)
 
 	for (i = 0; i < usb_rep_desc_len; i++)
 		*(usb_repd_buffer +i) = *(phost->device.Data + i);
+
+	uint16_t replen_bits;
+
+	ParseReportDescriptor(usb_repd_buffer, usb_rep_desc_len, &replen_bits, &IsMultiReport);
+	Report_Total_Length = replen_bits << 3;
 }
 
 uint8_t *USB_HID_GetLastReport()

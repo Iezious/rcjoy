@@ -358,6 +358,9 @@
     <ClCompile Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usb.c">
       <Filter>Libraries\Sources</Filter>
     </ClCompile>
+    <ClCompile Include="DescriptorParser.cpp">
+      <Filter>BSP\USBLIB</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stm32f4xx_hal_conf.h" />
@@ -762,6 +765,9 @@
     </ClInclude>
     <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h">
       <Filter>Libraries\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="DescriptorParser.h">
+      <Filter>BSP\USBLIB</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
