@@ -6,6 +6,7 @@
 #include "def.h"
 #include "gui.h"
 #include "guimodal.h"
+#include "ConfirmOverlay.h"
 
 /*********************************************************************************************
 /****   Definitions
@@ -19,14 +20,20 @@ static u8* Caption2;
 
 #define OK_BUTTON_COLOR GUI_COLOR_GREEN
 #define CANCEL_BUTTON_COLOR GUI_COLOR_RED
+#define BUTTON_BORDER_COLOR GUI_COLOR_DEFAULT
+#define NAME_COLOR GUI_COLOR_DEFAULT
+#define CAPTION_COLOR GUI_COLOR_HL
+#define SUBHEADER_COLOR GUI_COLOR_DEFAULT
+
 
 #define FONT_CAPTION  (&Font20)
 #define FONT_BUTTON  (&Font24)
 #define FONT_SUBCAPTION (&Font16)
 #define ICON_FONT (&FontPkts)
+#define FONT_NAME (&Font20)
 
-static void (OnConfirm*)(u32 tag);
-static void (OnCancel*)(u32 tag);
+static void(*OnConfirm)(u32 tag);
+static void(*OnCancel)(u32 tag);
 
 static bool OKButtonClick(GUIElementDef*, u16, u16);
 static bool CancelButtonClick(GUIElementDef*, u16, u16);
@@ -50,17 +57,17 @@ static GUIElementDef ButtonCancel =
 	36, 80, 160, 260, &ButtonDraw, &OKButtonClick, NULL, 1
 };
 
-static GUIElementDef Header = 
+static GUIElementDef Header =
 {
- 36, 200, 20, 100, &CaptionDraw, NULL, NULL, 0
-}
+	36, 200, 20, 100, &CaptionDraw, NULL, NULL, 0
+};
 
-static GUIElemnentDef SubHeader = 
+static GUIElementDef SubHeader =
 {
-  36, 200, 20, 160, &CaptionDraw, NULL, NULL, 0
-}
+	36, 200, 20, 160, &CaptionDraw, NULL, NULL, 0
+};
 
-static GUIElementDef Elements[4] = { ButtonOK, ButtonCancel, Header, SubHeader };
+static GUIElementDef* Elements[4] = { &ButtonOK, &ButtonCancel, &Header, &SubHeader };
 
 static ModalWindowDef ConfirmDialog =
 {
@@ -77,52 +84,52 @@ static ModalWindowDef ConfirmDialog =
 
 static void ButtonDraw(GUIElementDef* e)
 {
-	 BSP_LCD_SetTextColor(MAIN_BACK_COLOR);
-	 BSP_LCD_FillRect(e->Left, e->Top, e->Width, e->Height);
-  	BSP_LCD_SetTextColor(BUTTON_BORDER_COLOR);
-  	BSP_LCD_DrawRect(e->Left, e->Top, e->Width, e->Height);
+	BSP_LCD_SetTextColor(MAIN_BACK_COLOR);
+	BSP_LCD_FillRect(e->Left, e->Top, e->Width, e->Height);
+	BSP_LCD_SetTextColor(BUTTON_BORDER_COLOR);
+	BSP_LCD_DrawRect(e->Left, e->Top, e->Width, e->Height);
 
-  BSP_LCD_SetFont(FONT_BUTTON);
-  BSP_LCD_SetTextColor(e->Tag == 0 ? OK_BUTTON_COLOR : CANCEL_BUTTON_COLOR);
-  u8* text = (u8*)(e->Tag == 0 ? "OK" : "Cancel");   
+	BSP_LCD_SetFont(FONT_BUTTON);
+	BSP_LCD_SetTextColor(e->Tag == 0 ? OK_BUTTON_COLOR : CANCEL_BUTTON_COLOR);
+	u8* text = (u8*)(e->Tag == 0 ? "OK" : "Cancel");
 
-  u16 w = __strlen(text) * FONT_BUTTON->Width;
-  BSP_LCD_DisplayStringAt(e->Left + (e->Width -w) / 2, e->Top + 8, text, LEFT_MODE);
+	u16 w = __strlen(text) * FONT_BUTTON->Width;
+	BSP_LCD_DisplayStringAt(e->Left + (e->Width - w) / 2, e->Top + 8, text, LEFT_MODE);
 }
 
 static void CaptionDraw(GUIElementDef* e)
 {
-	 BSP_LCD_SetTextColor(MAIN_BACK_COLOR);
-	 BSP_LCD_FillRect(e->Left, e->Top, e->Width, e->Height);
-  
-  u8* text = e->Tag == 0 ? Caption1 : Caption2;
-  if(!text) return;
-  
-  Font* fnt = e->Tag == 0 ? FONT_CAPTION : FONT_SUBCAPTION;
-  
-  BSP_LCD_SetTextColor(e->Tag == 0? CAPTION_COLOR : SUBHEADER_COLOR);
-  BSP_LCD_SetFont(fnt);
-     
-	 u16 w = __strlen(text) * fnt->Width;
-	 BSP_LCD_SetTextColor(NAME_COLOR);
-	 BSP_LCD_SetFont(FONT_NAME);
-	 BSP_LCD_DisplayStringAt(e->Left + (e->Width -w) / 2, e->Top, text, LEFT_MODE);
+	BSP_LCD_SetTextColor(MAIN_BACK_COLOR);
+	BSP_LCD_FillRect(e->Left, e->Top, e->Width, e->Height);
+
+	u8* text = e->Tag == 0 ? Caption1 : Caption2;
+	if (!text) return;
+
+	sFONT *fnt = e->Tag == 0 ? FONT_CAPTION : FONT_SUBCAPTION;
+
+	BSP_LCD_SetTextColor(e->Tag == 0 ? CAPTION_COLOR : SUBHEADER_COLOR);
+	BSP_LCD_SetFont(fnt);
+
+	u16 w = __strlen(text) * fnt->Width;
+	BSP_LCD_SetTextColor(NAME_COLOR);
+	BSP_LCD_SetFont(FONT_NAME);
+	BSP_LCD_DisplayStringAt(e->Left + (e->Width - w) / 2, e->Top, text, LEFT_MODE);
 }
 
 
 static bool OKButtonClick(GUIElementDef* el, u16 x, u16 y)
 {
-  if(OnConfirm) OnConfirm(tag);
-  GUIRoot.HideModal();
-  
-  return true;
+	if (OnConfirm) OnConfirm(tag);
+	GUIRoot.HideModal();
+
+	return true;
 }
 static bool CancelButtonClick(GUIElementDef* e, u16 x, u16 y)
 {
-  if(OnCancel) OnCancel(tag);
-  GUIRoot.HideModal();
-  
-  return true;
+	if (OnCancel) OnCancel(tag);
+	GUIRoot.HideModal();
+
+	return true;
 }
 
 /*********************************************************************************************
@@ -131,11 +138,11 @@ static bool CancelButtonClick(GUIElementDef* e, u16 x, u16 y)
 
 void ShowConfirmDialog(ConfirmOvelayData *data)
 {
-  OnConfirm = data->Confirmed;
-  OnCancel = data->Declined;
-  tag = data->Tag,
-  Caption1 = data->Caption;
-  Caption2 = data->SubCaption;
-  
-  GUIRoot.ShowModal(&ConfirmDialog);
+	OnConfirm = data->Confirmed;
+	OnCancel = data->Declined;
+	tag = data->Tag,
+		Caption1 = data->Caption;
+	Caption2 = data->SubCaption;
+
+	GUIRoot.ShowModal(&ConfirmDialog);
 }

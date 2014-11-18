@@ -17,7 +17,7 @@ public:
 	void setChannels(uint8_t channels);
 
 	void setChan(uint16_t chan, uint16_t val);
-	uint16_t getChannel(unit8_t idx);
+	uint16_t getChannel(uint8_t idx);
 };
 
 

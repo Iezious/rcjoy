@@ -19,12 +19,6 @@ static void HeaderDraw(GUIElementDef*);
 static void DefsDraw(GUIElementDef*);
 static void ValueDraw(GUIElementDef*);
 
-#define GUI_COLOR_DEFAULT 0xFFCCCCCC
-#define GUI_COLOR_DARK 0xFF777777
-#define GUI_COLOR_HL 0xFFFFFFFF
-#define GUI_COLOR_GREEN 0xFF77FF77
-#define GUI_COLOR_RED 0xFFFF7777
-
 #define BUTTON_BORDER_COLOR GUI_COLOR_DEFAULT
 #define OK_BUTTON_COLOR GUI_COLOR_GREEN
 #define CANCEL_BUTTON_COLOR GUI_COLOR_RED

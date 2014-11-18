@@ -78,6 +78,7 @@ void SystemClock_Config(void)
 ComCom COMCOM;
 EEPRom EEPROM;
 PPMGenerator PPMGen;
+bool code_enabled; 
 
 #define MODES_CONT 3
 GUIModeDef *GUIModes[MODES_CONT] = { &ModeFlight, &ModelSelectMode, &ModeVariables };
@@ -107,7 +108,7 @@ int main(void)
 //	MX_USART1_UART_Init();
 //	MX_WWDG_Init();
 	HAL_Delay(100);
-	bool code_enabled = (BSP_PB_GetState(BUTTON_KEY) == RESET);
+	code_enabled = (BSP_PB_GetState(BUTTON_KEY) == RESET);
 
 	MX_USB_HOST_Init();
 

@@ -89,17 +89,17 @@ void GUI::DrawHeader()
 	{
 		BSP_LCD_SetTextColor(LCD_COLOR_RED);
 		BSP_LCD_DisplayChar(SCREEN_WIDTH - ICONS_FONT->Width * 2, 0, 41);
- }
-	else 
+	}
+	else
 	{
-		  BSP_LCD_SetTextColor(IsNotSavedShown & 1 ? LCD_COLOR_YELLOW, COLOR_INACTIVE);
-	   BSP_LCD_DisplayChar(SCREEN_WIDTH - ICONS_FONT->Width * 2, 0, 40);
- }
- 
+		BSP_LCD_SetTextColor(IsNotSavedShown & 1 ? LCD_COLOR_YELLOW : COLOR_INACTIVE);
+		BSP_LCD_DisplayChar(SCREEN_WIDTH - ICONS_FONT->Width * 2, 0, 40);
+	}
+
 	if (!PassiveMode)
 	{
 		BSP_LCD_SetTextColor(COLOR_ACTIVE);
-		BSP_LCD_DrawHLine(SCREEN_WIDTH - ICONS_FONT->Width*2, TABS_HEIGHT - 1, ICONS_FONT->Width*2);
+		BSP_LCD_DrawHLine(SCREEN_WIDTH - ICONS_FONT->Width * 2, TABS_HEIGHT - 1, ICONS_FONT->Width * 2);
 	}
 }
 
@@ -146,8 +146,8 @@ void GUI::Tick()
 	{
 		for (u8 i = 0; i < ModesCount; i++)
 			TickMode(*(Modes + i));
-			
-			if(CurrentModal && CurrentModal->Tick) Modal->Tick(); 
+
+		if (CurrentModal && CurrentModal->Tick) CurrentModal->Tick();
 
 		lastTick = now;
 
@@ -161,7 +161,7 @@ void GUI::Tick()
 		if (ProcessPB())
 		{
 			PassiveMode = !PassiveMode;
-			
+
 			HideModal();
 			ActivateTab(0);
 			DrawHeader();

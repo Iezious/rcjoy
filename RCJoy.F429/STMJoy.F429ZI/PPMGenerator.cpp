@@ -145,7 +145,7 @@ void PPMGenerator::stop()
 	HAL_TIM_Base_Stop(&htim3);
 }
 
-uint16_t PPMGenerator::getChannel(unit8_t idx)
+uint16_t PPMGenerator::getChannel(uint8_t idx)
 {
   return idx < active_channels ? *(channels+idx) : 0;
 }

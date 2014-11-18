@@ -17,16 +17,16 @@ void DrawList(ListDef *list, GUIElementDef* gelem)
 {
 	if (list == NULL) return;
 
-  BSP_LCD_SetTextColor(MAIN_BACK_COLOR);
-	 BSP_LCD_FillRect(gelem->Left, top, gelem->Width, gelem->Height);
+	BSP_LCD_SetTextColor(MAIN_BACK_COLOR);
+	BSP_LCD_FillRect(gelem->Left, gelem->Top, gelem->Width, gelem->Height);
 
- 	uint16_t cnt = gelem->Height / (u16) list->ItemHeight;
+	uint16_t cnt = gelem->Height / (u16)list->ItemHeight;
 
 	for (uint16_t i = 0; i < cnt; i++)
 	{
 		uint8_t curIdx = list->TopVisible + i;
 		uint16_t top = gelem->Top + list->ItemHeight * i;
- 
+
 		if (curIdx >= list->Length) break;
 		list->DrawElement(curIdx, gelem->Left, top, gelem->Width);
 	}
@@ -53,7 +53,7 @@ void DrawScrollBar(GUIElementDef *sb, uint8_t total, uint8_t visible, uint8_t cu
 
 	BSP_LCD_SetTextColor(MAIN_FRONT_COLOR);
 
-	BSP_LCD_DrawVLine(sb->Left + sb->Width/2, sb->Top, sb->Height);
+	BSP_LCD_DrawVLine(sb->Left + sb->Width / 2, sb->Top, sb->Height);
 
 	uint32_t h = sb->Height * (u32)visible / (u32)total;
 	uint32_t t = sb->Height * (u32)current_top / (u32)total;
@@ -64,9 +64,9 @@ void DrawScrollBar(GUIElementDef *sb, uint8_t total, uint8_t visible, uint8_t cu
 
 	CurrentSBInfo.current = current_top;
 	CurrentSBInfo.total = total;
-	CurrentSBInfo.visible = visible; 
+	CurrentSBInfo.visible = visible;
 
-	BSP_LCD_DrawRect(sb->Left + 3, sb->Top + t, sb->Width-6, h);
+	BSP_LCD_DrawRect(sb->Left + 3, sb->Top + t, sb->Width - 6, h);
 }
 
 

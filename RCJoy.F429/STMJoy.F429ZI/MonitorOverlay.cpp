@@ -45,7 +45,7 @@ static GUIElementDef ChannelsList =
 
 
 
-static GUIElelemntDef Elements[1] = { ChannelList };
+static GUIElementDef* Elements[1] = { &ChannelsList };
 
 ModalWindowDef MonitorDialog =
 {
@@ -64,49 +64,48 @@ static ListDef ListBox =
 
 static void DrawList(GUIElementDef* elem)
 {
-		DrawList(&ListBox, &ChannelsList);
+	DrawList(&ListBox, &ChannelsList);
 }
 
 static bool ClickList(GUIElementDef* s, u16 x, u16 y)
 {
-  GUI.HideModal();
-  return true;
+	GUIRoot.HideModal();
+	return true;
 }
 
 
 static void DrawListItem(uint8_t elementIndex, uint16_t top, uint16_t left, uint16_t width)
 {
-  		u8 __buffer[8];
-			
-			BSP_LCD_SetTextColor(COLOR_NAME);
-			BSP_LCD_SetFont(FONT_NAME);
-			
-			sprintf(__buffer, "%d:", elementIndex);
-			BSP_LCD_DisplayStringAt(left+10, top+6, __buffer, LEFT_MODE);
-			sprintf(__buffer, "%d:", elementIndex+8);
-			BSP_LCD_DisplayStringAt(left+130, top+6, __buffer, LEFT_MODE);
-			
-			BSP_LCD_SetTextColor(COLOR_VALUE);
-			BSP_LCD_SetFont(FONT_VALUE);
-			
-			sprintf(__buffer, "%d", PPMGen.getChannel(elementIndex));
-			BSP_LCD_DisplayStringAt(left+10+NAME_FONT->Width*3, top+3, __buffer, LEFT_MODE);
-			sprintf(__buffer, "%d", PPMGen.getChannel(elementIndex+8));
-			BSP_LCD_DisplayStringAt(left+130+NAME_FONT->Width*3, top+3, __buffer, LEFT_MODE);
+	char __buffer[8];
+
+	BSP_LCD_SetTextColor(COLOR_NAME);
+	BSP_LCD_SetFont(FONT_NAME);
+
+	sprintf(__buffer, "%d:", elementIndex);
+	BSP_LCD_DisplayStringAt(left + 10, top + 6, (u8*)__buffer, LEFT_MODE);
+	sprintf(__buffer, "%d:", elementIndex + 8);
+	BSP_LCD_DisplayStringAt(left + 130, top + 6, (u8*)__buffer, LEFT_MODE);
+
+	BSP_LCD_SetTextColor(COLOR_VALUE);
+	BSP_LCD_SetFont(FONT_VAL);
+
+	sprintf(__buffer, "%d", PPMGen.getChannel(elementIndex));
+	BSP_LCD_DisplayStringAt(left + 10 + FONT_NAME->Width * 3, top + 3, (u8*)__buffer, LEFT_MODE);
+	sprintf(__buffer, "%d", PPMGen.getChannel(elementIndex + 8));
+	BSP_LCD_DisplayStringAt(left + 130 + FONT_NAME->Width * 3, top + 3, (u8*)__buffer, LEFT_MODE);
 }
 
 static void TickOverlay(void)
 {
-  DrawMode(&MonitorDialog);
+	DrawModal(&MonitorDialog);
 }
-
 
 static bool ClickListItem(uint8_t elementIndex, uint16_t eX, uint16_t eY)
 {
-  return false;
+	return false;
 }
 
 void ShowChannelsMonitor()
 {
-  GUIRoot.ShowModal(&MonitorDialog);
+	GUIRoot.ShowModal(&MonitorDialog);
 }
