@@ -457,7 +457,7 @@ static USBH_StatusTypeDef USBH_HID_SOFProcess(USBH_HandleTypeDef *phost)
   
   if(HID_Handle->state == HID_POLL)
   {
-    if(( phost->Timer - HID_Handle->timer) >= HID_Handle->poll)
+    if(( phost->Timer - HID_Handle->timer) >= HID_Handle->poll << 4)
     {
       HID_Handle->state = HID_GET_DATA;
 #if (USBH_USE_OS == 1)

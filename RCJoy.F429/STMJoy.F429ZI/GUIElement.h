@@ -26,6 +26,7 @@ struct ListDef
 };
 
 extern void DrawList(ListDef *list, GUIElementDef* gelem);
+extern void DrawListNoClear(ListDef *list, GUIElementDef* gelem);
 extern bool ListClick(ListDef *list, uint16_t x, uint16_t y);
 
 extern void DrawScrollBar(GUIElementDef *sb, uint8_t total, uint8_t visible, uint8_t current_top);

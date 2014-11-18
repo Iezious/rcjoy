@@ -12,6 +12,7 @@
 #include "functions.h"
 
 
+static bool ActivateOptions();
 static void DrawList(GUIElementDef* elem);
 static bool ClickList(GUIElementDef*, u16, u16);
 
@@ -22,7 +23,7 @@ extern bool code_enabled;
 
 
 #define MENU_COLOR 0xFFDDDDDD
-#define MENU_FONT (&Font24)
+#define MENU_FONT (&Font16)
 
 static GUIElementDef List =
 {
@@ -50,7 +51,7 @@ GUIModeDef ModeOptions =
 	Elemts,									//	GUIElementDef **Elements;
 	1,										//	uint8_t ElementsCount;
 
-	0,	    						//bool(*Activate)(void);
+	&ActivateOptions,	    						//bool(*Activate)(void);
 	0,										//bool(*Deactivate)(void);
 	0,										//bool(*Click)(uint16_t x, uint16_t y);
 	0,										//bool(*Update)(void);
@@ -69,6 +70,12 @@ static ListDef ListBox =
 	&ClickListItem							//bool(*ClickElement)(uint8_t elementIndex, uint16_t eX, uint16_t eY);
 };
 
+static bool ActivateOptions()
+{
+	ListBox.Length = code_enabled ? 4 : 6;
+	return true;
+}
+
 static void DrawList(GUIElementDef* elem)
 {
 	DrawList(&ListBox, &List);
@@ -80,7 +87,7 @@ static bool ClickList(GUIElementDef* s, u16 x, u16 y)
 	return true;
 }
 
-static void DrawListItem(uint8_t elementIndex, uint16_t top, uint16_t left, uint16_t width)
+static void DrawListItem(uint8_t elementIndex, uint16_t left, uint16_t top, uint16_t width)
 {
 	u8* __name = 0;
 
@@ -196,6 +203,9 @@ static void ResetModelVars()
 
 static void DoResetProgram(uint32_t tag)
 {
+	if (HAL_FLASH_Unlock() != HAL_OK)
+		return;
+
 	FLASH_EraseInitTypeDef fes;
 	fes.Sector = PROGRAM_SECTOR;
 	fes.NbSectors = 1;
@@ -224,9 +234,11 @@ static void ProgramReset()
 
 static void DoFullReset(uint32_t tag)
 {
+	if (HAL_FLASH_Unlock() != HAL_OK)
+		return;
+
 	FLASH_EraseInitTypeDef fes;
-	fes.Sector = 0;
-	fes.NbSectors = 1;
+	fes.Banks = FLASH_BANK_BOTH;
 	fes.TypeErase = TYPEERASE_MASSERASE;
 	fes.VoltageRange = VOLTAGE_RANGE_3;
 
@@ -243,7 +255,7 @@ static void ChipReset()
 {
 	ConfirmOvelayData confdata =
 	{
-		(u8*)"Clear whole flash?", (u8*)"Reset board when finished", 1, &DoFullReset, 0
+		(u8*)"Clear whole flash?", (u8*)"Reset after 1 minute.", 1, &DoFullReset, 0
 	};
 
 	ShowConfirmDialog(&confdata);
