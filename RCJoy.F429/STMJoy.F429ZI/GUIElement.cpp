@@ -17,23 +17,18 @@ void DrawList(ListDef *list, GUIElementDef* gelem)
 {
 	if (list == NULL) return;
 
-	uint16_t cnt = gelem->Height / (u16) list->ItemHeight;
+  BSP_LCD_SetTextColor(MAIN_BACK_COLOR);
+	 BSP_LCD_FillRect(gelem->Left, top, gelem->Width, gelem->Height);
+
+ 	uint16_t cnt = gelem->Height / (u16) list->ItemHeight;
 
 	for (uint16_t i = 0; i < cnt; i++)
 	{
 		uint8_t curIdx = list->TopVisible + i;
 		uint16_t top = gelem->Top + list->ItemHeight * i;
-
-		if (curIdx < list->Length)
-		{
-			list->DrawElement(curIdx, gelem->Left, top, gelem->Width);
-		}
-		else
-		{
-			BSP_LCD_SetTextColor(MAIN_BACK_COLOR);
-			BSP_LCD_FillRect(gelem->Left, top, gelem->Width, gelem->Height - top);
-			break;
-		}
+ 
+		if (curIdx >= list->Length) break;
+		list->DrawElement(curIdx, gelem->Left, top, gelem->Width);
 	}
 }
 

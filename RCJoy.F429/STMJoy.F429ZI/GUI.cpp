@@ -86,14 +86,16 @@ void GUI::DrawHeader()
 
 
 	if (IsNotSavedShown & 2)
+	{
 		BSP_LCD_SetTextColor(LCD_COLOR_RED);
-	else if (IsNotSavedShown & 1)
-		BSP_LCD_SetTextColor(LCD_COLOR_YELLOW);
-	else
-		BSP_LCD_SetTextColor(COLOR_INACTIVE);
-
-	BSP_LCD_DisplayChar(SCREEN_WIDTH - ICONS_FONT->Width * 2, 0, 40);
-
+		BSP_LCD_DisplayChar(SCREEN_WIDTH - ICONS_FONT->Width * 2, 0, 41);
+ }
+	else 
+	{
+		  BSP_LCD_SetTextColor(IsNotSavedShown & 1 ? LCD_COLOR_YELLOW, COLOR_INACTIVE);
+	   BSP_LCD_DisplayChar(SCREEN_WIDTH - ICONS_FONT->Width * 2, 0, 40);
+ }
+ 
 	if (!PassiveMode)
 	{
 		BSP_LCD_SetTextColor(COLOR_ACTIVE);
@@ -144,6 +146,8 @@ void GUI::Tick()
 	{
 		for (u8 i = 0; i < ModesCount; i++)
 			TickMode(*(Modes + i));
+			
+			if(CurrentModal && CurrentModal->Tick) Modal->Tick(); 
 
 		lastTick = now;
 
@@ -158,6 +162,7 @@ void GUI::Tick()
 		{
 			PassiveMode = !PassiveMode;
 			
+			HideModal();
 			ActivateTab(0);
 			DrawHeader();
 		}

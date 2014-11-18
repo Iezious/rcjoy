@@ -91,12 +91,14 @@ public:
 	void ShowModal(ModalWindowDef* modal)
 	{
 	  CurrentModal = modal;
+	  BSP_LCD_Clear(MAIN_BACK_COLOR);
 	  Draw();
 	}
 	
 	 void HideModal()
 	 {
     CurrentModal = 0;
+    BSP_LCD_Clear(MAIN_BACK_COLOR);
     Draw();
 	 }
 };

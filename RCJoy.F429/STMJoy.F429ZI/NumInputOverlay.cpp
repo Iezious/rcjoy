@@ -164,7 +164,7 @@ static GUIElementDef* Elements[17] =
 
 static ModalWindowDef NumDialog =
 {
-	Elements, 17, NULL, NULL, NULL, NULL
+	Elements, 17, NULL, NULL, NULL, NULL, NULL
 };
 
 
