@@ -25,6 +25,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="SysTimer.c" />
+    <ClCompile Include="PPMReader.cpp" />
+    <ClCompile Include="PWMGenerator.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\CMSIS\CM3\CoreSupport\core_cm3.c">
       <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
@@ -100,13 +104,9 @@
     <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c">
       <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\Startup\startup_stm32f10x_cl.c">
+    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\Startup\startup_stm32f10x_md.c">
       <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="SysTimer.c" />
-    <ClCompile Include="PPMReader.cpp" />
-    <ClCompile Include="PWMGenerator.cpp" />
-    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
@@ -121,6 +121,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SysTimer.h" />
+    <ClInclude Include="PWMGenerator.h" />
+    <ClInclude Include="PPMReader.h" />
     <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\CMSIS\CM3\CoreSupport\core_cm3.h">
       <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
@@ -199,8 +202,5 @@
     <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F1xxxx\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h">
       <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="SysTimer.h" />
-    <ClInclude Include="PWMGenerator.h" />
-    <ClInclude Include="PPMReader.h" />
   </ItemGroup>
 </Project>
