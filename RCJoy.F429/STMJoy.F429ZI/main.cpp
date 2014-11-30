@@ -155,10 +155,7 @@ int main(void)
 
 	for (;;)
 	{
-		if (USB_Poll_Time < 5)
-			HAL_Delay(4);
-		else
-			HAL_Delay(USB_Poll_Time-2);
+		HAL_Delay(5);
 
 		MX_USB_HOST_Process();
 

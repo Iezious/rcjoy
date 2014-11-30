@@ -222,7 +222,7 @@ typedef struct _HID_Process
   uint16_t             length;
   uint8_t              ep_addr;
   uint16_t             poll; 
-  uint16_t             timer;
+  uint32_t             timer;
   uint8_t              DataReady;
   HID_DescTypeDef      HID_Desc;  
   USBH_StatusTypeDef  ( * Init)(USBH_HandleTypeDef *phost);
@@ -305,8 +305,6 @@ USBH_StatusTypeDef USBH_HID_SetIdle (USBH_HandleTypeDef *phost,
 USBH_StatusTypeDef USBH_HID_SetProtocol (USBH_HandleTypeDef *phost,
                                       uint8_t protocol);
 
-void USBH_HID_EventCallback(USBH_HandleTypeDef *phost);
-
 HID_TypeTypeDef USBH_HID_GetDeviceType(USBH_HandleTypeDef *phost);
 
 uint8_t USBH_HID_GetPollInterval(USBH_HandleTypeDef *phost);
@@ -316,6 +314,10 @@ void fifo_init(FIFO_TypeDef * f, uint8_t * buf, uint16_t size);
 uint16_t  fifo_read(FIFO_TypeDef * f, void * buf, uint16_t  nbytes);
 
 uint16_t  fifo_write(FIFO_TypeDef * f, const void * buf, uint16_t  nbytes);
+
+void USBH_HID_EventCallback(USBH_HandleTypeDef *phost);
+void USB_HID_DataTimeoutCallBack(USBH_HandleTypeDef *phost);
+
 
 /**
   * @}

@@ -4,7 +4,8 @@
 
 
 
-uint8_t usb_buffer[1024];
+uint8_t usb_input_buffer[1024];
+uint8_t usb_buffer[256];
 uint8_t usb_repd_buffer[2048];
 uint16_t usb_rep_desc_len;
 uint16_t usb_rep_len;
@@ -45,13 +46,16 @@ USBH_StatusTypeDef USBH_HID_CommonInit(USBH_HandleTypeDef *phost)
 	ProductID = phost->device.DevDesc.idProduct;
 	USB_Poll_Time = HID_Handle->poll;
 	HasReports = 0;
+	IsMultiReport = 0;
+	CurrentReportShift = 0;
 }
 
 
 void USBH_HID_EventCallback(USBH_HandleTypeDef *phost)
 {
 	HID_HandleTypeDef *HID_Handle = phost->pActiveClass->pData;
-	
+	uint16_t i;
+
 	HasReports = 1;
 	
 	usb_rep_len = HID_Handle->length;
@@ -59,16 +63,30 @@ void USBH_HID_EventCallback(USBH_HandleTypeDef *phost)
 	if (HID_Handle->length == 0)
 	{
 		usb_data_valid = FALSE;
+		CurrentReportShift = 0;
 		return;
 	}
 
 	usb_data_valid = (fifo_read(&HID_Handle->fifo, usb_buffer, HID_Handle->length) == HID_Handle->length);
 
+	if (!usb_data_valid)
+	{
+		CurrentReportShift = 0;
+		return;
+	}
+
+	for (i = 0; i < HID_Handle->length; i++)
+		usb_input_buffer[i + CurrentReportShift] = usb_buffer[i];
+
+	CurrentReportShift += HID_Handle->length;
+
+	if (CurrentReportShift >= Report_Total_Length)
+		CurrentReportShift = 0;
+
 #ifdef DEBUG_USB
-	if (!usb_data_valid) return;
 	if (!debug_buffer_active) return;
 
-	uint16_t i;
+	
 
 	debug_buffer[0] = HID_Handle->length;
 
@@ -79,6 +97,11 @@ void USBH_HID_EventCallback(USBH_HandleTypeDef *phost)
 
 	debug_buffer_active = (debug_buffer_pos < DEBUG_BUFFER_LEN);
 #endif
+}
+
+void USB_HID_DataTimeoutCallBack(USBH_HandleTypeDef *phost)
+{
+	//CurrentReportShift = 0;
 }
 
 void USB_HID_ReportReadCallback(USBH_HandleTypeDef *phost)
@@ -100,14 +123,14 @@ void USB_HID_ReportReadCallback(USBH_HandleTypeDef *phost)
 uint8_t *USB_HID_GetLastReport()
 {
 	if (usb_data_valid)
-		return usb_buffer;
+		return usb_input_buffer;
 	else
 		return NULL;
 }
 
 uint16_t USB_HID_GetReportLength()
 {
-	return usb_rep_len;
+	return Report_Total_Length ? Report_Total_Length : usb_rep_len;
 }
 
 void USB_GetReportDescriptor(uint16_t *l, uint8_t **b)
