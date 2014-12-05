@@ -32,22 +32,6 @@ void DrawList(ListDef *list, GUIElementDef* gelem)
 	}
 }
 
-void DrawListNoClear(ListDef *list, GUIElementDef* gelem)
-{
-	if (list == NULL) return;
-
-	uint16_t cnt = gelem->Height / (u16)list->ItemHeight;
-
-	for (uint16_t i = 0; i < cnt; i++)
-	{
-		uint8_t curIdx = list->TopVisible + i;
-		uint16_t top = gelem->Top + list->ItemHeight * i;
-
-		if (curIdx >= list->Length) break;
-		list->DrawElement(curIdx, gelem->Left, top, gelem->Width);
-	}
-}
-
 bool ListClick(ListDef *list, uint16_t x, uint16_t y)
 {
 	uint16_t idx = y / list->ItemHeight;
@@ -111,5 +95,29 @@ bool ScrollBarClick(uint16_t y)
 	}
 
 	return false;
+}
+
+bool DoListScrollUp(ListDef *list, GUIElementDef* elem)
+{
+	uint16_t total = elem->Height / list->ItemHeight;
+	if (list->TopVisible < total)
+		list->TopVisible = 0;
+	else
+		list->TopVisible -= total;
+
+	GUIRoot.DrawContent();
+	return true;
+}
+
+bool DoListScrollDown(ListDef *list, GUIElementDef* elem)
+{
+	uint16_t total = elem->Height / list->ItemHeight;
+	list->TopVisible += total;
+
+	if (list->TopVisible > list->Length - total)
+		list->TopVisible = list->Length - total;
+
+	GUIRoot.DrawContent();
+	return true;
 }
 

@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <inttypes.h>
-#include "GUIModeVars.h"
+#include "GUIDebugBlocks.h"
 #include "def.h"
 #include "conf.h"
-#include "GUIModeFlight.h"
-#include "NumInputOverlay.h"
+#include "GUIModeBlock.h"
 #include "Calculator.h"
 #include "functions.h"
-#include "EEPRom.h"
 
 static void DrawScroll(GUIElementDef* elem);
 static bool ClickScroll(GUIElementDef*, u16, u16);
@@ -26,7 +24,7 @@ static bool ListScrollDown();
 #define FONT_NAME (&Font12)
 #define FONT_VAL (&Font16)
 
-static GUIElementDef VarsScroll =
+static GUIElementDef BlocksScroll =
 {
 	LCD_SCROLL_WIDTH,					//uint16_t Width;
 	LCD_WORK_HEIGHT - 6,				//uint16_t Height;
@@ -40,7 +38,7 @@ static GUIElementDef VarsScroll =
 };
 
 
-static GUIElementDef VarsList =
+static GUIElementDef BlocksList =
 {
 	LCD_WORK_WIDTH,						//uint16_t Width;
 	LCD_WORK_HEIGHT,					//uint16_t Height;
@@ -53,12 +51,12 @@ static GUIElementDef VarsList =
 	0
 };
 
-static GUIElementDef* Elemts[2] = { &VarsList, &VarsScroll };
+static GUIElementDef* Elemts[2] = { &BlocksScroll, &BlocksList };
 
-GUIModeDef ModeVariables =
+GUIModeDef ModeBlocks =
 {
 	0,						// Index
-	35,						// Icon
+	37,						// Icon
 	false,					// Active
 
 
@@ -75,7 +73,7 @@ GUIModeDef ModeVariables =
 	0,										//void(*Tick)(void);							
 };
 
-static ListDef VarsListBox =
+static ListDef BlocksListBox =
 {
 	0,										//uint8_t Length;
 	MLHEIGHT,								//uint8_t ItemHeight;
@@ -88,13 +86,13 @@ bool ModeActivate()
 {
 	if (!PROGRAM_PRESENT)
 	{
-		VarsListBox.Length = 0;
+		BlockListBox.Length = 0;
 		return true;
 	}
 
 	u16 c = 0;
-	for (u16 i = 0; i < CalcData->VariablesCount; i++)
-		if (CalcData->Variables[i].MODEL_IDX == CurrentModelIdx) c++;
+	for (u16 i = 0; i < CalcData->BlocksCount; i++)
+		if (CalcData->Blocks[i].MODEL_IDX == CurrentModelIdx) c++;
 
 	VarsListBox.Length = c;
 	return true;
@@ -102,18 +100,18 @@ bool ModeActivate()
 
 bool ListScrollUp()
 {
-	return DoListScrollUp(&VarsListBox, &VarsList);
+	return DoListScrollUp(&BlocksListBox, &BlocksList);
 }
 
 bool ListScrollDown()
 {
-	return DoListScrollDown(&VarsListBox, &VarsList);
+	return DoListScrollDown(&BlocksListBox, &BlocksList);
 }
 
 void DrawScroll(GUIElementDef* elem)
 {
-	DrawScrollBar(&VarsScroll, VarsListBox.Length, VarsList.Height / VarsListBox.ItemHeight,
-		VarsListBox.TopVisible);
+	DrawScrollBar(&BlocksScroll, BlocksListBox.Length, BlocksList.Height / BlocksListBox.ItemHeight,
+		BlocksListBox.TopVisible);
 }
 
 static bool ClickScroll(GUIElementDef* s, u16 x, u16 y)
@@ -123,42 +121,41 @@ static bool ClickScroll(GUIElementDef* s, u16 x, u16 y)
 
 static void DrawList(GUIElementDef* elem)
 {
-	if (VarsListBox.Length != 0)
-		DrawList(&VarsListBox, &VarsList);
+	if (BlocksListBox.Length != 0)
+		DrawList(&BlocksListBox, &BlocksList);
 	else
 	{
 		BSP_LCD_SetTextColor(COLOR_ERROR);
 		BSP_LCD_SetFont(FONT_VAL);
-		BSP_LCD_DisplayStringAt(elem->Width, elem->Top, (u8*)"No variables found", LEFT_MODE);
+		BSP_LCD_DisplayStringAt(elem->Left, elem->Top, (u8*)"No blocks information", LEFT_MODE);
 	}
 }
 
 static bool ClickList(GUIElementDef* s, u16 x, u16 y)
 {
 	if (PROGRAM_PRESENT)
-		ListClick(&VarsListBox, x, y);
+		ListClick(&BlocksListBox, x, y);
 }
 
 static uint8_t buffer[32];
 
-static VariableDef* GetModelVariable(uint16_t elementIndex)
+static BlockDef* GetModelBlock(uint16_t elementIndex)
 {
 	u16 idx = 0;
 	u16 var_index = 0;
 
-	for (; var_index < CalcData->VariablesCount; var_index++)
+	for (; var_index < CalcData->BlocksCount; var_index++)
 	{
-		if (CalcData->Variables[var_index].MODEL_IDX == CurrentModelIdx)
+		if (CalcData->Blocks[var_index].MODEL_IDX == CurrentModelIdx)
 		{
 			if (idx == elementIndex) break;
 			idx++;
 		}
 	}
 
-	if (var_index == CalcData->VariablesCount) return NULL;
+	if (var_index == CalcData->BlocksCount) return NULL;
 
-	return CalcData->Variables + var_index;
-
+	return CalcData->Blocks + var_index;
 }
 
 static void DrawListItem(uint8_t elementIndex, uint16_t left, uint16_t top, uint16_t width)
@@ -167,66 +164,22 @@ static void DrawListItem(uint8_t elementIndex, uint16_t left, uint16_t top, uint
 	BSP_LCD_FillRect(left, top, width, MLHEIGHT);
 	BSP_LCD_SetBackColor(MAIN_BACK_COLOR);
 
-	VariableDef* var = GetModelVariable(elementIndex);
+	BlockDef* var = GetModelBlock(elementIndex);
 	if (!var) return;
 	
-	if (var->EEPROM_ADDR != 0)
-		BSP_LCD_SetTextColor(COLOR_NAME_EEP);
-	else
-		BSP_LCD_SetTextColor(COLOR_NAME);
-
+	BSP_LCD_SetTextColor(COLOR_NAME);
 	BSP_LCD_SetFont(FONT_NAME);
 
 	BSP_LCD_DisplayStringAt(left, top + 7, (u8*)var->Name, LEFT_MODE);
-
-	BSP_LCD_SetTextColor(COLOR_VAL);
-	BSP_LCD_SetFont(FONT_VAL);
-
-	sprintf((char*)buffer, "%d", get(var->DATAMAP_ADDR));
-	uint16_t l = __strlen((u8*)buffer);
-
-	BSP_LCD_DisplayStringAt(
-		left + width - l * FONT_VAL->Width - 2,
-		top + 3, buffer, LEFT_MODE);
 }
 
-static void ValueEdited(int32_t tag, int16_t value);
-
-static NumDialogDataDef VariableEditInfo =
-{
-	NULL,
-	0, 0, 0, 0,
-	0,
-
-	&ValueEdited,
-	NULL
-};
 
 static bool ClickListItem(uint8_t elementIndex, uint16_t eX, uint16_t eY)
 {
-	VariableDef* var = GetModelVariable(elementIndex);
-	if (!var) return true;
-
-	VariableEditInfo.Name = var->Name;
-	VariableEditInfo.Min = var->MIN;
-	VariableEditInfo.Max = var->MAX;
-	VariableEditInfo.Default = var->DEFAULT;
-	VariableEditInfo.Value = get(var->DATAMAP_ADDR);
-	VariableEditInfo.tag = elementIndex;
-
-	ShowNumInput(&VariableEditInfo);
-
-	return true;
-}
-
-static void ValueEdited(int32_t tag, int16_t value)
-{
-	VariableDef* var = GetModelVariable(tag);
+	BlockDef* var = GetModelBlock(elementIndex);
 	if (!var) return;
-
-	set_val(var->DATAMAP_ADDR, value);
-
-	if (var->EEPROM_ADDR)
-		EEPROM.Write(var->EEPROM_ADDR, value);
+	
+	ShowBlockDebug(var);
+	return true;
 }
 
