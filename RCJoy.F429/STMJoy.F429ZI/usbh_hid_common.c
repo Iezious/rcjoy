@@ -120,12 +120,12 @@ void USBH_HID_EventCallback(USBH_HandleTypeDef *phost)
 			if (usb_buffer[0] != 1) return;
 
 			for (i = 0; i < HID_Handle->length - 1; i++)
-				usb_input_buffer[i + CurrentReportShift] = usb_buffer[i + 1];
+				usb_input_buffer[i] = usb_buffer[i + 1];
 		}
 		else
 		{
 			for (i = 0; i < HID_Handle->length; i++)
-				usb_input_buffer[i + CurrentReportShift] = usb_buffer[i];
+				usb_input_buffer[i] = usb_buffer[i];
 		}
 	}
 
