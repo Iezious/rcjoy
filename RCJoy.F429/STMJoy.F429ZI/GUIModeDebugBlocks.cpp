@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <inttypes.h>
-#include "GUIDebugBlocks.h"
+#include "GUIModeDebugBlocks.h"
 #include "def.h"
 #include "conf.h"
 #include "GUIModeBlock.h"
@@ -86,7 +86,7 @@ bool ModeActivate()
 {
 	if (!PROGRAM_PRESENT)
 	{
-		BlockListBox.Length = 0;
+		BlocksListBox.Length = 0;
 		return true;
 	}
 
@@ -94,7 +94,7 @@ bool ModeActivate()
 	for (u16 i = 0; i < CalcData->BlocksCount; i++)
 		if (CalcData->Blocks[i].MODEL_IDX == CurrentModelIdx) c++;
 
-	VarsListBox.Length = c;
+	BlocksListBox.Length = c;
 	return true;
 }
 
@@ -177,7 +177,7 @@ static void DrawListItem(uint8_t elementIndex, uint16_t left, uint16_t top, uint
 static bool ClickListItem(uint8_t elementIndex, uint16_t eX, uint16_t eY)
 {
 	BlockDef* var = GetModelBlock(elementIndex);
-	if (!var) return;
+	if (!var) return false;
 	
 	ShowBlockDebug(var);
 	return true;

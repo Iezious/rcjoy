@@ -32,6 +32,23 @@ void DrawList(ListDef *list, GUIElementDef* gelem)
 	}
 }
 
+
+void DrawListNoClear(ListDef *list, GUIElementDef* gelem)
+{
+	if (list == NULL) return;
+
+	uint16_t cnt = gelem->Height / (u16)list->ItemHeight;
+
+	for (uint16_t i = 0; i < cnt; i++)
+	{
+		uint8_t curIdx = list->TopVisible + i;
+		uint16_t top = gelem->Top + list->ItemHeight * i;
+
+		if (curIdx >= list->Length) break;
+		list->DrawElement(curIdx, gelem->Left, top, gelem->Width);
+	}
+}
+
 bool ListClick(ListDef *list, uint16_t x, uint16_t y)
 {
 	uint16_t idx = y / list->ItemHeight;

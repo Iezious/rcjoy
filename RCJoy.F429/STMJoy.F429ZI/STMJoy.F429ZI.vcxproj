@@ -146,6 +146,8 @@
     <ClCompile Include="GUIElement.cpp" />
     <ClCompile Include="GUIModal.cpp" />
     <ClCompile Include="GUIMode.cpp" />
+    <ClCompile Include="GUIModeBlock.cpp" />
+    <ClCompile Include="GUIModeDebugBlocks.cpp" />
     <ClCompile Include="GUIModeFlight.cpp" />
     <ClCompile Include="GUIModelListMode.cpp" />
     <ClCompile Include="GUIModeOptions.cpp" />
@@ -285,6 +287,8 @@
     <ClInclude Include="GUIElement.h" />
     <ClInclude Include="GUIModal.h" />
     <ClInclude Include="GUIMode.h" />
+    <ClInclude Include="GUIModeBlock.h" />
+    <ClInclude Include="GUIModeDebugBlocks.h" />
     <ClInclude Include="GUIModeFlight.h" />
     <ClInclude Include="GUIModelListMode.h" />
     <ClInclude Include="GUIModeOptions.h" />

@@ -38,6 +38,7 @@ extern "C" {
 #include "GUIModeVars.h"
 #include "GUIModeOptions.h"
 #include "ComProg.h"
+#include "GUIModeDebugBlocks.h"
 
 
 void SystemClock_Config(void)
@@ -82,8 +83,8 @@ EEPRom EEPROM;
 PPMGenerator PPMGen;
 bool code_enabled; 
 
-#define MODES_CONT 4
-GUIModeDef *GUIModes[MODES_CONT] = { &ModeFlight, &ModelSelectMode, &ModeVariables, &ModeOptions };
+#define MODES_CONT 5
+GUIModeDef *GUIModes[MODES_CONT] = { &ModeFlight, &ModelSelectMode, &ModeVariables, &ModeBlocks, &ModeOptions };
 
 
 void ComComEcho(uint8_t* b, uint32_t l, uint8_t **ab, uint32_t *al)

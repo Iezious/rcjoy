@@ -60,6 +60,9 @@
     <Filter Include="GUI\NumDialog">
       <UniqueIdentifier>{0633d0f8-ad7b-48ba-b67c-863ea9397f29}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GUI\ModeDebug">
+      <UniqueIdentifier>{de622c5b-1da4-4ead-8aec-fc5569072e99}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -369,6 +372,12 @@
     </ClCompile>
     <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usb.c">
       <Filter>Libraries\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIModeBlock.cpp">
+      <Filter>GUI\ModeDebug</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIModeDebugBlocks.cpp">
+      <Filter>GUI\ModeDebug</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -786,6 +795,12 @@
     </ClInclude>
     <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h">
       <Filter>Libraries\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIModeBlock.h">
+      <Filter>GUI\ModeDebug</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIModeDebugBlocks.h">
+      <Filter>GUI\ModeDebug</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
