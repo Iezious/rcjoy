@@ -21,6 +21,8 @@ uint8_t HasReports = 0;
 uint16_t VendorID;
 uint16_t ProductID;
 
+uint8_t data_pid_stored;
+
 extern void ParseReportDescriptor(uint8_t *report, uint16_t len, uint16_t* bitlen, uint8_t *mreport);
 
 #ifdef DEBUG_USB
@@ -48,6 +50,7 @@ USBH_StatusTypeDef USBH_HID_CommonInit(USBH_HandleTypeDef *phost)
 	HasReports = 0;
 	IsMultiReport = 0;
 	CurrentReportShift = 0;
+	data_pid_stored = 0xFF;
 }
 
 
@@ -78,6 +81,15 @@ void USBH_HID_EventCallback(USBH_HandleTypeDef *phost)
 	if (Report_Total_Length > HID_Handle->length)
 	{
 		// check seq here
+
+		uint8_t data_pid = ((((HCD_HandleTypeDef*)phost->pData)->hc)[HID_Handle->InPipe]).data_pid;
+		
+		if (data_pid == data_pid_stored)
+		{
+			return; // reinit interface ???
+		}
+
+		data_pid_stored = data_pid;
 
 #ifdef MULTIREP11
 		if (IsMultiReport && CurrentReportShift == 0)
