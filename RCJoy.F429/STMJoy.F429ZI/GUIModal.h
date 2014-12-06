@@ -13,7 +13,7 @@ struct ModalWindowDef
 	bool(*Click)(uint16_t x, uint16_t y);
 	bool(*ScrollUp)(void);
 	bool(*ScrollDown)(void);
-	bool(*Tick)(void);
+	void(*Tick)(void);
 };
 
 

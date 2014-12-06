@@ -26,11 +26,11 @@ static u8* Caption2;
 #define SUBHEADER_COLOR GUI_COLOR_DEFAULT
 
 
-#define FONT_CAPTION  (&Font20)
-#define FONT_BUTTON  (&Font24)
-#define FONT_SUBCAPTION (&Font16)
+#define FONT_CAPTION  (&Font16)
+#define FONT_BUTTON  (&Font16)
+#define FONT_SUBCAPTION (&Font12)
 #define ICON_FONT (&FontPkts)
-#define FONT_NAME (&Font20)
+#define FONT_NAME (&Font12)
 
 static void(*OnConfirm)(u32 tag);
 static void(*OnCancel)(u32 tag);
@@ -49,22 +49,22 @@ static void CaptionDraw(GUIElementDef*);
 
 static GUIElementDef ButtonOK =
 {
-	36, 80, 20, 260, &ButtonDraw, &OKButtonClick, NULL, 0
+	80, 24, 20, 180, &ButtonDraw, &OKButtonClick, NULL, 0
 };
 
 static GUIElementDef ButtonCancel =
 {
-	36, 80, 160, 260, &ButtonDraw, &OKButtonClick, NULL, 1
+	80, 24, 140, 180, &ButtonDraw, &CancelButtonClick, NULL, 1
 };
 
 static GUIElementDef Header =
 {
-	36, 200, 20, 100, &CaptionDraw, NULL, NULL, 0
+	220, 36, 10, 100, &CaptionDraw, NULL, NULL, 0
 };
 
 static GUIElementDef SubHeader =
 {
-	36, 200, 20, 160, &CaptionDraw, NULL, NULL, 0
+	220, 36, 10, 120, &CaptionDraw, NULL, NULL, 1
 };
 
 static GUIElementDef* Elements[4] = { &ButtonOK, &ButtonCancel, &Header, &SubHeader };
@@ -109,11 +109,7 @@ static void CaptionDraw(GUIElementDef* e)
 
 	BSP_LCD_SetTextColor(e->Tag == 0 ? CAPTION_COLOR : SUBHEADER_COLOR);
 	BSP_LCD_SetFont(fnt);
-
-	u16 w = __strlen(text) * fnt->Width;
-	BSP_LCD_SetTextColor(NAME_COLOR);
-	BSP_LCD_SetFont(FONT_NAME);
-	BSP_LCD_DisplayStringAt(e->Left + (e->Width - w) / 2, e->Top, text, LEFT_MODE);
+	BSP_LCD_DisplayStringAt(e->Left, e->Top, text, LEFT_MODE);
 }
 
 

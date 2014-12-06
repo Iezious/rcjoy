@@ -285,6 +285,7 @@ namespace Tahorg.RCJoyGUI.Data
         private int buttons_counter = 1;
         private int hats_counter = 1;
         private int lev_counter = 1;
+        private int axis_counter = 1;
 
         private void CreateButtons()
         {
@@ -327,8 +328,8 @@ namespace Tahorg.RCJoyGUI.Data
                 Length = (int)__Bits,
                 MinValue = 0,
                 MaxValue = (int)GetMaxBits(__Bits),
-                ConstantName = name,
-                Name = cname
+                ConstantName = cname,
+                Name = name
             });
         }
 
@@ -470,7 +471,8 @@ namespace Tahorg.RCJoyGUI.Data
                         break;
 
                     default:
-                        CreateAxle("Unknown:rename", "NONAME");
+                        CreateAxle("Axis " + axis_counter, "AXIS" + axis_counter);
+                        axis_counter++;
                         break;
                         
                 }

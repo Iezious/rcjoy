@@ -49,7 +49,7 @@ static GUIElementDef* Elements[1] = { &ChannelsList };
 
 ModalWindowDef MonitorDialog =
 {
-	Elements, 1, NULL, NULL, NULL, NULL, NULL
+	Elements, 1, NULL, NULL, NULL, NULL, &TickOverlay
 };
 
 static ListDef ListBox =
@@ -64,7 +64,7 @@ static ListDef ListBox =
 
 static void DrawList(GUIElementDef* elem)
 {
-	DrawList(&ListBox, &ChannelsList);
+	DrawListNoClear(&ListBox, &ChannelsList);
 }
 
 static bool ClickList(GUIElementDef* s, u16 x, u16 y)
@@ -74,7 +74,7 @@ static bool ClickList(GUIElementDef* s, u16 x, u16 y)
 }
 
 
-static void DrawListItem(uint8_t elementIndex, uint16_t top, uint16_t left, uint16_t width)
+static void DrawListItem(uint8_t elementIndex, uint16_t left, uint16_t top, uint16_t width)
 {
 	char __buffer[8];
 
@@ -86,18 +86,18 @@ static void DrawListItem(uint8_t elementIndex, uint16_t top, uint16_t left, uint
 	sprintf(__buffer, "%d:", elementIndex + 8);
 	BSP_LCD_DisplayStringAt(left + 130, top + 6, (u8*)__buffer, LEFT_MODE);
 
-	BSP_LCD_SetTextColor(COLOR_VALUE);
+	BSP_LCD_SetTextColor(COLOR_VAL);
 	BSP_LCD_SetFont(FONT_VAL);
 
-	sprintf(__buffer, "%d", PPMGen.getChannel(elementIndex));
+	sprintf(__buffer, "%d  ", PPMGen.getChannel(elementIndex));
 	BSP_LCD_DisplayStringAt(left + 10 + FONT_NAME->Width * 3, top + 3, (u8*)__buffer, LEFT_MODE);
-	sprintf(__buffer, "%d", PPMGen.getChannel(elementIndex + 8));
+	sprintf(__buffer, "%d  ", PPMGen.getChannel(elementIndex + 8));
 	BSP_LCD_DisplayStringAt(left + 130 + FONT_NAME->Width * 3, top + 3, (u8*)__buffer, LEFT_MODE);
 }
 
 static void TickOverlay(void)
 {
-	DrawModal(&MonitorDialog);
+	DrawElements(MonitorDialog.Elements, MonitorDialog.ElementsCount);
 }
 
 static bool ClickListItem(uint8_t elementIndex, uint16_t eX, uint16_t eY)

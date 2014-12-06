@@ -75,18 +75,53 @@ void USBH_HID_EventCallback(USBH_HandleTypeDef *phost)
 		return;
 	}
 
-	for (i = 0; i < HID_Handle->length; i++)
-		usb_input_buffer[i + CurrentReportShift] = usb_buffer[i];
+	if (Report_Total_Length > HID_Handle->length)
+	{
+		// check seq here
 
-	CurrentReportShift += HID_Handle->length;
+#ifdef MULTIREP11
+		if (IsMultiReport && CurrentReportShift == 0)
+		{
+			for (i = 0; i < HID_Handle->length - 1; i++)
+				usb_input_buffer[i + CurrentReportShift] = usb_buffer[i + 1];
+
+			CurrentReportShift += HID_Handle->length - 1;
+		}
+		else
+		{
+			for (i = 0; i < HID_Handle->length; i++)
+				usb_input_buffer[i + CurrentReportShift] = usb_buffer[i];
+
+			CurrentReportShift += HID_Handle->length;
+		}
+#else
+		for (i = 0; i < HID_Handle->length; i++)
+			usb_input_buffer[i + CurrentReportShift] = usb_buffer[i];
+
+		CurrentReportShift += HID_Handle->length;
+#endif
+	}
+	else
+	{
+		if (IsMultiReport)
+		{
+			if (usb_buffer[0] != 1) return;
+
+			for (i = 0; i < HID_Handle->length - 1; i++)
+				usb_input_buffer[i + CurrentReportShift] = usb_buffer[i + 1];
+		}
+		else
+		{
+			for (i = 0; i < HID_Handle->length; i++)
+				usb_input_buffer[i + CurrentReportShift] = usb_buffer[i];
+		}
+	}
 
 	if (CurrentReportShift >= Report_Total_Length)
 		CurrentReportShift = 0;
 
 #ifdef DEBUG_USB
 	if (!debug_buffer_active) return;
-
-	
 
 	debug_buffer[0] = HID_Handle->length;
 
