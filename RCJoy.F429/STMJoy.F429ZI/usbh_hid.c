@@ -105,6 +105,8 @@ static USBH_StatusTypeDef USBH_HID_Process(USBH_HandleTypeDef *phost);
 static USBH_StatusTypeDef USBH_HID_SOFProcess(USBH_HandleTypeDef *phost);
 static void  USBH_HID_ParseHIDDesc(HID_DescTypeDef *desc, uint8_t *buf);
 
+extern uint16_t USB_Poll_Time;
+
 //extern USBH_StatusTypeDef USBH_HID_MouseInit(USBH_HandleTypeDef *phost);
 //extern USBH_StatusTypeDef USBH_HID_KeybdInit(USBH_HandleTypeDef *phost);
 
@@ -408,6 +410,7 @@ static USBH_StatusTypeDef USBH_HID_Process(USBH_HandleTypeDef *phost)
     HID_Handle->state = HID_POLL;
     HID_Handle->timer = phost->Timer;
     HID_Handle->DataReady = 0;
+	USB_Poll_Time = 2;
     break;
     
   case HID_POLL:
@@ -419,6 +422,7 @@ static USBH_StatusTypeDef USBH_HID_Process(USBH_HandleTypeDef *phost)
         fifo_write(&HID_Handle->fifo, HID_Handle->pData, HID_Handle->length);
         HID_Handle->DataReady = 1;
         USBH_HID_EventCallback(phost);
+		USB_Poll_Time = HID_Handle->poll;
 #if (USBH_USE_OS == 1)
     osMessagePut ( phost->os_event, USBH_URB_EVENT, 0);
 #endif          
