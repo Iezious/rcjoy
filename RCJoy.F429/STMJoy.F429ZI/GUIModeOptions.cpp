@@ -73,6 +73,7 @@ static ListDef ListBox =
 static bool ActivateOptions()
 {
 	ListBox.Length = code_enabled ? 4 : 6;
+	ListBox.TopVisible = 0;
 	return true;
 }
 

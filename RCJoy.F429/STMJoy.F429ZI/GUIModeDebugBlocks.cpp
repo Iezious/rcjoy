@@ -95,6 +95,7 @@ bool ModeActivate()
 		if (CalcData->Blocks[i].MODEL_IDX == CurrentModelIdx) c++;
 
 	BlocksListBox.Length = c;
+	BlocksListBox.TopVisible = 0;
 	return true;
 }
 

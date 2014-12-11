@@ -97,6 +97,7 @@ bool ModeActivate()
 		if (CalcData->Variables[i].MODEL_IDX == CurrentModelIdx) c++;
 
 	VarsListBox.Length = c;
+	VarsListBox.TopVisible = 0;
 	return true;
 }
 
