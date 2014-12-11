@@ -10,6 +10,7 @@
 #include "def.h"
 #include "conf.h"
 #include "GUI.h"
+#include "functions.h"
 
 GUI GUIRoot;
 
@@ -25,6 +26,7 @@ static uint32_t lastPB = 0;
 static u8 IsNotSavedShown = 0;
 static bool PassiveMode = true;
 static bool PBPressed = false;
+static u16 touchx = 0, touchy = 0;
 
 static TS_StateTypeDef  TS_State;
 
@@ -103,7 +105,6 @@ void GUI::DrawHeader()
 	}
 }
 
-
 static bool ProcessTouch()
 {
 	BSP_TS_GetState(&TS_State);
@@ -139,6 +140,7 @@ static void TrySwitchTab(uint16_t x)
 	GUIRoot.ActivateTab(idx);
 }
 
+
 void GUI::Tick()
 {
 	uint32_t now = HAL_GetTick();
@@ -172,6 +174,14 @@ void GUI::Tick()
 	{
 		if (!PassiveMode && ProcessTouch())
 		{
+			if (
+				(abs((s16)(TS_State.X - touchx)) < 3) &&
+				(abs((s16)(TS_State.Y - touchy)) < 3) &&
+				(now - lastTouch < 500)
+				)
+			{
+				return;
+			}
 
 			if (CurrentModal)
 				ClickModal(CurrentModal, TS_State.X, TS_State.Y);
@@ -181,6 +191,8 @@ void GUI::Tick()
 				ClickMode(ActiveMode, TS_State.X, TS_State.Y);
 
 			lastTouch = now;
+			touchx = TS_State.X;
+			touchy = TS_State.Y;
 		}
 	}
 }

@@ -64,8 +64,8 @@ namespace Tahorg.RCJoyGUI
             {
 
                 if ((Bits & 0x10) == 0x10) return enLinkType.Button;
-                if ((Bits & 0x40) == 0x20) return enLinkType.Value;
-                if ((Bits & 0x20) == 0x40) return enLinkType.Axle;
+                if ((Bits & 0x20) == 0x20) return enLinkType.Value;
+                if ((Bits & 0x40) == 0x40) return enLinkType.Axle;
 
                 LinkType = enLinkType.Axle;
 
@@ -79,10 +79,10 @@ namespace Tahorg.RCJoyGUI
                     case enLinkType.Button:
                         Bits = (ushort)(Bits & 0xFF0F | 0x10);
                         break;
-                    case enLinkType.Axle:
+                    case enLinkType.Value:
                         Bits = (ushort)(Bits & 0xFF0F | 0x20);
                         break;
-                    case enLinkType.Value:
+                    case enLinkType.Axle:
                         Bits = (ushort)(Bits & 0xFF0F | 0x40);
                         break;
                 }
@@ -142,7 +142,7 @@ namespace Tahorg.RCJoyGUI
         {
             Name = el.Title;
             ModelIndex = model.Index;
-            Links = (links ?? el.GetLinks()).Select(l => new STMBlockInkInfo(l)).ToArray();
+            Links = (links ?? el.GetLinks()).Where(l => l.Direction == enLinkDirection.Output || l.LinkedTo != null).Select(l => new STMBlockInkInfo(l)).ToArray();
             Variables = variables != null ? variables.ToArray() : null;
         }
 

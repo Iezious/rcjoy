@@ -322,17 +322,15 @@ bool OKButtonClick(GUIElementDef* btn, u16 x, u16 y)
 {
 	if (!IsValueValid()) return true;
 
-	__Data->OKCallback(__Data->tag, __Value);
-
 	GUIRoot.HideModal();
+	__Data->OKCallback(__Data->tag, __Value);
 	return true;
 }
 
 bool CancelButtonClick(GUIElementDef*, u16, u16)
 {
-	if (__Data->Cancel) __Data->Cancel();
-
 	GUIRoot.HideModal();
+	if (__Data->Cancel) __Data->Cancel();
 	return true;
 }
 

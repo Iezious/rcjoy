@@ -7,7 +7,9 @@
 static void DrawScroll(GUIElementDef* );
 static bool ClickScroll(GUIElementDef*, u16, u16);
 static void DrawList(GUIElementDef* );
+static void DrawBackButton(GUIElementDef*);
 static bool ClickList(GUIElementDef*, u16, u16);
+static bool ClickBackButton(GUIElementDef*, u16, u16);
 static bool ListScrollUp();
 static bool ListScrollDown();
 
@@ -20,9 +22,9 @@ static void BlockModeTick();
 #define COLOR_VARIABLE 0xFFFFFF00
 #define COLOR_EEPROM_VAR 0xFF00FFFF
 
-#define COLOR_AXIS 0xFF000077
+#define COLOR_AXIS 0xFF0000FF
 #define COLOR_BUTTON 0xFFFF0000
-#define COLOR_VALUE 0xFF008080
+#define COLOR_VALUE LCD_COLOR_CYAN
 
 #define FONT_NAME (&Font12)
 #define FONT_VALUE (&Font16)
@@ -41,6 +43,19 @@ static GUIElementDef BlockDataList =
 	0
 };
 
+static GUIElementDef BackButton =
+{
+	20,								//uint16_t Width;
+	TABS_HEIGHT,					//uint16_t Height;
+	SCREEN_WIDTH - 20,		        //uint16_t Left;
+	0,							    //uint16_t Top;
+
+	&DrawBackButton,							//void(*Draw)(void);
+	&ClickBackButton,							//bool(*Click)(uint16_t x, uint16_t y);
+	0,									//void(*Drag)(uint16_t x, uint16_t y);
+	0
+};
+
 
 static GUIElementDef BlocksScroll =
 {
@@ -55,11 +70,11 @@ static GUIElementDef BlocksScroll =
 };
 
 
-static GUIElementDef* Elements[2] = { &BlockDataList,  &BlocksScroll};
+static GUIElementDef* Elements[3] = { &BlockDataList,  &BlocksScroll, &BackButton};
 
 ModalWindowDef BlockDialog =
 {
-	Elements, 2, NULL, NULL, &ListScrollUp, &ListScrollDown, &BlockModeTick
+	Elements, 3, NULL, NULL, &ListScrollUp, &ListScrollDown, &BlockModeTick
 };
 
 static ListDef ListBox =
@@ -124,7 +139,7 @@ static void DrawLinkSymbol(BlockLinkDef* lnk, uint16_t left, uint16_t top, uint1
 	if(lnk->LINK_BITS & LINK_TYPE_AXIS)	
 		BSP_LCD_SetTextColor(COLOR_AXIS);		
 	else if(lnk->LINK_BITS & LINK_TYPE_VALUE)
-		BSP_LCD_SetTextColor(COLOR_VARIABLE);
+		BSP_LCD_SetTextColor(COLOR_VALUE);
 	else 
 		BSP_LCD_SetTextColor(COLOR_BUTTON);
 	
@@ -200,7 +215,7 @@ static void DrawVariable(VariableDef* var, u16 left, u16 top, u16 width)
 
 static void GetItem(u8 idx, u8* obj_idx, u8* isVar)
 {
-	if(idx >= InLinksCount && idx < VarsCount)
+	if (idx >= InLinksCount && idx < InLinksCount + VarsCount)
 	{
 		*isVar = 1;
 		*obj_idx = idx - InLinksCount;
@@ -339,3 +354,14 @@ static void BlockModeTick()
 		DrawListNoClear(&ListBox, &BlockDataList);
 }
 
+static void DrawBackButton(GUIElementDef* el)
+{
+	BSP_LCD_SetTextColor(COLOR_NAME);
+	BSP_LCD_SetFont(&Font16);
+	BSP_LCD_DisplayChar(el->Left + 2, el->Top + 2, 'X');
+}
+
+static bool ClickBackButton(GUIElementDef*, u16, u16)
+{
+	GUIRoot.HideModal();
+}
