@@ -67,6 +67,10 @@ namespace Tahorg.RCJoyGUI
 
             __Settings = new ProjectSettings();
 
+#if !DEBUG
+            captureDebugDataToolStripMenuItem.Visible = false;
+#endif
+
             ReadLastList();
             SetFileState();
         }

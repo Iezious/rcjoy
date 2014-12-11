@@ -28,17 +28,17 @@ namespace Tahorg.RCJoyGUI
 
                 if (pp != null)
                 {
-                    Name = p.MappedValueName;
-                    DataIndex = p.DataMapIdx;
+                    Name = p.Name;
+                    DataIndex = pp.DataMapIdx;
                 }
                 else
                 {
-                    DataIndex = -1;
+                    DataIndex = 0;
                 }
             }
             else
             {
-                Name = p.MappedValueName;
+                Name = p.Name;
                 DataIndex = p.DataMapIdx;
             }
             
@@ -188,8 +188,8 @@ namespace Tahorg.RCJoyGUI
             __out.Write(VarsAddr);
 
             __out.Write(ModelIndex);
-            __out.Write((ushort)Links.Length);
-            __out.Write((ushort)Variables.Length);
+            __out.Write((ushort)(Links != null ? Links.Length : 0));
+            __out.Write((ushort)(Variables != null ? Variables.Length : 0));
             __out.Write((ushort)0);
         }
 
@@ -231,7 +231,7 @@ namespace Tahorg.RCJoyGUI
 
         public void Add(STMBlockInfo block)
         {
-                        
+            Blocks.Add(block);                        
         }
         public void Remap(ref uint Pointer)
         {

@@ -80,7 +80,8 @@ void ShowBlockDebug(BlockDef* block)
 {
 	Block = block;
 	ListBox.Length = block->VarsCount + block->LinkCount + 1;
-	
+	ListBox.TopVisible = 0;
+
 	VarsCount = block->VarsCount;
 	
 	InLinksCount = 0;
@@ -118,7 +119,7 @@ static bool ListScrollDown()
 	return DoListScrollDown(&ListBox, &BlockDataList);
 }
 
-static void DrawLinkSymbol(BlockLinkDef* lnk, uint16_t top, uint16_t left, uint16_t width)
+static void DrawLinkSymbol(BlockLinkDef* lnk, uint16_t left, uint16_t top, uint16_t width)
 {
 	if(lnk->LINK_BITS & LINK_TYPE_AXIS)	
 		BSP_LCD_SetTextColor(COLOR_AXIS);		
@@ -135,7 +136,7 @@ static void DrawLinkSymbol(BlockLinkDef* lnk, uint16_t top, uint16_t left, uint1
 		BSP_LCD_DisplayChar(left + width - FONT_PKS->Width, top + 2, 45);
 }
 
-static void DrawItemName(u8* name, uint16_t top, uint16_t left)
+static void DrawItemName(u8* name, uint16_t left, uint16_t top)
 {
 	BSP_LCD_SetTextColor(COLOR_NAME);
 	BSP_LCD_SetFont(FONT_NAME);
@@ -148,7 +149,7 @@ static void DrawValue(u16 addr, uint16_t left, uint16_t top, uint16_t width)
 
 	BSP_LCD_SetFont(FONT_VALUE);
 	
-	sprintf(__buffer, "%d", get(addr));
+	sprintf(__buffer, "%4d", get(addr));
 	
 	BSP_LCD_DisplayStringAt(
 		left + width - FONT_PKS->Width - 4 - FONT_VALUE->Width * __strlen((u8*)__buffer), 

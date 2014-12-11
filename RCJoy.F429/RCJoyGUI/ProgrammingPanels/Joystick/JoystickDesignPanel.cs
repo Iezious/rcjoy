@@ -225,6 +225,7 @@ namespace Tahorg.RCJoyGUI.ProgrammingPanels
         public override void GenerateJoystick(CodeGeneratorContext context, STMProgram prog)
         {
             __CurrentConfig.GenerateSTMCode(prog, context.ModelCode);
+//            base.GenerateSTMCode(context, prog);
         }
 
 

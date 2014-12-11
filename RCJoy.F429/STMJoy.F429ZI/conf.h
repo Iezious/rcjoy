@@ -16,6 +16,11 @@
 #define STRING_CONSTANTS_SIZE 64
 #define VARIABLES_SIZE 64
 #define MODELS_BLOCKS_SIZE 16
+
+#ifdef DEBUG
+
 #define DEBUG_USB
+
+#endif 
 
 #endif
