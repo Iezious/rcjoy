@@ -6,6 +6,7 @@ using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
@@ -65,6 +66,10 @@ namespace Tahorg.RCJoyGUI
             FillComPorts();
 
             __Settings = new ProjectSettings();
+
+#if !DEBUG
+            captureDebugDataToolStripMenuItem.Visible = false;
+#endif
 
             ReadLastList();
             SetFileState();
@@ -383,6 +388,21 @@ namespace Tahorg.RCJoyGUI
             UpdateJoystics();
         }
 
+        private string[] SplitValues(string data)
+        {
+            var rx = new Regex("[^0-9A-Fa-f]");
+            var ds = rx.Replace(data, "");
+
+            var res = new List<string>();
+            while (ds.Length > 0)
+            {
+                res.Add(ds.Substring(0,2));
+                ds = ds.Substring(2);
+            }
+
+            return res.ToArray();
+        }
+
         private void createFromBoardCaptureToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var dlg = new ParseJoyDialog();
@@ -392,7 +412,7 @@ namespace Tahorg.RCJoyGUI
             try
             {
                 var parser = new DescriptionParser(joy);
-                var data = dlg.DescriptorText.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+                var data = SplitValues(dlg.DescriptorText);
                 parser.Parse(data.Select(s => uint.Parse(s, NumberStyles.HexNumber)).GetEnumerator());
                 joy.VendorID = dlg.VendorID;
                 joy.ProductID = dlg.ProductID;

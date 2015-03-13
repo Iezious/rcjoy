@@ -12,6 +12,7 @@
 #define __ATOMIC_ACQUIRE 2
 #define __SFRACT_IBIT__ 0
 #define __FLT_MIN__ 1.1754943508222875e-38F
+#define __GCC_IEC_559_COMPLEX 0
 #define __UFRACT_MAX__ 0XFFFFP-16UR
 #define __UINT_LEAST8_TYPE__ unsigned char
 #define __DQ_FBIT__ 63
@@ -33,7 +34,9 @@
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_4 1
 #define __DBL_DENORM_MIN__ double(4.9406564584124654e-324L)
 #define __GCC_ATOMIC_CHAR_LOCK_FREE 2
+#define __GCC_IEC_559 0
 #define __FLT_EVAL_METHOD__ 0
+#define __cpp_binary_literals 201304
 #define __LLACCUM_MAX__ 0X7FFFFFFFFFFFFFFFP-31LLK
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define __FRACT_FBIT__ 15
@@ -56,7 +59,7 @@
 #define __FRACT_MAX__ 0X7FFFP-15R
 #define __thumb2__ 1
 #define __UFRACT_FBIT__ 16
-#define __ARM_FP 12
+#define __ARM_FP 4
 #define __UFRACT_MIN__ 0.0UR
 #define __UINT_LEAST8_MAX__ 255
 #define __GCC_ATOMIC_BOOL_LOCK_FREE 2
@@ -159,6 +162,7 @@
 #define __ARM_FEATURE_QBIT 1
 #define STM32F429ZI 1
 #define __INT_FAST64_TYPE__ long long int
+#define __FP_FAST_FMAF 1
 #define __DBL_MIN__ double(2.2250738585072014e-308L)
 #define __FLT_MIN_10_EXP__ (-37)
 #define __LACCUM_MIN__ (-0X1P31LK-0X1P31LK)
@@ -178,12 +182,13 @@
 #define __SFRACT_MIN__ (-0.5HR-0.5HR)
 #define __UTQ_FBIT__ 128
 #define __FLT_MANT_DIG__ 24
-#define __VERSION__ "4.8.2"
+#define __VERSION__ "4.9.2"
 #define __ULLFRACT_FBIT__ 64
 #define __FRACT_EPSILON__ 0x1P-15R
 #define __ULACCUM_MIN__ 0.0ULK
 #define __UDA_FBIT__ 32
 #define __LLACCUM_EPSILON__ 0x1P-31LLK
+#define __ARM_FEATURE_FMA 1
 #define __GCC_ATOMIC_INT_LOCK_FREE 2
 #define __FLOAT_WORD_ORDER__ __ORDER_LITTLE_ENDIAN__
 #define __USFRACT_MIN__ 0.0UHR
@@ -201,6 +206,7 @@
 #define __SIZE_TYPE__ unsigned int
 #define __UINT64_MAX__ 18446744073709551615ULL
 #define __UDQ_FBIT__ 64
+#define DEBUG 1
 #define __INT8_TYPE__ signed char
 #define __thumb__ 1
 #define __ELF__ 1
@@ -231,6 +237,7 @@
 #define __USA_FBIT__ 16
 #define __UINT_FAST16_TYPE__ unsigned int
 #define __DEC64_MAX__ 9.999999999999999E384DD
+#define __ARM_32BIT_STATE 1
 #define __CHAR16_TYPE__ short unsigned int
 #define __PRAGMA_REDEFINE_EXTNAME 1
 #define __INT_LEAST16_MAX__ 32767
@@ -323,7 +330,7 @@
 #define __INTMAX_TYPE__ long long int
 #define __DEC128_MAX_EXP__ 6145
 #define __ATOMIC_CONSUME 1
-#define __GNUC_MINOR__ 8
+#define __GNUC_MINOR__ 9
 #define __UINTMAX_MAX__ 18446744073709551615ULL
 #define __DEC32_MANT_DIG__ 7
 #define __HA_FBIT__ 7
@@ -359,7 +366,6 @@
 #define __QQ_IBIT__ 0
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
-#define DEBUG 
 #endif
 
 // --- Include directories begin --- //
@@ -368,21 +374,22 @@
 //C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/CMSIS/Include
 //C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/CMSIS/RTOS
 //C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/STM32F4xx_HAL_Driver/Inc
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.8.2/../../../../arm-eabi/include/c++/4.8.2
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.8.2/../../../../arm-eabi/include/c++/4.8.2/arm-eabi/thumb/fpu/cortex_m4
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.8.2/../../../../arm-eabi/include/c++/4.8.2/backward
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.8.2/include
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.8.2/include-fixed
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.8.2/../../../../arm-eabi/sys-include
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.8.2/../../../../arm-eabi/include
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2/arm-eabi/thumb/fpu/cortex_m4
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2/backward
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/include
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/include-fixed
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/sys-include
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include
+//.
 // --- Library directories end --- //
 
 
 // --- Library directories begin --- //
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.8.2/thumb/fpu/cortex_m4/
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.8.2/../../../../arm-eabi/lib/thumb/fpu/cortex_m4/
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.8.2/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/thumb/fpu/cortex_m4/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/lib/thumb/fpu/cortex_m4/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/
 //c:/sysgcc/arm-eabi/bin/../lib/gcc/
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.8.2/../../../../arm-eabi/lib/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/lib/
 // --- Library directories begin --- //
 

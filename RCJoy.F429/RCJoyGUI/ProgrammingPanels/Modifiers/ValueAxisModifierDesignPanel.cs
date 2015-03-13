@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.IO;
 using System.Xml.Linq;
 using Tahorg.RCJoyGUI.Data;
 
@@ -81,7 +72,7 @@ namespace Tahorg.RCJoyGUI.ProgrammingPanels
         public override void GenerateSTMCode(CodeGeneratorContext context, STMProgram prog)
         {
             context.ModelCode.Add(0x10, lnkIn.LinkedTo.DataMapIdx, _DataIndex);
-            base.GenerateSTMCode(context, prog);
+         //   base.GenerateSTMCode(context, prog);
         }
 #endif
     }

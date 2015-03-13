@@ -28,6 +28,11 @@
 #define LCD_WORK_WIDTH (SCREEN_WIDTH - LCD_SCROLL_WIDTH)
 #define LCD_WORK_HEIGHT (SCREEN_HEIGHT - TABS_HEIGHT)
 
+#define GUI_COLOR_DEFAULT 0xFFCCCCCC
+#define GUI_COLOR_DARK 0xFF777777
+#define GUI_COLOR_HL 0xFFFFFFFF
+#define GUI_COLOR_GREEN 0xFF77FF77
+#define GUI_COLOR_RED 0xFFFF7777
 
 class GUI
 {
@@ -91,12 +96,14 @@ public:
 	void ShowModal(ModalWindowDef* modal)
 	{
 	  CurrentModal = modal;
+	  BSP_LCD_Clear(MAIN_BACK_COLOR);
 	  Draw();
 	}
 	
 	 void HideModal()
 	 {
     CurrentModal = 0;
+    BSP_LCD_Clear(MAIN_BACK_COLOR);
     Draw();
 	 }
 };

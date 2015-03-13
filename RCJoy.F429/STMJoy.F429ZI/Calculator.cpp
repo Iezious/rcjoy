@@ -19,6 +19,7 @@ extern "C" void GetJoyInfo(uint16_t *pVendor, uint16_t *pProduct);
 
 extern "C" void  USBStartCollectingDebug();
 extern "C" void USBGetCollectedDebug(uint8_t** b, uint32_t *len);
+extern "C" void USBGetStatuses(uint8_t *b);
 
 
 #endif
@@ -164,6 +165,17 @@ void GetUSBDebugCOllected(uint8_t* b, uint32_t l, uint8_t **ab, uint32_t *al)
 	USBGetCollectedDebug(ab, al);
 }
 
+void GetUSBStateBytes(uint8_t* b, uint32_t l, uint8_t **ab, uint32_t *al)
+{
+	static u8 USBStates[10];
+	USBGetStatuses(USBStates);
+
+	*ab = USBStates;
+	*al = 10;
+}
+
+
+
 #endif
 
 static uint8_t VendorData[4];
@@ -202,6 +214,7 @@ void InitCalc()
 #ifdef DEBUG_USB
 	COMCOM.RegisterCommand(0x0B, &StartUSBDebug);
 	COMCOM.RegisterCommand(0x0C, &GetUSBDebugCOllected);
+	COMCOM.RegisterCommand(0x0D, &GetUSBStateBytes);
 #endif
 }
 

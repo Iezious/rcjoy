@@ -60,12 +60,146 @@
     <Filter Include="GUI\NumDialog">
       <UniqueIdentifier>{0633d0f8-ad7b-48ba-b67c-863ea9397f29}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GUI\ModeDebug">
+      <UniqueIdentifier>{de622c5b-1da4-4ead-8aec-fc5569072e99}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\startup_stm32f4xx.c">
-      <Filter>Libraries\Sources</Filter>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="stm32f4xx_it.c">
+      <Filter>startup_files</Filter>
+    </ClCompile>
+    <ClCompile Include="stm32f429i_discovery.c">
+      <Filter>BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="font8.c">
+      <Filter>BSP\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="font12.c">
+      <Filter>BSP\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="font16.c">
+      <Filter>BSP\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="font20.c">
+      <Filter>BSP\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="font24.c">
+      <Filter>BSP\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ComCom.cpp">
+      <Filter>Communications</Filter>
+    </ClCompile>
+    <ClCompile Include="functions.cpp">
+      <Filter>Calculations</Filter>
+    </ClCompile>
+    <ClCompile Include="Calculator.cpp">
+      <Filter>Calculations</Filter>
+    </ClCompile>
+    <ClCompile Include="CalcMap.cpp">
+      <Filter>Calculations</Filter>
+    </ClCompile>
+    <ClCompile Include="PPMGenerator.cpp">
+      <Filter>PPMGen</Filter>
+    </ClCompile>
+    <ClCompile Include="EEPRom.cpp">
+      <Filter>Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="Picts.c">
+      <Filter>BSP\Fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusBox.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp" />
+    <ClCompile Include="usbh_hid.c">
+      <Filter>BSP\USBLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="usb_host.c">
+      <Filter>BSP\USBLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="usbh_conf.c">
+      <Filter>BSP\USBLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="stm32f429i_discovery_io.c">
+      <Filter>BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="stm32f429i_discovery_lcd.c">
+      <Filter>BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="stm32f429i_discovery_sdram.c">
+      <Filter>BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="stm32f429i_discovery_ts.c">
+      <Filter>BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="stmpe811.c">
+      <Filter>BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="ili9341.c">
+      <Filter>BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="gpio.c">
+      <Filter>BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="usbh_hid_common.c">
+      <Filter>BSP\USBLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIElement.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIMode.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIModeFlight.cpp">
+      <Filter>GUI\FlightMode</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIModelListMode.cpp">
+      <Filter>GUI\ModelSelect</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIModeVars.cpp">
+      <Filter>GUI\VarsMode</Filter>
+    </ClCompile>
+    <ClCompile Include="NumInputOverlay.cpp">
+      <Filter>GUI\NumDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIModal.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ComProg.cpp">
+      <Filter>Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="DescriptorParser.cpp">
+      <Filter>BSP\USBLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorOverlay.cpp">
+      <Filter>GUI\OptionsMode</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIModeOptions.cpp">
+      <Filter>GUI\OptionsMode</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfirmOverlay.cpp">
+      <Filter>GUI</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c">
+      <Filter>Libraries\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_core.c">
+      <Filter>Libraries\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_ctlreq.c">
+      <Filter>Libraries\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_ioreq.c">
+      <Filter>Libraries\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_pipes.c">
+      <Filter>Libraries\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\startup_stm32f4xx.c">
       <Filter>Libraries\Sources</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c">
@@ -239,127 +373,159 @@
     <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usb.c">
       <Filter>Libraries\Sources</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="stm32f4xx_it.c">
-      <Filter>startup_files</Filter>
+    <ClCompile Include="GUIModeBlock.cpp">
+      <Filter>GUI\ModeDebug</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_core.c">
-      <Filter>Libraries\Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_ctlreq.c">
-      <Filter>Libraries\Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_ioreq.c">
-      <Filter>Libraries\Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_pipes.c">
-      <Filter>Libraries\Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="stm32f429i_discovery.c">
-      <Filter>BSP</Filter>
-    </ClCompile>
-    <ClCompile Include="font8.c">
-      <Filter>BSP\Fonts</Filter>
-    </ClCompile>
-    <ClCompile Include="font12.c">
-      <Filter>BSP\Fonts</Filter>
-    </ClCompile>
-    <ClCompile Include="font16.c">
-      <Filter>BSP\Fonts</Filter>
-    </ClCompile>
-    <ClCompile Include="font20.c">
-      <Filter>BSP\Fonts</Filter>
-    </ClCompile>
-    <ClCompile Include="font24.c">
-      <Filter>BSP\Fonts</Filter>
-    </ClCompile>
-    <ClCompile Include="GUI.cpp">
-      <Filter>GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="ComCom.cpp">
-      <Filter>Communications</Filter>
-    </ClCompile>
-    <ClCompile Include="functions.cpp">
-      <Filter>Calculations</Filter>
-    </ClCompile>
-    <ClCompile Include="Calculator.cpp">
-      <Filter>Calculations</Filter>
-    </ClCompile>
-    <ClCompile Include="CalcMap.cpp">
-      <Filter>Calculations</Filter>
-    </ClCompile>
-    <ClCompile Include="PPMGenerator.cpp">
-      <Filter>PPMGen</Filter>
-    </ClCompile>
-    <ClCompile Include="EEPRom.cpp">
-      <Filter>Storage</Filter>
-    </ClCompile>
-    <ClCompile Include="Picts.c">
-      <Filter>BSP\Fonts</Filter>
-    </ClCompile>
-    <ClCompile Include="StatusBox.cpp">
-      <Filter>GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="Time.cpp" />
-    <ClCompile Include="usbh_hid.c">
-      <Filter>BSP\USBLIB</Filter>
-    </ClCompile>
-    <ClCompile Include="usb_host.c">
-      <Filter>BSP\USBLIB</Filter>
-    </ClCompile>
-    <ClCompile Include="usbh_conf.c">
-      <Filter>BSP\USBLIB</Filter>
-    </ClCompile>
-    <ClCompile Include="stm32f429i_discovery_io.c">
-      <Filter>BSP</Filter>
-    </ClCompile>
-    <ClCompile Include="stm32f429i_discovery_lcd.c">
-      <Filter>BSP</Filter>
-    </ClCompile>
-    <ClCompile Include="stm32f429i_discovery_sdram.c">
-      <Filter>BSP</Filter>
-    </ClCompile>
-    <ClCompile Include="stm32f429i_discovery_ts.c">
-      <Filter>BSP</Filter>
-    </ClCompile>
-    <ClCompile Include="stmpe811.c">
-      <Filter>BSP</Filter>
-    </ClCompile>
-    <ClCompile Include="ili9341.c">
-      <Filter>BSP</Filter>
-    </ClCompile>
-    <ClCompile Include="gpio.c">
-      <Filter>BSP</Filter>
-    </ClCompile>
-    <ClCompile Include="usbh_hid_common.c">
-      <Filter>BSP\USBLIB</Filter>
-    </ClCompile>
-    <ClCompile Include="GUIElement.cpp">
-      <Filter>GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="GUIMode.cpp">
-      <Filter>GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="GUIModeFlight.cpp">
-      <Filter>GUI\FlightMode</Filter>
-    </ClCompile>
-    <ClCompile Include="GUIModelListMode.cpp">
-      <Filter>GUI\ModelSelect</Filter>
-    </ClCompile>
-    <ClCompile Include="GUIModeVars.cpp">
-      <Filter>GUI\VarsMode</Filter>
-    </ClCompile>
-    <ClCompile Include="NumInputOverlay.cpp">
-      <Filter>GUI\NumDialog</Filter>
-    </ClCompile>
-    <ClCompile Include="GUIModal.cpp">
-      <Filter>GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="ComProg.cpp">
-      <Filter>Storage</Filter>
+    <ClCompile Include="GUIModeDebugBlocks.cpp">
+      <Filter>GUI\ModeDebug</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="stm32f4xx_hal_conf.h" />
+    <ClInclude Include="gcc_Debug.h">
+      <Filter>startup_files</Filter>
+    </ClInclude>
+    <ClInclude Include="gcc_Release.h">
+      <Filter>startup_files</Filter>
+    </ClInclude>
+    <ClInclude Include="stm32f4xx_it.h">
+      <Filter>startup_files</Filter>
+    </ClInclude>
+    <ClInclude Include="stm32f429i_discovery.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="fonts.h">
+      <Filter>BSP\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="io.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="lcd.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="font8.h">
+      <Filter>BSP\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="font12.h">
+      <Filter>BSP\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="font16.h">
+      <Filter>BSP\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="font20.h">
+      <Filter>BSP\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="font24.h">
+      <Filter>BSP\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CalcMap.h">
+      <Filter>Calculations</Filter>
+    </ClInclude>
+    <ClInclude Include="Calculator.h">
+      <Filter>Calculations</Filter>
+    </ClInclude>
+    <ClInclude Include="functions.h">
+      <Filter>Calculations</Filter>
+    </ClInclude>
+    <ClInclude Include="ComCom.h">
+      <Filter>Communications</Filter>
+    </ClInclude>
+    <ClInclude Include="PPMGenerator.h">
+      <Filter>PPMGen</Filter>
+    </ClInclude>
+    <ClInclude Include="EEPRom.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="fontPkts.h">
+      <Filter>BSP\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusBox.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="conf.h" />
+    <ClInclude Include="def.h" />
+    <ClInclude Include="Time.h" />
+    <ClInclude Include="usbh_hid.h">
+      <Filter>BSP\USBLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="usbh_hid_usage.h">
+      <Filter>BSP\USBLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="usb_host.h">
+      <Filter>BSP\USBLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="usbh_conf.h">
+      <Filter>BSP\USBLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="stm32f429i_discovery_io.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="stm32f429i_discovery_lcd.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="stm32f429i_discovery_sdram.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="stm32f429i_discovery_ts.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="stmpe811.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="ili9341.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="ts.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="tsensor.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="gpio.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="usbh_hid_common.h">
+      <Filter>BSP\USBLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIElement.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIMode.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIModal.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIModeFlight.h">
+      <Filter>GUI\FlightMode</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIModelListMode.h">
+      <Filter>GUI\ModelSelect</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIModeVars.h">
+      <Filter>GUI\VarsMode</Filter>
+    </ClInclude>
+    <ClInclude Include="NumInputOverlay.h">
+      <Filter>GUI\NumDialog</Filter>
+    </ClInclude>
+    <ClInclude Include="ComProg.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="DescriptorParser.h">
+      <Filter>BSP\USBLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorOverlay.h">
+      <Filter>GUI\OptionsMode</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIModeOptions.h">
+      <Filter>GUI\OptionsMode</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfirmOverlay.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h">
       <Filter>Libraries\Headers</Filter>
     </ClInclude>
@@ -436,6 +602,21 @@
       <Filter>Libraries\Headers</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\RTOS\cmsis_os.h">
+      <Filter>Libraries\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_core.h">
+      <Filter>Libraries\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_ctlreq.h">
+      <Filter>Libraries\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_def.h">
+      <Filter>Libraries\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_ioreq.h">
+      <Filter>Libraries\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_pipes.h">
       <Filter>Libraries\Headers</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h">
@@ -615,153 +796,11 @@
     <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h">
       <Filter>Libraries\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="stm32f4xx_hal_conf.h" />
-    <ClInclude Include="gcc_Debug.h">
-      <Filter>startup_files</Filter>
+    <ClInclude Include="GUIModeBlock.h">
+      <Filter>GUI\ModeDebug</Filter>
     </ClInclude>
-    <ClInclude Include="gcc_Release.h">
-      <Filter>startup_files</Filter>
-    </ClInclude>
-    <ClInclude Include="stm32f4xx_it.h">
-      <Filter>startup_files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_core.h">
-      <Filter>Libraries\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_ctlreq.h">
-      <Filter>Libraries\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_def.h">
-      <Filter>Libraries\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_ioreq.h">
-      <Filter>Libraries\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_pipes.h">
-      <Filter>Libraries\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="stm32f429i_discovery.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="fonts.h">
-      <Filter>BSP\Fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="io.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="lcd.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="font8.h">
-      <Filter>BSP\Fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="font12.h">
-      <Filter>BSP\Fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="font16.h">
-      <Filter>BSP\Fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="font20.h">
-      <Filter>BSP\Fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="font24.h">
-      <Filter>BSP\Fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="GUI.h">
-      <Filter>GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="CalcMap.h">
-      <Filter>Calculations</Filter>
-    </ClInclude>
-    <ClInclude Include="Calculator.h">
-      <Filter>Calculations</Filter>
-    </ClInclude>
-    <ClInclude Include="functions.h">
-      <Filter>Calculations</Filter>
-    </ClInclude>
-    <ClInclude Include="ComCom.h">
-      <Filter>Communications</Filter>
-    </ClInclude>
-    <ClInclude Include="PPMGenerator.h">
-      <Filter>PPMGen</Filter>
-    </ClInclude>
-    <ClInclude Include="EEPRom.h">
-      <Filter>Storage</Filter>
-    </ClInclude>
-    <ClInclude Include="fontPkts.h">
-      <Filter>BSP\Fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="StatusBox.h">
-      <Filter>GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="conf.h" />
-    <ClInclude Include="def.h" />
-    <ClInclude Include="Time.h" />
-    <ClInclude Include="usbh_hid.h">
-      <Filter>BSP\USBLIB</Filter>
-    </ClInclude>
-    <ClInclude Include="usbh_hid_usage.h">
-      <Filter>BSP\USBLIB</Filter>
-    </ClInclude>
-    <ClInclude Include="usb_host.h">
-      <Filter>BSP\USBLIB</Filter>
-    </ClInclude>
-    <ClInclude Include="usbh_conf.h">
-      <Filter>BSP\USBLIB</Filter>
-    </ClInclude>
-    <ClInclude Include="stm32f429i_discovery_io.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="stm32f429i_discovery_lcd.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="stm32f429i_discovery_sdram.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="stm32f429i_discovery_ts.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="stmpe811.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="ili9341.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="ts.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="tsensor.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="gpio.h">
-      <Filter>BSP</Filter>
-    </ClInclude>
-    <ClInclude Include="usbh_hid_common.h">
-      <Filter>BSP\USBLIB</Filter>
-    </ClInclude>
-    <ClInclude Include="GUIElement.h">
-      <Filter>GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="GUIMode.h">
-      <Filter>GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="GUIModal.h">
-      <Filter>GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="GUIModeFlight.h">
-      <Filter>GUI\FlightMode</Filter>
-    </ClInclude>
-    <ClInclude Include="GUIModelListMode.h">
-      <Filter>GUI\ModelSelect</Filter>
-    </ClInclude>
-    <ClInclude Include="GUIModeVars.h">
-      <Filter>GUI\VarsMode</Filter>
-    </ClInclude>
-    <ClInclude Include="NumInputOverlay.h">
-      <Filter>GUI\NumDialog</Filter>
-    </ClInclude>
-    <ClInclude Include="ComProg.h">
-      <Filter>Storage</Filter>
+    <ClInclude Include="GUIModeDebugBlocks.h">
+      <Filter>GUI\ModeDebug</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

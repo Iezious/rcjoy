@@ -17,23 +17,35 @@ void DrawList(ListDef *list, GUIElementDef* gelem)
 {
 	if (list == NULL) return;
 
-	uint16_t cnt = gelem->Height / (u16) list->ItemHeight;
+	BSP_LCD_SetTextColor(MAIN_BACK_COLOR);
+	BSP_LCD_FillRect(gelem->Left, gelem->Top, gelem->Width, gelem->Height);
+
+	uint16_t cnt = gelem->Height / (u16)list->ItemHeight;
 
 	for (uint16_t i = 0; i < cnt; i++)
 	{
 		uint8_t curIdx = list->TopVisible + i;
 		uint16_t top = gelem->Top + list->ItemHeight * i;
 
-		if (curIdx < list->Length)
-		{
-			list->DrawElement(curIdx, gelem->Left, top, gelem->Width);
-		}
-		else
-		{
-			BSP_LCD_SetTextColor(MAIN_BACK_COLOR);
-			BSP_LCD_FillRect(gelem->Left, top, gelem->Width, gelem->Height - top);
-			break;
-		}
+		if (curIdx >= list->Length) break;
+		list->DrawElement(curIdx, gelem->Left, top, gelem->Width);
+	}
+}
+
+
+void DrawListNoClear(ListDef *list, GUIElementDef* gelem)
+{
+	if (list == NULL) return;
+
+	uint16_t cnt = gelem->Height / (u16)list->ItemHeight;
+
+	for (uint16_t i = 0; i < cnt; i++)
+	{
+		uint8_t curIdx = list->TopVisible + i;
+		uint16_t top = gelem->Top + list->ItemHeight * i;
+
+		if (curIdx >= list->Length) break;
+		list->DrawElement(curIdx, gelem->Left, top, gelem->Width);
 	}
 }
 
@@ -58,7 +70,7 @@ void DrawScrollBar(GUIElementDef *sb, uint8_t total, uint8_t visible, uint8_t cu
 
 	BSP_LCD_SetTextColor(MAIN_FRONT_COLOR);
 
-	BSP_LCD_DrawVLine(sb->Left + sb->Width/2, sb->Top, sb->Height);
+	BSP_LCD_DrawVLine(sb->Left + sb->Width / 2, sb->Top, sb->Height);
 
 	uint32_t h = sb->Height * (u32)visible / (u32)total;
 	uint32_t t = sb->Height * (u32)current_top / (u32)total;
@@ -69,9 +81,9 @@ void DrawScrollBar(GUIElementDef *sb, uint8_t total, uint8_t visible, uint8_t cu
 
 	CurrentSBInfo.current = current_top;
 	CurrentSBInfo.total = total;
-	CurrentSBInfo.visible = visible; 
+	CurrentSBInfo.visible = visible;
 
-	BSP_LCD_DrawRect(sb->Left + 3, sb->Top + t, sb->Width-6, h);
+	BSP_LCD_DrawRect(sb->Left + 3, sb->Top + t, sb->Width - 6, h);
 }
 
 
@@ -100,5 +112,29 @@ bool ScrollBarClick(uint16_t y)
 	}
 
 	return false;
+}
+
+bool DoListScrollUp(ListDef *list, GUIElementDef* elem)
+{
+	uint16_t total = elem->Height / list->ItemHeight;
+	if (list->TopVisible < total)
+		list->TopVisible = 0;
+	else
+		list->TopVisible -= total;
+
+	GUIRoot.DrawContent();
+	return true;
+}
+
+bool DoListScrollDown(ListDef *list, GUIElementDef* elem)
+{
+	uint16_t total = elem->Height / list->ItemHeight;
+	list->TopVisible += total;
+
+	if (list->TopVisible > list->Length - total)
+		list->TopVisible = list->Length - total;
+
+	GUIRoot.DrawContent();
+	return true;
 }
 

@@ -39,7 +39,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeIncludeSearchPath>$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\RTOS;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc;c:\sysgcc\arm-eabi\arm-eabi\include\c++\4.8.2;c:\sysgcc\arm-eabi\arm-eabi\include\c++\4.8.2\arm-eabi\thumb\fpu\cortex_m4;c:\sysgcc\arm-eabi\arm-eabi\include\c++\4.8.2\backward;c:\sysgcc\arm-eabi\lib\gcc\arm-eabi\4.8.2\include;c:\sysgcc\arm-eabi\lib\gcc\arm-eabi\4.8.2\include-fixed;c:\sysgcc\arm-eabi\arm-eabi\sys-include;c:\sysgcc\arm-eabi\arm-eabi\include;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Class\HID\Inc;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath>$(ProjectDir)\.;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\RTOS;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\;c:\sysgcc\arm-eabi\arm-eabi\include\c++\4.9.2;c:\sysgcc\arm-eabi\arm-eabi\include\c++\4.9.2\arm-eabi\thumb\fpu\cortex_m4;c:\sysgcc\arm-eabi\arm-eabi\include\c++\4.9.2\backward;c:\sysgcc\arm-eabi\lib\gcc\arm-eabi\4.9.2\include;c:\sysgcc\arm-eabi\lib\gcc\arm-eabi\4.9.2\include-fixed;c:\sysgcc\arm-eabi\arm-eabi\sys-include;c:\sysgcc\arm-eabi\arm-eabi\include;$(ProjectDir)\.;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
     <NMakeForcedIncludes>$(ProjectDir)\gcc_Debug.h;$(VISUALGDB_DIR)\gcc_compat.h;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\stm32_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
     <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
     <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
@@ -132,6 +132,8 @@
     <ClCompile Include="Calculator.cpp" />
     <ClCompile Include="ComCom.cpp" />
     <ClCompile Include="ComProg.cpp" />
+    <ClCompile Include="ConfirmOverlay.cpp" />
+    <ClCompile Include="DescriptorParser.cpp" />
     <ClCompile Include="EEPRom.cpp" />
     <ClCompile Include="font12.c" />
     <ClCompile Include="font16.c" />
@@ -144,11 +146,15 @@
     <ClCompile Include="GUIElement.cpp" />
     <ClCompile Include="GUIModal.cpp" />
     <ClCompile Include="GUIMode.cpp" />
+    <ClCompile Include="GUIModeBlock.cpp" />
+    <ClCompile Include="GUIModeDebugBlocks.cpp" />
     <ClCompile Include="GUIModeFlight.cpp" />
     <ClCompile Include="GUIModelListMode.cpp" />
+    <ClCompile Include="GUIModeOptions.cpp" />
     <ClCompile Include="ili9341.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GUIModeVars.cpp" />
+    <ClCompile Include="MonitorOverlay.cpp" />
     <ClCompile Include="NumInputOverlay.cpp" />
     <ClCompile Include="Picts.c" />
     <ClCompile Include="PPMGenerator.cpp" />
@@ -262,7 +268,9 @@
     <ClInclude Include="ComCom.h" />
     <ClInclude Include="ComProg.h" />
     <ClInclude Include="conf.h" />
+    <ClInclude Include="ConfirmOverlay.h" />
     <ClInclude Include="def.h" />
+    <ClInclude Include="DescriptorParser.h" />
     <ClInclude Include="EEPRom.h" />
     <ClInclude Include="font12.h" />
     <ClInclude Include="font16.h" />
@@ -279,12 +287,16 @@
     <ClInclude Include="GUIElement.h" />
     <ClInclude Include="GUIModal.h" />
     <ClInclude Include="GUIMode.h" />
+    <ClInclude Include="GUIModeBlock.h" />
+    <ClInclude Include="GUIModeDebugBlocks.h" />
     <ClInclude Include="GUIModeFlight.h" />
     <ClInclude Include="GUIModelListMode.h" />
+    <ClInclude Include="GUIModeOptions.h" />
     <ClInclude Include="ili9341.h" />
     <ClInclude Include="io.h" />
     <ClInclude Include="lcd.h" />
     <ClInclude Include="GUIModeVars.h" />
+    <ClInclude Include="MonitorOverlay.h" />
     <ClInclude Include="NumInputOverlay.h" />
     <ClInclude Include="PPMGenerator.h" />
     <ClInclude Include="StatusBox.h" />

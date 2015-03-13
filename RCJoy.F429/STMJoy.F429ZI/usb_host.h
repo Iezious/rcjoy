@@ -32,6 +32,7 @@
   ******************************************************************************
 */
 
+
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __usb_host_H
 #define __usb_host_H
@@ -42,6 +43,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx.h"
 #include "stm32f4xx_hal.h"
+
 
 typedef enum {
   APPLICATION_IDLE = 0,  
@@ -55,6 +57,8 @@ void MX_USB_HOST_Process(void);
 
 
 extern ApplicationTypeDef Appli_state;
+extern uint16_t USB_Poll_Time;
+
 
 #ifdef __cplusplus
 }

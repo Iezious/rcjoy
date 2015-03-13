@@ -229,7 +229,7 @@ namespace Tahorg.RCJoyGUI.ProgrammingPanels
                     variableIdx
                 );
 
-            prog.Blocks.Add(new STMBlockInfo(this, context.CurrentModel, null, new[] { prog.Variables[variableIdx] }));
+            //prog.Blocks.Add(new STMBlockInfo(this, context.CurrentModel, null, new[] { prog.Variables[variableIdx] }));
         }
 #endif
     }

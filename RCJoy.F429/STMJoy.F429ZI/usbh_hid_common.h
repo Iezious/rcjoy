@@ -15,11 +15,13 @@ void USB_HID_ReportReadCallback(USBH_HandleTypeDef *phost);
 uint8_t *USB_HID_GetLastReport();
 void USB_GetReportDescriptor(uint16_t *l, uint8_t **b);
 uint16_t USB_HID_GetReportLength();
+void USB_HID_DataTimeoutCallBack(USBH_HandleTypeDef *phost);
 
 #ifdef DEBUG_USB
 
 void  USBStartCollectingDebug();
 void USBGetCollectedDebug(uint8_t** b, uint32_t *len);
+void USBGetStatuses(uint8_t *b);
 
 #endif
 

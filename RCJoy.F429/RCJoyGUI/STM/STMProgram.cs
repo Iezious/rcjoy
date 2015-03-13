@@ -122,6 +122,7 @@ namespace Tahorg.RCJoyGUI
             StringConstants.WriteTo(writer);
             Models.WriteTo(writer);
             Variables.WriteTo(writer);
+            Blocks.WriteTo(writer);
 
             CommonCode.WriteTo(writer);
             StartupCode.WriteTo(writer);

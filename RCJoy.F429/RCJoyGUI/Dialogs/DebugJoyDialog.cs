@@ -22,13 +22,13 @@ namespace Tahorg.RCJoyGUI.Dialogs
             {
                 lblPortState.Text = Resources.ParseJoyDialog_ParseJoyDialog_Connected;
                 lblPortState.ForeColor = Color.Green;
-                btnComRead.Enabled = true;
+                pnlButtons.Enabled = true;
             }
             else
             {
                 lblPortState.Text = Resources.ParseJoyDialog_ParseJoyDialog_Not_connected;
                 lblPortState.ForeColor = Color.Red;
-                btnComRead.Enabled = false;
+                pnlButtons.Enabled = false;
 
             }
         }
@@ -43,6 +43,33 @@ namespace Tahorg.RCJoyGUI.Dialogs
                 sw.Write(textBox1.Text);
         }
 
+        private void btnReadStates_Click(object sender, EventArgs e)
+        {
+            byte[] bytes;
+
+            if (PortDataComm.SendCommand(0x0D, out bytes) != PortDataComm.CommandStatus.OK)
+            {
+                MessageBox.Show(this, "Error", "Unable to read statuses", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
+                return;
+            }
+
+            textBox1.Lines = new[]
+            {
+                string.Format("Host->gState:{0:X2}", bytes[0]),
+                string.Format("Host->EnumState:{0:X2}", bytes[1]),
+                string.Format("Host->RequestState:{0:X2}", bytes[2]),
+                string.Format("Host->Control.state:{0:X2}", bytes[3]),
+                string.Format("Host->device.speed:{0:X2}", bytes[4]),
+                string.Format("HID->State:{0:X2}", bytes[5]),
+                string.Format("HID->ContrlolState:{0:X2}", bytes[6]),
+                string.Format("ReportLength:{0:0}", bytes[7]),
+                string.Format("MiltiRerport:{0:0}", bytes[8]),
+                string.Format("DataFlow:{0:0}", bytes[9]),
+            };
+        }
+
         private void btnComRead_Click(object sender, EventArgs e)
         {
             byte[] bytes;
@@ -55,8 +82,7 @@ namespace Tahorg.RCJoyGUI.Dialogs
                 return;
             }
 
-            btnComRead.Enabled = false;
-            btnSave.Enabled = false;
+            pnlButtons.Enabled = false;
             lblPortState.ForeColor = Color.Blue;
             textBox1.Text = "";
 
@@ -122,8 +148,9 @@ namespace Tahorg.RCJoyGUI.Dialogs
 
         private void EnableAll()
         {
-            btnComRead.Enabled = true;
-            btnSave.Enabled = true;
+            pnlButtons.Enabled = true;
         }
+
+
     }
 }

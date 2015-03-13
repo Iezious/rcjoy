@@ -19,12 +19,6 @@ static void HeaderDraw(GUIElementDef*);
 static void DefsDraw(GUIElementDef*);
 static void ValueDraw(GUIElementDef*);
 
-#define GUI_COLOR_DEFAULT 0xFFCCCCCC
-#define GUI_COLOR_DARK 0xFF777777
-#define GUI_COLOR_HL 0xFFFFFFFF
-#define GUI_COLOR_GREEN 0xFF77FF77
-#define GUI_COLOR_RED 0xFFFF7777
-
 #define BUTTON_BORDER_COLOR GUI_COLOR_DEFAULT
 #define OK_BUTTON_COLOR GUI_COLOR_GREEN
 #define CANCEL_BUTTON_COLOR GUI_COLOR_RED
@@ -164,7 +158,7 @@ static GUIElementDef* Elements[17] =
 
 static ModalWindowDef NumDialog =
 {
-	Elements, 17, NULL, NULL, NULL, NULL
+	Elements, 17, NULL, NULL, NULL, NULL, NULL
 };
 
 
@@ -328,17 +322,15 @@ bool OKButtonClick(GUIElementDef* btn, u16 x, u16 y)
 {
 	if (!IsValueValid()) return true;
 
-	__Data->OKCallback(__Data->tag, __Value);
-
 	GUIRoot.HideModal();
+	__Data->OKCallback(__Data->tag, __Value);
 	return true;
 }
 
 bool CancelButtonClick(GUIElementDef*, u16, u16)
 {
-	if (__Data->Cancel) __Data->Cancel();
-
 	GUIRoot.HideModal();
+	if (__Data->Cancel) __Data->Cancel();
 	return true;
 }
 

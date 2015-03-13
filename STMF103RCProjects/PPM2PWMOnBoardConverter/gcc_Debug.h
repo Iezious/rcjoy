@@ -37,6 +37,7 @@
 #define __GCC_ATOMIC_CHAR_LOCK_FREE 2
 #define __GCC_IEC_559 0
 #define __FLT_EVAL_METHOD__ 0
+#define __cpp_binary_literals 201304
 #define __LLACCUM_MAX__ 0X7FFFFFFFFFFFFFFFP-31LLK
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define __FRACT_FBIT__ 15
@@ -49,7 +50,7 @@
 #define __ARM_FEATURE_UNALIGNED 1
 #define __ARM_ARCH_7M__ 1
 #define __LFRACT_IBIT__ 0
-#define __GNUC_PATCHLEVEL__ 1
+#define __GNUC_PATCHLEVEL__ 2
 #define __LFRACT_MAX__ 0X7FFFFFFFP-31LR
 #define __UINT_FAST8_MAX__ 4294967295U
 #define __DEC64_MAX_EXP__ 385
@@ -183,7 +184,7 @@
 #define __SFRACT_MIN__ (-0.5HR-0.5HR)
 #define __UTQ_FBIT__ 128
 #define __FLT_MANT_DIG__ 24
-#define __VERSION__ "4.9.1"
+#define __VERSION__ "4.9.2"
 #define __ULLFRACT_FBIT__ 64
 #define __FRACT_EPSILON__ 0x1P-15R
 #define __ULACCUM_MIN__ 0.0ULK
@@ -367,21 +368,21 @@
 //C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F1xxxx/CMSIS/CM3/CoreSupport
 //C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F1xxxx/CMSIS/CM3/DeviceSupport/ST/STM32F10x
 //C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/include/c++/4.9.1
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/include/c++/4.9.1/arm-eabi/thumb/cortex_m3
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/include/c++/4.9.1/backward
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/include
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/include-fixed
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/sys-include
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/include
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2/arm-eabi/thumb/cortex_m3
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2/backward
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/include
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/include-fixed
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/sys-include
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include
 // --- Library directories end --- //
 
 
 // --- Library directories begin --- //
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.1/thumb/cortex_m3/
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/lib/thumb/cortex_m3/
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.1/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/thumb/cortex_m3/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/lib/thumb/cortex_m3/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/
 //c:/sysgcc/arm-eabi/bin/../lib/gcc/
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/lib/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/lib/
 // --- Library directories begin --- //
 

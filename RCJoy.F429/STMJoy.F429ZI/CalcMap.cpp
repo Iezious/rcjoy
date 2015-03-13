@@ -1020,6 +1020,8 @@ static bool MultiHoldSwitch(uint32_t *datapointer)
 
 	set_val(idx_dest + 1, get(idx_dest) != value);
 	set_val(idx_dest, value);
+
+	return true;
 }
 
 

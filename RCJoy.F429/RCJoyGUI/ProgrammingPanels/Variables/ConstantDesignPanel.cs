@@ -155,7 +155,7 @@ namespace Tahorg.RCJoyGUI.ProgrammingPanels
                 prog.StartupCode.Add(0x0D, _DataIndex, short.Parse(tbValue.Text));
             }
 
-            prog.Blocks.Add(new STMBlockInfo(this, context.CurrentModel, null, new []{prog.Variables[variableIdx]}));
+            //prog.Blocks.Add(new STMBlockInfo(this, context.CurrentModel, null, new []{prog.Variables[variableIdx]}));
         }
 
     }

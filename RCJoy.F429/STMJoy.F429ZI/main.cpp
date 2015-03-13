@@ -36,7 +36,10 @@ extern "C" {
 #include "GUIModeFlight.h"
 #include "GUIModelListMode.h"
 #include "GUIModeVars.h"
+#include "GUIModeOptions.h"
 #include "ComProg.h"
+#include "GUIModeDebugBlocks.h"
+
 
 void SystemClock_Config(void)
 {
@@ -78,9 +81,10 @@ void SystemClock_Config(void)
 ComCom COMCOM;
 EEPRom EEPROM;
 PPMGenerator PPMGen;
+bool code_enabled; 
 
-#define MODES_CONT 3
-GUIModeDef *GUIModes[MODES_CONT] = { &ModeFlight, &ModelSelectMode, &ModeVariables };
+#define MODES_CONT 5
+GUIModeDef *GUIModes[MODES_CONT] = { &ModeFlight, &ModelSelectMode, &ModeVariables, &ModeBlocks, &ModeOptions };
 
 
 void ComComEcho(uint8_t* b, uint32_t l, uint8_t **ab, uint32_t *al)
@@ -107,7 +111,7 @@ int main(void)
 //	MX_USART1_UART_Init();
 //	MX_WWDG_Init();
 	HAL_Delay(100);
-	bool code_enabled = (BSP_PB_GetState(BUTTON_KEY) == RESET);
+	code_enabled = (BSP_PB_GetState(BUTTON_KEY) == RESET);
 
 	MX_USB_HOST_Init();
 
@@ -154,7 +158,7 @@ int main(void)
 
 	for (;;)
 	{
-		HAL_Delay(4);
+		HAL_Delay(USB_Poll_Time);
 
 		MX_USB_HOST_Process();
 
