@@ -1,35 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCJoyGUI", "RCJoyGUI\RCJoyGUI.csproj", "{9440DD9B-A9F7-47EE-88AD-F543CB9800A4}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "STMJoy.F429ZI", "STMJoy.F429ZI\STMJoy.F429ZI.vcxproj", "{E888AC25-D6D6-4B91-9ADD-91F278532194}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ST-LINKv2 Probe", "ST-LINKv2 Probe\ST-LINKv2 Probe.csproj", "{A3153543-6F00-444A-AA75-20B0C8417AD6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsbLibrary", "UsbLibrary\UsbLibrary.csproj", "{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{81297221-4985-4EDD-9F99-CAF1A0D831DA}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://rcjoy.visualstudio.com/defaultcollection
-		SccProjectUniqueName0 = RCJoyGUI\\RCJoyGUI.csproj
-		SccProjectName0 = RCJoyGUI
-		SccLocalPath0 = RCJoyGUI
-		SccProjectUniqueName1 = ST-LINKv2\u0020Probe\\ST-LINKv2\u0020Probe.csproj
-		SccProjectName1 = ST-LINKv2\u0020Probe
-		SccLocalPath1 = ST-LINKv2\u0020Probe
-		SccProjectUniqueName2 = STMJoy.F429ZI\\STMJoy.F429ZI.vcxproj
-		SccProjectName2 = STMJoy.F429ZI
-		SccLocalPath2 = STMJoy.F429ZI
-		SccProjectUniqueName3 = UsbLibrary\\UsbLibrary.csproj
-		SccProjectName3 = UsbLibrary
-		SccLocalPath3 = UsbLibrary
-		SccLocalPath4 = .
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug Port407|Any CPU = Debug Port407|Any CPU
 		Debug Port407|Mixed Platforms = Debug Port407|Mixed Platforms
@@ -72,36 +57,6 @@ Global
 		{E888AC25-D6D6-4B91-9ADD-91F278532194}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{E888AC25-D6D6-4B91-9ADD-91F278532194}.Release|Win32.ActiveCfg = Release|Win32
 		{E888AC25-D6D6-4B91-9ADD-91F278532194}.Release|Win32.Build.0 = Release|Win32
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Debug Port407|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Debug Port407|Any CPU.Build.0 = Debug|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Debug Port407|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Debug Port407|Mixed Platforms.Build.0 = Debug|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Debug Port407|Win32.ActiveCfg = Debug|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{A3153543-6F00-444A-AA75-20B0C8417AD6}.Release|Win32.ActiveCfg = Release|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Debug Port407|Any CPU.ActiveCfg = Debug|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Debug Port407|Any CPU.Build.0 = Debug|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Debug Port407|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Debug Port407|Mixed Platforms.Build.0 = Debug|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Debug Port407|Win32.ActiveCfg = Debug|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{71E42A6D-C432-4C03-BF4F-ABFD2A3173E0}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
