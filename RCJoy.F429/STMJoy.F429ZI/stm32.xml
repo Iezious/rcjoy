@@ -2,8 +2,8 @@
 <EmbeddedProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
   <BspID>com.sysprogs.arm.stm32</BspID>
-  <McuID>STM32F429ZI</McuID>
-  <MCUDefinitionFile>devices\stm32f429xx.xml</MCUDefinitionFile>
+  <McuID>STM32F427ZI</McuID>
+  <MCUDefinitionFile>devices\stm32f427xx.xml</MCUDefinitionFile>
   <MCUProperties>
     <Entries>
       <KeyValue>
@@ -13,6 +13,18 @@
       <KeyValue>
         <Key>com.sysprogs.bspoptions.stm32.floatmode</Key>
         <Value>-mfloat-abi=hard</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.toolchainoptions.arm.libctype</Key>
+        <Value />
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.toolchainoptions.arm.compactcpp</Key>
+        <Value>compactcpp</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.toolchainoptions.arm.libnosys</Key>
+        <Value />
       </KeyValue>
     </Entries>
   </MCUProperties>

@@ -3,22 +3,22 @@
 #DO NOT EDIT MANUALLY. THE FILE WILL BE OVERWRITTEN. 
 #Use VisualGDB Project Properties dialog or modify Makefile or per-configuration .mak files instead.
 
-#VisualGDB provides BSP_ROOT via environment when running Make. The line below will only be active if GNU Make is started manually.
-BSP_ROOT ?= C:/Users/SAK/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.stm32
-TOOLCHAIN_ROOT := C:/SysGCC/arm-eabi
+#VisualGDB provides BSP_ROOT and TOOLCHAIN_ROOT via environment when running Make. The line below will only be active if GNU Make is started manually.
+BSP_ROOT ?= C:/Users/sergey-ki/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.stm32
+TOOLCHAIN_ROOT ?= C:/SysGCC/arm-eabi
 
 #Embedded toolchain
 CC := $(TOOLCHAIN_ROOT)/bin/arm-eabi-gcc.exe
 CXX := $(TOOLCHAIN_ROOT)/bin/arm-eabi-g++.exe
 LD := $(CXX)
 AR := $(TOOLCHAIN_ROOT)/bin/arm-eabi-ar.exe
-OBJCOPY := $(TOOLCHAIN_ROOT)/bin/arm-eabi-objcopy.exe 
+OBJCOPY := $(TOOLCHAIN_ROOT)/bin/arm-eabi-objcopy.exe
 
 #Additional flags
-PREPROCESSOR_MACROS += ARM_MATH_CM4 stm32_flash_layout STM32F429ZI STM32F429xx
-INCLUDE_DIRS += . $(BSP_ROOT)/STM32F4xxxx-HAL/CMSIS/Device/ST/STM32F4xx/Include $(BSP_ROOT)/STM32F4xxxx-HAL/CMSIS/Include $(BSP_ROOT)/STM32F4xxxx-HAL/CMSIS/RTOS $(BSP_ROOT)/STM32F4xxxx-HAL/STM32F4xx_HAL_Driver/Inc $(BSP_ROOT)/STM32F4xxxx-HAL/Frameworks/STM32_USB_Host_Library/Core/Inc $(BSP_ROOT)/STM32F4xxxx-HAL/Frameworks/STM32_USB_Host_Library/Class/HID/Inc
+PREPROCESSOR_MACROS += ARM_MATH_CM4 stm32_flash_layout STM32F427ZI STM32F427xx
+INCLUDE_DIRS += . $(BSP_ROOT)/STM32F4xxxx-HAL/CMSIS/Device/ST/STM32F4xx/Include $(BSP_ROOT)/STM32F4xxxx-HAL/CMSIS/Include $(BSP_ROOT)/STM32F4xxxx-HAL/CMSIS/RTOS $(BSP_ROOT)/STM32F4xxxx-HAL/STM32F4xx_HAL_Driver/Inc
 LIBRARY_DIRS += 
-LIBRARY_NAMES += 
+LIBRARY_NAMES += compactcpp
 ADDITIONAL_LINKER_INPUTS += 
 MACOS_FRAMEWORKS += 
 LINUX_PACKAGES += 
@@ -26,6 +26,6 @@ LINUX_PACKAGES +=
 CFLAGS += -mcpu=cortex-m4 -mthumb
 CXXFLAGS += -mcpu=cortex-m4 -mthumb
 ASFLAGS += -mcpu=cortex-m4 -mthumb
-LDFLAGS += -mcpu=cortex-m4 -mthumb  -T$(BSP_ROOT)/STM32F4xxxx-HAL/LinkerScripts/STM32F429xI_flash.lds
+LDFLAGS += -mcpu=cortex-m4 -mthumb -T$(BSP_ROOT)/STM32F4xxxx-HAL/LinkerScripts/STM32F427xI_flash.lds  
 COMMONFLAGS +=  -mfloat-abi=hard
 

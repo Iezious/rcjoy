@@ -63,6 +63,9 @@
     <Filter Include="GUI\ModeDebug">
       <UniqueIdentifier>{de622c5b-1da4-4ead-8aec-fc5569072e99}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource files\Device-specific files">
+      <UniqueIdentifier>{6da6b7d7-96df-4b27-adb1-c55f9501c548}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -801,6 +804,261 @@
     </ClInclude>
     <ClInclude Include="GUIModeDebugBlocks.h">
       <Filter>GUI\ModeDebug</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xe.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f405xx.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f415xx.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f417xx.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f427xx.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f429xx.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f437xx.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f439xx.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\arm_common_tables.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\arm_const_structs.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\arm_math.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\core_cm0.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\core_cm0plus.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\core_cm3.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\core_cm4.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\core_cm4_simd.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\core_cmFunc.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\core_cmInstr.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\core_sc000.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\Include\core_sc300.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\CMSIS\RTOS\cmsis_os.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_can.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_conf_template.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_crc.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cryp.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cryp_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dcmi.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma2d.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_eth.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hash.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hash_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2s_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_irda.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_iwdg.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_ltdc.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_nand.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_nor.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pccard.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rng.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sai.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sd.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sdram.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_smartcard.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_sram.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_wwdg.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_fmc.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_fsmc.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_sdmmc.h">
+      <Filter>Resource files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sergey-ki\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h">
+      <Filter>Resource files\Device-specific files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
