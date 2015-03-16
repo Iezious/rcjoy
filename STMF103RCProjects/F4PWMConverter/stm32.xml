@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<EmbeddedProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+  <BspID>com.sysprogs.arm.stm32</BspID>
+  <McuID>STM32F407ZE</McuID>
+  <MCUDefinitionFile>devices\stm32f407xx.xml</MCUDefinitionFile>
+  <MCUProperties>
+    <Entries>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.primary_memory</Key>
+        <Value>flash</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.stm32.floatmode</Key>
+        <Value>-mfloat-abi=soft</Value>
+      </KeyValue>
+    </Entries>
+  </MCUProperties>
+  <BSPSourceFolderName>Device-specific files</BSPSourceFolderName>
+</EmbeddedProfile>

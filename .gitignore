@@ -14,6 +14,15 @@ x64/
 build/
 [Bb]in/
 [Oo]bj/
+*.ld
+*.o
+*.dep
+*.elf
+*.bin
+*.hex
+VisualGDBCache/
+MemoryUtilizationReport.xml
+
 
 # Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
 !packages/*/build/
@@ -38,6 +47,7 @@ build/
 *.tlh
 *.tmp
 *.tmp_proj
+*.old
 *.log
 *.vspscc
 *.vssscc
@@ -120,6 +130,7 @@ ClientBin/
 
 # RIA/Silverlight projects
 Generated_Code/
+Visual Micro/
 
 # Backup & report files from converting an old project file to a newer
 # Visual Studio version. Backup files are not needed, because we have git ;-)
