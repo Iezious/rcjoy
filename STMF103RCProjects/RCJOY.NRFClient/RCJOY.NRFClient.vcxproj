@@ -87,7 +87,9 @@
     <ClCompile Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" />
     <ClCompile Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" />
     <ClCompile Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c" />
-    <ClCompile Include="LEDBlink.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PPMGenerator.c" />
+    <ClCompile Include="SysTimer.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="debug.mak" />
@@ -122,6 +124,8 @@
     <ClInclude Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" />
     <ClInclude Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h" />
     <ClInclude Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h" />
+    <ClInclude Include="PPMGenerator.h" />
+    <ClInclude Include="SysTimer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

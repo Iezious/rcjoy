@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<EmbeddedProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+  <BspID>com.visualgdb.bsp.in-place</BspID>
+  <McuID>STM32F103C8</McuID>
+  <BSPSubdirectory>BSP</BSPSubdirectory>
+  <MCUProperties>
+    <Entries />
+  </MCUProperties>
+  <BSPSourceFolderName>Device-specific files</BSPSourceFolderName>
+  <InPlaceMCU>
+    <ID>STM32F103C8</ID>
+    <UserFriendlyName>STM32F103C8</UserFriendlyName>
+    <CompilationFlags>
+      <PreprocessorMacros>
+        <string>stm32_flash_layout</string>
+        <string>STM32F103C8</string>
+        <string>STM32F10X_MD</string>
+      </PreprocessorMacros>
+      <IncludeDirectories>
+        <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/CMSIS/CM3/CoreSupport</string>
+        <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/CMSIS/CM3/DeviceSupport/ST/STM32F10x</string>
+        <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc</string>
+      </IncludeDirectories>
+      <AdditionalLibraries>
+        <string>compactcpp</string>
+      </AdditionalLibraries>
+      <CFLAGS>-mcpu=cortex-m3 -mthumb</CFLAGS>
+      <CXXFLAGS>-mcpu=cortex-m3 -mthumb</CXXFLAGS>
+      <LDFLAGS>-mcpu=cortex-m3 -mthumb -TD:/GITRoot/rcjoy.default/STMF103RCProjects/RCJOY.NRFClient/BSP/STM32F103x8_flash.lds</LDFLAGS>
+      <ASFLAGS>-mcpu=cortex-m3 -mthumb</ASFLAGS>
+      <COMMONFLAGS />
+      <EnableLinkerGroups>true</EnableLinkerGroups>
+    </CompilationFlags>
+    <AdditionalSourceFiles>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/CMSIS/CM3/CoreSupport/core_cm3.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/CMSIS/CM3/DeviceSupport/ST/STM32F10x/system_stm32f10x.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/misc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/Startup/startup_stm32f10x_md.c</string>
+    </AdditionalSourceFiles>
+    <AdditionalHeaderFiles>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/CMSIS/CM3/CoreSupport/core_cm3.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/CMSIS/CM3/DeviceSupport/ST/STM32F10x/stm32f10x.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/CMSIS/CM3/DeviceSupport/ST/STM32F10x/system_stm32f10x.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/misc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_adc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_bkp.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_can.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_cec.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_crc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_dac.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_dbgmcu.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_dma.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_exti.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_flash.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_fsmc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_gpio.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_i2c.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_iwdg.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_pwr.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_rcc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_rtc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_sdio.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_spi.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_tim.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F1xxxx/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h</string>
+    </AdditionalHeaderFiles>
+    <AdditionalSystemVars>
+      <SysVarEntry>
+        <Key>com.sysprogs.arm.stm32.periph_prefix</Key>
+        <Value>stm32f10x</Value>
+      </SysVarEntry>
+    </AdditionalSystemVars>
+    <ConfigurableProperties>
+      <PropertyGroups>
+        <PropertyGroup>
+          <Properties>
+            <PropertyEntry xsi:type="Enumerated">
+              <Name>Execute from</Name>
+              <UniqueID>com.sysprogs.bspoptions.primary_memory</UniqueID>
+              <OmitPrefixIfEmpty>false</OmitPrefixIfEmpty>
+              <SuggestionList>
+                <Suggestion>
+                  <UserFriendlyName>FLASH</UserFriendlyName>
+                  <InternalValue>flash</InternalValue>
+                </Suggestion>
+                <Suggestion>
+                  <UserFriendlyName>SRAM</UserFriendlyName>
+                  <InternalValue>sram</InternalValue>
+                </Suggestion>
+              </SuggestionList>
+              <DefaultEntryIndex>0</DefaultEntryIndex>
+              <AllowFreeEntry>false</AllowFreeEntry>
+            </PropertyEntry>
+            <PropertyEntry xsi:type="Enumerated">
+              <Name>C Library Type</Name>
+              <UniqueID>com.sysprogs.toolchainoptions.arm.libctype</UniqueID>
+              <OmitPrefixIfEmpty>false</OmitPrefixIfEmpty>
+              <SuggestionList>
+                <Suggestion>
+                  <UserFriendlyName>Default</UserFriendlyName>
+                  <InternalValue />
+                </Suggestion>
+                <Suggestion>
+                  <UserFriendlyName>Newlib-nano</UserFriendlyName>
+                  <InternalValue>--specs=nano.specs</InternalValue>
+                </Suggestion>
+                <Suggestion>
+                  <UserFriendlyName>Newlib-nano with floating point support in printf()</UserFriendlyName>
+                  <InternalValue>--specs=nano.specs -u _printf_float</InternalValue>
+                </Suggestion>
+                <Suggestion>
+                  <UserFriendlyName>Newlib-nano with floating point support in printf() and scanf()</UserFriendlyName>
+                  <InternalValue>--specs=nano.specs -u printf_float -u _scanf_float</InternalValue>
+                </Suggestion>
+              </SuggestionList>
+              <DefaultEntryIndex>0</DefaultEntryIndex>
+              <AllowFreeEntry>false</AllowFreeEntry>
+            </PropertyEntry>
+            <PropertyEntry xsi:type="Boolean">
+              <Name>Reduce the size of C++ binaries</Name>
+              <UniqueID>com.sysprogs.toolchainoptions.arm.compactcpp</UniqueID>
+              <OmitPrefixIfEmpty>false</OmitPrefixIfEmpty>
+              <DefaultValue>true</DefaultValue>
+              <ValueForTrue>compactcpp</ValueForTrue>
+            </PropertyEntry>
+            <PropertyEntry xsi:type="Boolean">
+              <Name>Provide default stubs for system calls</Name>
+              <UniqueID>com.sysprogs.toolchainoptions.arm.libnosys</UniqueID>
+              <OmitPrefixIfEmpty>false</OmitPrefixIfEmpty>
+              <DefaultValue>false</DefaultValue>
+              <ValueForTrue>--specs=nosys.specs</ValueForTrue>
+            </PropertyEntry>
+          </Properties>
+          <CollapsedByDefault>false</CollapsedByDefault>
+        </PropertyGroup>
+      </PropertyGroups>
+    </ConfigurableProperties>
+    <HierarchicalPath>STM32\STM32F1xxxx</HierarchicalPath>
+    <FamilyID>STM32F1xxxx</FamilyID>
+    <FLASHSize>65536</FLASHSize>
+    <RAMSize>20480</RAMSize>
+    <FLASHBase>134217728</FLASHBase>
+    <RAMBase>536870912</RAMBase>
+    <MCUDefinitionFile>devices\STM32F1xxxx_MD.xml</MCUDefinitionFile>
+  </InPlaceMCU>
+  <MCUMakFile>stm32.mak</MCUMakFile>
+</EmbeddedProfile>
