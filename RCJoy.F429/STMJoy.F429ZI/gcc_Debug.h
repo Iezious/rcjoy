@@ -370,10 +370,11 @@
 
 // --- Include directories begin --- //
 //.
-//C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/CMSIS/Device/ST/STM32F4xx/Include
-//C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/CMSIS/Include
-//C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/CMSIS/RTOS
-//C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/STM32F4xx_HAL_Driver/Inc
+//D:/GITRoot/rcjoy.default/RCJoy.F429/STMJoy.F429ZI/BSP/STM32F4xxxx-HAL/CMSIS/Device/ST/STM32F4xx/Include
+//D:/GITRoot/rcjoy.default/RCJoy.F429/STMJoy.F429ZI/BSP/STM32F4xxxx-HAL/CMSIS/Include
+//D:/GITRoot/rcjoy.default/RCJoy.F429/STMJoy.F429ZI/BSP/STM32F4xxxx-HAL/CMSIS/RTOS
+//D:/GITRoot/rcjoy.default/RCJoy.F429/STMJoy.F429ZI/BSP/STM32F4xxxx-HAL/STM32F4xx_HAL_Driver/Inc
+//D:/GITRoot/rcjoy.default/RCJoy.F429/STMJoy.F429ZI/BSP/STM32F4xxxx-HAL/Frameworks/STM32_USB_Host_Library/Core/Inc
 //c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2
 //c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2/arm-eabi/thumb/fpu/cortex_m4
 //c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2/backward
