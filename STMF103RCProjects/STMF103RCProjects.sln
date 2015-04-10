@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PWMCollector", "PWMCollector\PWMCollector.vcxproj", "{3F232412-7F63-4202-91EF-50CC0821A0D2}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PPM2PWMOnBoardConverter", "PPM2PWMOnBoardConverter\PPM2PWMOnBoardConverter.vcxproj", "{16DE6585-1203-4EA1-9E0E-0383FF042EF3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "F4PWMConverter", "F4PWMConverter\F4PWMConverter.vcxproj", "{24250F12-B27B-4AD6-B5FE-630ADB7DADBB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RCJOY.NRFClient", "RCJOY.NRFClient\RCJOY.NRFClient.vcxproj", "{2CDEFA9A-F8FF-42E2-B228-F8FC15484147}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{24250F12-B27B-4AD6-B5FE-630ADB7DADBB}.Debug|Win32.Build.0 = Debug|Win32
 		{24250F12-B27B-4AD6-B5FE-630ADB7DADBB}.Release|Win32.ActiveCfg = Release|Win32
 		{24250F12-B27B-4AD6-B5FE-630ADB7DADBB}.Release|Win32.Build.0 = Release|Win32
+		{2CDEFA9A-F8FF-42E2-B228-F8FC15484147}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2CDEFA9A-F8FF-42E2-B228-F8FC15484147}.Debug|Win32.Build.0 = Debug|Win32
+		{2CDEFA9A-F8FF-42E2-B228-F8FC15484147}.Release|Win32.ActiveCfg = Release|Win32
+		{2CDEFA9A-F8FF-42E2-B228-F8FC15484147}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
