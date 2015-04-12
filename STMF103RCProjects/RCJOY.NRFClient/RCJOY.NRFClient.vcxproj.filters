@@ -96,8 +96,10 @@
       <Filter>Library\Device-specific files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SysTimer.c" />
     <ClCompile Include="PPMGenerator.c" />
+    <ClCompile Include="SysTimer.c" />
+    <ClCompile Include="SSD1306.cpp" />
+    <ClCompile Include="font5x7.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
@@ -192,5 +194,8 @@
     </ClInclude>
     <ClInclude Include="SysTimer.h" />
     <ClInclude Include="PPMGenerator.h" />
+    <ClInclude Include="NRF2401L.h" />
+    <ClInclude Include="SSD1306.h" />
+    <ClInclude Include="font5x7.h" />
   </ItemGroup>
 </Project>

@@ -23,7 +23,7 @@ error:
 	$(error Invalid configuration, please check your inputs)
 endif
 
-SOURCEFILES :=
+SOURCEFILES := $(BSP_ROOT)/STM32F1xxxx/CMSIS/CM3/CoreSupport/core_cm3.c $(BSP_ROOT)/STM32F1xxxx/CMSIS/CM3/DeviceSupport/ST/STM32F10x/system_stm32f10x.c $(BSP_ROOT)/STM32F1xxxx/Startup/startup_stm32f10x_md.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/misc.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c font5x7.c main.cpp NRF2401L.cpp PPMGenerator.c SSD1306.cpp SysTimer.c
 EXTERNAL_LIBS := 
 EXTERNAL_LIBS_COPIED := $(foreach lib, $(EXTERNAL_LIBS),$(BINARYDIR)/$(notdir $(lib)))
 
@@ -163,3 +163,108 @@ $(BINARYDIR)/%.o : %.cxx $(all_make_files) |$(BINARYDIR)
 	$(CC) $(CFLAGS) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
 
 #VisualGDB: GeneratedRules				#<--- All lines below are auto-generated
+
+
+$(BINARYDIR)/core_cm3.o : $(BSP_ROOT)/STM32F1xxxx/CMSIS/CM3/CoreSupport/core_cm3.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/system_stm32f10x.o : $(BSP_ROOT)/STM32F1xxxx/CMSIS/CM3/DeviceSupport/ST/STM32F10x/system_stm32f10x.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/startup_stm32f10x_md.o : $(BSP_ROOT)/STM32F1xxxx/Startup/startup_stm32f10x_md.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/misc.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/misc.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_adc.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_bkp.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_can.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_cec.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_crc.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_dac.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_dbgmcu.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_dma.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_exti.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_flash.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_fsmc.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_gpio.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_i2c.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_iwdg.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_pwr.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_rcc.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_rtc.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_sdio.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_spi.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_tim.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_usart.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+
+
+$(BINARYDIR)/stm32f10x_wwdg.o : $(BSP_ROOT)/STM32F1xxxx/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c $(all_make_files) |$(BINARYDIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
+

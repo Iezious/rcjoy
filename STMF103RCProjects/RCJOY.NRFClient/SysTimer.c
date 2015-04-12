@@ -2,7 +2,6 @@
 #include <stm32f10x_rcc.h>
 #include <stm32f10x_tim.h>
 
-
 static volatile uint32_t __currentTime;
 static volatile uint32_t __micros_divider;
 

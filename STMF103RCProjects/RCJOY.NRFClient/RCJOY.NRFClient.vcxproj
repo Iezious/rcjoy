@@ -87,8 +87,11 @@
     <ClCompile Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" />
     <ClCompile Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" />
     <ClCompile Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c" />
+    <ClCompile Include="font5x7.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NRF2401L.cpp" />
     <ClCompile Include="PPMGenerator.c" />
+    <ClCompile Include="SSD1306.cpp" />
     <ClCompile Include="SysTimer.c" />
   </ItemGroup>
   <ItemGroup>
@@ -124,7 +127,10 @@
     <ClInclude Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" />
     <ClInclude Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h" />
     <ClInclude Include="BSP\STM32F1xxxx\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h" />
+    <ClInclude Include="font5x7.h" />
+    <ClInclude Include="NRF2401L.h" />
     <ClInclude Include="PPMGenerator.h" />
+    <ClInclude Include="SSD1306.h" />
     <ClInclude Include="SysTimer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
