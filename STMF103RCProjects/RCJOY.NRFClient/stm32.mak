@@ -4,7 +4,7 @@
 #Use VisualGDB Project Properties dialog or modify Makefile or per-configuration .mak files instead.
 
 #VisualGDB provides BSP_ROOT via environment when running Make. The line below will only be active if GNU Make is started manually.
-BSP_ROOT ?= D:/GITRoot/rcjoy.default/STMF103RCProjects/RCJOY.NRFClient/BSP
+BSP_ROOT ?= D:/GITRoot/rcjoy.github/STMF103RCProjects/RCJOY.NRFClient/BSP
 TOOLCHAIN_ROOT := C:/SysGCC/arm-eabi
 
 #Embedded toolchain
@@ -26,6 +26,6 @@ LINUX_PACKAGES +=
 CFLAGS += -mcpu=cortex-m3 -mthumb
 CXXFLAGS += -mcpu=cortex-m3 -mthumb
 ASFLAGS += -mcpu=cortex-m3 -mthumb
-LDFLAGS += -mcpu=cortex-m3 -mthumb -TD:/GITRoot/rcjoy.default/STMF103RCProjects/RCJOY.NRFClient/BSP/STM32F103x8_flash.lds
+LDFLAGS += -mcpu=cortex-m3 -mthumb -T$(BSP_ROOT)/STM32F103x8_flash.lds
 COMMONFLAGS += 
 

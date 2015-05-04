@@ -25,7 +25,7 @@
 #define SETUP_RETR      0x04  //  setup the retransmit
 #define RF_CH           0x05  // Configurate the RF frequency
 #define RF_SETUP        0x06  // Setup the rate of data, and transmit power
-#define NRFRegSTATUS    0x07  //
+#define STATUS		    0x07  //
 #define OBSERVE_TX      0x08  //
 #define CD              0x09  // Carrier detect
 #define RX_ADDR_P0      0x0A  // Receive address of channel 0
@@ -66,6 +66,10 @@
 #define RF_SETUP_RF_DR_1M	0x00
 #define RF_SETUP_RF_DR_2M	0x08
 
+#define STATUS_RX_DR		0x40
+#define STATUS_TX_DS		0x20
+#define STATUS_MAX_RT		0x10
+
 #define SPI                   			  SPI1
 #define GPIO_CS_CE                  	GPIOA
 #define GPIO_Pin_CE              			GPIO_Pin_3
@@ -81,14 +85,20 @@
 #define GPIO_Pin_SPI_MISO_SOURCE      GPIO_PinSource6
 #define GPIO_Pin_SPI_MOSI_SOURCE      GPIO_PinSource7
 
-#define nRF24l01_IRQ    GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_2); 
-
-typedef enum { IDLE = 0, TX_READY=1, TX_ACTIVE=2, RX_ACTIVE=0x10 } nRFState;
+#define nRF24l01_IRQ    GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_2)
 
 uint8_t TX_ADDRESS[5] = {0x11, 0x12, 0xFF, 0xAC, 0x15};
 uint8_t RX_ADDRESS[5] = {0x11, 0x12, 0xFF, 0xAC, 0x15};
+
+uint8_t RX_BUFFER[RX_PLOAD_WIDTH];
+uint8_t TX_BUFFER[TX_PLOAD_WIDTH];
+
 uint8_t CURRENT_CHANNEL = 24;
 nRFState CurrentState = IDLE;
+
+__attribute__((weak)) void nFR24l01_TX_Sent()  { }
+__attribute__((weak)) void nFR24l01_TX_Fail() { }
+__attribute__((weak)) void nFR24l01_RX_Data(u8* data) { }
 
 
 inline void nRF24L01_SPI_NSS_H(void)
@@ -195,7 +205,7 @@ unsigned char SPI_Write_Buf(unsigned char reg, unsigned char *pBuf, unsigned cha
 }
 
 //Define the layer2 functions
-unsigned char SPI_RD_Reg(unsigned char reg)
+static u8 SPI_RD_Reg(u8 reg)
 {
 	unsigned char reg_val;
 
@@ -208,7 +218,7 @@ unsigned char SPI_RD_Reg(unsigned char reg)
 	return(reg_val);        // return register value
 }
 
-unsigned char SPI_WR_Reg(unsigned char reg, unsigned char value)
+static u8 SPI_WR_Reg(u8 reg, u8 value)
 {
 	unsigned char status;
 
@@ -260,14 +270,90 @@ void nRF24_SetChannel(uint8_t ch)
 
 void nRF24_PowerDown()
 {
+	SPI_Write_Buf(FLUSH_TX, 0, 0);
+	SPI_Write_Buf(FLUSH_RX, 0, 0);
+
 	SPI_WR_Reg(CONFIG, 0);
 
 	CurrentState = IDLE;
 }
 
 
+static void ReadRxData()
+{
+	nRF24L01_CE_L();
 
-__attribute__((weak)) void nFR24l01_TX_Sent()  { }
-__attribute__((weak)) void nFR24l01_TX_Fail() { }
-__attribute__((weak)) void nFR24l01_RX_Data(u8* data) { }
+	nRF24L01_Delay_us(10);
+
+	u8 status = SPI_RD_Reg(STATUS);
+	if (status & STATUS_RX_DR)
+	{
+		while ((status & 0x0F) != 0x0E)
+		{
+			SPI_Read_Buf(RD_RX_PLOAD, RX_BUFFER, RX_PLOAD_WIDTH);
+			nFR24l01_RX_Data(RX_BUFFER);
+
+			status = SPI_RD_Reg(STATUS);
+		}
+
+		SPI_WR_Reg(STATUS, STATUS_RX_DR);
+	}
+
+	nRF24L01_CE_H();
+}
+
+static void CheckTxResult()
+{
+	nRF24L01_CE_L();
+
+	nRF24L01_Delay_us(10);
+
+	u8 status = SPI_RD_Reg(STATUS);
+
+	if (status & STATUS_TX_DS)
+	{
+		SPI_WR_Reg(STATUS, STATUS_TX_DS);
+		CurrentState = TX_READY;
+		nFR24l01_TX_Sent();
+	}
+	else if (status & STATUS_MAX_RT)
+	{
+		SPI_WR_Reg(STATUS, STATUS_MAX_RT);
+		CurrentState = TX_READY;
+		nFR24l01_TX_Fail();
+	}
+}
+
+uint8_t nRF24_SendData(uint8_t *buffer, uint8_t length)
+{
+	if (CurrentState != TX_READY) return 0;
+
+	for (u8 i = 0; i < length && i < TX_PLOAD_WIDTH; i++) TX_BUFFER[i] = buffer[i];
+	
+	nRF24L01_CE_L();
+
+	SPI_Write_Buf(FLUSH_TX, 0, 0);
+	SPI_Write_Buf(WR_TX_PLOAD, TX_BUFFER, TX_PLOAD_WIDTH);
+
+	CurrentState = TX_ACTIVE;
+	nRF24L01_CE_H();
+}
+
+void nRF24_Tick()
+{
+	if (CurrentState == IDLE) return;
+
+	if (CurrentState == RX_ACTIVE && nRF24l01_IRQ)
+	{
+		ReadRxData();
+		return;
+	}
+
+	if (CurrentState == TX_ACTIVE && nRF24l01_IRQ)
+	{
+		CheckTxResult();
+		return;
+	}
+}
+
 
