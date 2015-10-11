@@ -3,6 +3,7 @@
 #include <stm32f10x_spi.h>
 #include <stm32f10x_gpio.h>
 
+/*
 
 // SPI(nRF24L01) commands
 #define READ_REG_NRF24L01    	0x00 				// Define read command to register
@@ -13,7 +14,7 @@
 #define FLUSH_RX    			0xE2 				// Define flush RX register command
 #define REUSE_TX_PL 			0xE3 				// Define reuse TX payload register command
 #define NOP         			0xFF 				// Define No Operation, might be used to read status register
-//***************************************************//
+
 // SPI(nRF24L01) registers(addresses)
 #define CONFIG      			0x00				// 'Config' register address
 #define EN_AA       			0x01                		// 'Enable Auto Acknowledgment' register address
@@ -40,5 +41,20 @@
 #define RX_PW_P5    			0x16 				// 'RX payload width, pipe5' register address
 #define FIFO_STATUS 			0x17 			    	// 'FIFO Status Register' register address
 
+*/
+
 #define TX_ADR_WIDTH   	5  // Address width
 #define TX_PLOAD_WIDTH 	32  // Payload width
+#define RX_PLOAD_WIDTH	32
+
+typedef enum { IDLE = 0, TX_READY = 1, TX_ACTIVE = 2, RX_ACTIVE = 0x10 } nRFState;
+
+extern void nRF24_Tick();
+
+extern void nRF24_PowerUpTX();
+extern void nRF24_PowerUpRX();
+extern void nRF24_SetChannel();
+extern void nRF24_PowerDown();
+
+extern uint8_t nRF24_SendData(uint8_t *buffer, uint8_t length);
+
