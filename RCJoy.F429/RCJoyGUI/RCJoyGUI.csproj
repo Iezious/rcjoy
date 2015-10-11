@@ -66,8 +66,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsFormsToolkit">
+    <Reference Include="WindowsFormsToolkit, Version=0.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\wfToolkit.0.4.0\lib\net40\WindowsFormsToolkit.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -84,9 +85,7 @@
       <DependentUpon>DraggableElement.cs</DependentUpon>
     </Compile>
     <Compile Include="BasePanels\IPanelInterfaces.cs" />
-    <Compile Include="BasePanels\LinkPoint.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="BasePanels\LinkPoint.cs" />
     <Compile Include="BasePanels\LinkPoint.Designer.cs">
       <DependentUpon>LinkPoint.cs</DependentUpon>
     </Compile>
