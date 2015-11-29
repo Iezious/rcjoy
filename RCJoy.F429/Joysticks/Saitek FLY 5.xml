@@ -1,0 +1,10 @@
+  <Joystick Name="F.L.Y. 5" Code="FLY5">
+    <Axle Name="Alirons" CName="AX_ALIRONS" Length="10" MinValue="0" DataIndex="0" MaxValue="1023" />
+    <Axle Name="Elevator" CName="AX_ELEVATOR" Length="10" MinValue="0" DataIndex="2" MaxValue="1023" />
+    <Axle Name="Rudder" CName="AX_RUDDER" Length="8" MinValue="0" DataIndex="4" MaxValue="255" />
+    <Axle Name="Throttle" CName="AX_THROTTLE" Length="8" MinValue="0" DataIndex="6" MaxValue="255" />
+    <Axle Name="Flaps" CName="AX_FLAPS" Length="8" MinValue="0" DataIndex="8" MaxValue="256" />
+    <Buttons Name="Button" ConstantName="BTN_BUTTON" DataIndex="10" ButtonsCount="14" ButtonsStateBits="1" />
+    <HatSwitch Name="Main Hat" ConstantName="HAT_MAINHAT" DataIndex="24" Length="4" MinValue="0" MaxValue="7" />
+    <Leveler Name="DMMY" Length="2" />
+  </Joystick>

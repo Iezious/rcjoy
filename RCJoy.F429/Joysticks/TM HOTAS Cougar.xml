@@ -1,0 +1,13 @@
+  <Joystick Name="Cougar" Code="COUGAR">
+    <Buttons Name="Buttons" ConstantName="BTN_BUTTONS" DataIndex="0" ButtonsCount="28" ButtonsStateBits="1" />
+    <Leveler Name="DMMY" Length="16" />
+    <HatSwitch Name="Main Hat" ConstantName="HAT_MAINHAT" DataIndex="1" Length="4" MinValue="0" MaxValue="15" />
+    <Axle Name="Ailerons" CName="AILERONS" Length="16" MinValue="0" DataIndex="3" MaxValue="65535" />
+    <Axle Name="Elevator" CName="ELEVATOR" Length="16" MinValue="0" DataIndex="4" MaxValue="65535" />
+    <Axle Name="Throttle" CName="THROTTLE" Length="8" MinValue="0" DataIndex="5" MaxValue="255" />
+    <Axle Name="Rx" CName="RX" Length="8" MinValue="0" DataIndex="6" MaxValue="255" />
+    <Axle Name="Slider" CName="SLIDER" Length="8" MinValue="0" DataIndex="7" MaxValue="255" />
+    <Axle Name="Twist" CName="TWIST" Length="8" MinValue="0" DataIndex="8" MaxValue="255" />
+    <Axle Name="Dial" CName="DIAL" Length="8" MinValue="0" DataIndex="9" MaxValue="255" />
+    <Axle Name="Ry" CName="RY" Length="8" MinValue="0" DataIndex="10" MaxValue="255" />
+  </Joystick>

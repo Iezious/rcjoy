@@ -1,0 +1,14 @@
+  <Joystick Name="Saitek X52" Code="SAITEK_X52">
+    <Axle Name="Ailerons" CName="AILERONS" Length="11" MinValue="0" DataIndex="0" MaxValue="2047" />
+    <Axle Name="Elevator" CName="ELEVATOR" Length="11" MinValue="0" DataIndex="2" MaxValue="2047" />
+    <Axle Name="Twist" CName="TWIST" Length="10" MinValue="0" DataIndex="4" MaxValue="1023" />
+    <Axle Name="Throttle" CName="THROTTLE" Length="8" MinValue="0" DataIndex="6" MaxValue="255" />
+    <Axle Name="Rx" CName="RX" Length="8" MinValue="0" DataIndex="8" MaxValue="255" />
+    <Axle Name="Ry" CName="RY" Length="8" MinValue="0" DataIndex="10" MaxValue="255" />
+    <Axle Name="Slider" CName="SLIDER" Length="8" MinValue="0" DataIndex="12" MaxValue="255" />
+    <Buttons Name="Buttons" ConstantName="BTN_BUTTONS" DataIndex="14" ButtonsCount="34" ButtonsStateBits="1" />
+    <Leveler Name="DMMY" Length="2" />
+    <HatSwitch Name="Hat" ConstantName="HAT_HAT" DataIndex="48" Length="4" MinValue="0" MaxValue="15" />
+    <Axle Name="Move L/R" CName="MOVE_LR" Length="4" MinValue="0" DataIndex="50" MaxValue="15" />
+    <Axle Name="Move U/D" CName="MOVE_UD" Length="4" MinValue="0" DataIndex="52" MaxValue="15" />
+  </Joystick>

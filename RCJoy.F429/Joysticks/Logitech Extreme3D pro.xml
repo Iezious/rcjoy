@@ -1,0 +1,10 @@
+  <Joystick Name="Logitech" Code="LOGITECH" VendorID="046D" ProductID="C215">
+    <Axle Name="Ailerons" CName="AILERONS" Length="10" MinValue="0" DataIndex="0" MaxValue="1023" />
+    <Axle Name="Elevator" CName="ELEVATOR" Length="10" MinValue="0" DataIndex="2" MaxValue="1023" />
+    <Leveler Name="DMMY" Length="4" />
+    <Axle Name="Rudder" CName="TWIST" Length="8" MinValue="0" DataIndex="4" MaxValue="255" />
+    <Buttons Name="Buttons 1" ConstantName="BUTTONS_1" DataIndex="6" ButtonsCount="8" ButtonsStateBits="1" />
+    <Axle Name="Throttle" CName="AX_THROTTLE" Length="8" MinValue="0" DataIndex="14" MaxValue="255" />
+    <Buttons Name="Buttons 3" ConstantName="BUTTONS_3" DataIndex="16" ButtonsCount="4" ButtonsStateBits="1" />
+    <Leveler Name="DMMY" Length="4" />
+  </Joystick>
