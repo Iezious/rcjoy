@@ -36,6 +36,7 @@
 #define __GCC_ATOMIC_CHAR_LOCK_FREE 2
 #define __GCC_IEC_559 0
 #define __FLT_EVAL_METHOD__ 0
+#define __cpp_binary_literals 201304
 #define __LLACCUM_MAX__ 0X7FFFFFFFFFFFFFFFP-31LLK
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define __FRACT_FBIT__ 15
@@ -47,7 +48,7 @@
 #define __ARMEL__ 1
 #define __ARM_FEATURE_UNALIGNED 1
 #define __LFRACT_IBIT__ 0
-#define __GNUC_PATCHLEVEL__ 1
+#define __GNUC_PATCHLEVEL__ 2
 #define __LFRACT_MAX__ 0X7FFFFFFFP-31LR
 #define __UINT_FAST8_MAX__ 4294967295U
 #define __DEC64_MAX_EXP__ 385
@@ -75,6 +76,7 @@
 #define __ULLFRACT_MIN__ 0.0ULLR
 #define __SCHAR_MAX__ 127
 #define __WCHAR_MIN__ 0U
+#define STM32F427xx 1
 #define __DBL_DIG__ 15
 #define __GCC_ATOMIC_POINTER_LOCK_FREE 2
 #define __LLACCUM_MIN__ (-0X1P31LLK-0X1P31LLK)
@@ -162,7 +164,6 @@
 #define __USFRACT_MAX__ 0XFFP-8UHR
 #define __UFRACT_IBIT__ 0
 #define __ARM_FEATURE_QBIT 1
-#define STM32F429ZI 1
 #define __INT_FAST64_TYPE__ long long int
 #define __FP_FAST_FMAF 1
 #define __DBL_MIN__ double(2.2250738585072014e-308L)
@@ -183,7 +184,7 @@
 #define __SFRACT_MIN__ (-0.5HR-0.5HR)
 #define __UTQ_FBIT__ 128
 #define __FLT_MANT_DIG__ 24
-#define __VERSION__ "4.9.1"
+#define __VERSION__ "4.9.2"
 #define __ULLFRACT_FBIT__ 64
 #define __FRACT_EPSILON__ 0x1P-15R
 #define __ULACCUM_MIN__ 0.0ULK
@@ -195,7 +196,6 @@
 #define __USFRACT_MIN__ 0.0UHR
 #define __ULLACCUM_IBIT__ 32
 #define __UQQ_IBIT__ 0
-#define STM32F429xx 1
 #define __DEC64_EPSILON__ 1E-15DD
 #define __ORDER_PDP_ENDIAN__ 3412
 #define __DEC128_MIN_EXP__ (-6142)
@@ -327,6 +327,7 @@
 #define __INT32_TYPE__ long int
 #define __SIZEOF_DOUBLE__ 8
 #define __UFRACT_EPSILON__ 0x1P-16UR
+#define STM32F427ZI 1
 #define __INTMAX_TYPE__ long long int
 #define __DEC128_MAX_EXP__ 6145
 #define __ATOMIC_CONSUME 1
@@ -370,26 +371,26 @@
 
 // --- Include directories begin --- //
 //.
-//C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/CMSIS/Device/ST/STM32F4xx/Include
-//C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/CMSIS/Include
-//C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/CMSIS/RTOS
-//C:\Users\SAK\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/STM32F4xx_HAL_Driver/Inc
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/include/c++/4.9.1
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/include/c++/4.9.1/arm-eabi/thumb/fpu/cortex_m4
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/include/c++/4.9.1/backward
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/include
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/include-fixed
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/sys-include
-//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/include
+//$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/CMSIS/Device/ST/STM32F4xx/Include
+//$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/CMSIS/Include
+//$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/CMSIS/RTOS
+//$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx-HAL/STM32F4xx_HAL_Driver/Inc
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2/arm-eabi/thumb/fpu/cortex_m4
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include/c++/4.9.2/backward
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/include
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/include-fixed
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/sys-include
+//c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/include
 //.
-// --- Library directories end --- //
+// --- Include directories end --- //
 
 
 // --- Library directories begin --- //
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.1/thumb/fpu/cortex_m4/
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/lib/thumb/fpu/cortex_m4/
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.1/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/thumb/fpu/cortex_m4/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/lib/thumb/fpu/cortex_m4/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/
 //c:/sysgcc/arm-eabi/bin/../lib/gcc/
-//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.1/../../../../arm-eabi/lib/
+//c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/4.9.2/../../../../arm-eabi/lib/
 // --- Library directories begin --- //
 
