@@ -3,9 +3,9 @@
 #DO NOT EDIT MANUALLY. THE FILE WILL BE OVERWRITTEN. 
 #Use VisualGDB Project Properties dialog or modify Makefile or per-configuration .mak files instead.
 
-#VisualGDB provides BSP_ROOT via environment when running Make. The line below will only be active if GNU Make is started manually.
+#VisualGDB provides BSP_ROOT and TOOLCHAIN_ROOT via environment when running Make. The line below will only be active if GNU Make is started manually.
 BSP_ROOT ?= BSP
-TOOLCHAIN_ROOT := C:/SysGCC/arm-eabi
+TOOLCHAIN_ROOT ?= C:/SysGCC/arm-eabi
 
 #Embedded toolchain
 CC := $(TOOLCHAIN_ROOT)/bin/arm-eabi-gcc.exe
@@ -26,6 +26,7 @@ LINUX_PACKAGES +=
 CFLAGS += -mcpu=cortex-m4 -mthumb
 CXXFLAGS += -mcpu=cortex-m4 -mthumb
 ASFLAGS += -mcpu=cortex-m4 -mthumb
-LDFLAGS += -mcpu=cortex-m4 -mthumb -TD:/GITRoot/rcjoy.default/RCJoy.F429/STMJoy.F429ZI/BSP/STM32F429xI_flash.lds
+LDFLAGS += -mcpu=cortex-m4 -mthumb
 COMMONFLAGS +=  -mfloat-abi=hard
+LINKER_SCRIPT := BSP/STM32F429ZI_flash.lds
 
