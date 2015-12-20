@@ -184,8 +184,8 @@ void USART1_IRQHandler(void)
 		ReadByte((uint8_t)(huart1.Instance->DR & (uint8_t)0x00FF));
 	}
 
-//	HAL_NVIC_ClearPendingIRQ(USART1_IRQn);
-//	HAL_UART_IRQHandler(&COMCOM_USART);
+	HAL_NVIC_ClearPendingIRQ(USART1_IRQn);
+	HAL_UART_IRQHandler(&COMCOM_USART);
 }
 
 void DMA2_Stream7_IRQHandler(void)
@@ -254,7 +254,7 @@ static void dma_enque(uint8_t *buffer, uint16_t len)
 	rec->buffer = buffer;
 
 	DMA_QUEUE.tail = (DMA_QUEUE.tail + 1) & 0x0F;
-	dma_send_from_queue();
+//	dma_send_from_queue();
 }
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef* h)
@@ -262,7 +262,6 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef* h)
 	State.TXState = Idle;
 	dma_send_from_queue();
 }
-
 
 /******************************************************************************************************************************/
 /**  Rx procedures
@@ -468,7 +467,8 @@ void ComCom::Ping()
 	comcon_send_header[4] = State.command;
 
 	dma_enque(comcon_send_header, 5);
-	if (alen > 0)	dma_enque(abuffer, alen);
+	if (alen > 0)	
+		dma_enque(abuffer, alen);
 
 	dma_send_from_queue();
 
