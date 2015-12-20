@@ -45,6 +45,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include <stdint.h>
+#include <inttypes.h>
 
 /** @addtogroup Utilities
   * @{

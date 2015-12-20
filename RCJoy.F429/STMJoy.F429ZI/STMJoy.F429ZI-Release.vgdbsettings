@@ -76,6 +76,9 @@
         </KeyValue>
       </Entries>
     </DebugMethodProperties>
+    <SemihostingSupport>Auto</SemihostingSupport>
+    <StepIntoEntryPoint>false</StepIntoEntryPoint>
+    <ReloadFirmwareOnReset>false</ReloadFirmwareOnReset>
   </Debug>
   <CustomBuild>
     <PreBuildActions />

@@ -65,8 +65,11 @@ namespace Tahorg.RCJoyGUI.ProgrammingPanels
             //            tbName.Enabled = lbName.Enabled =
             //            cbEEPRom.Checked;
 
-            _UseFRAM = cbEEPRom.Checked;
-            FRAMMapper.ReAssign(this);
+            if (_UseFRAM != cbEEPRom.Checked)
+            {
+                _UseFRAM = cbEEPRom.Checked;
+                FRAMMapper.ReAssign(this);
+            }
         }
 
         public override XElement CreatXMLSave()
@@ -95,7 +98,7 @@ namespace Tahorg.RCJoyGUI.ProgrammingPanels
             tbValue.Text = data.AttributeValue("Value");
             tbMin.Text = data.AttributeValue("MinValue");
             tbMax.Text = data.AttributeValue("MaxValue");
-            _UseFRAM = cbEEPRom.Checked = bool.Parse(data.AttributeValue("WriteFRAM") ?? "false");
+            cbEEPRom.Checked = _UseFRAM = bool.Parse(data.AttributeValue("WriteFRAM") ?? "false");
 
             _Addr = _UseFRAM ? uint.Parse(data.AttributeValue("Addr") ?? "0") : 0;
 
