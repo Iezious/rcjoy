@@ -24,7 +24,7 @@ static void BlockModeTick();
 
 #define COLOR_AXIS 0xFF0000FF
 #define COLOR_BUTTON 0xFFFF0000
-#define COLOR_VALUE LCD_COLOR_CYAN
+#define COLOR_DATAVALUE LCD_COLOR_CYAN
 
 #define FONT_NAME (&Font12)
 #define FONT_VALUE (&Font16)
@@ -139,7 +139,7 @@ static void DrawLinkSymbol(BlockLinkDef* lnk, uint16_t left, uint16_t top, uint1
 	if(lnk->LINK_BITS & LINK_TYPE_AXIS)	
 		BSP_LCD_SetTextColor(COLOR_AXIS);		
 	else if(lnk->LINK_BITS & LINK_TYPE_VALUE)
-		BSP_LCD_SetTextColor(COLOR_VALUE);
+		BSP_LCD_SetTextColor(COLOR_DATAVALUE);
 	else 
 		BSP_LCD_SetTextColor(COLOR_BUTTON);
 	
@@ -201,7 +201,7 @@ static void DrawLink(BlockLinkDef* lnk, uint16_t left, uint16_t top, uint16_t wi
 	}	
 	else
 	{
-		BSP_LCD_SetTextColor(lnk->LINK_BITS & LINK_TYPE_AXIS ? COLOR_AXIS : COLOR_VALUE);
+		BSP_LCD_SetTextColor(lnk->LINK_BITS & LINK_TYPE_AXIS ? COLOR_AXIS : COLOR_DATAVALUE);
 		DrawValue(lnk->DATAMAP_ADDR, left, top, width);
 	}
 }

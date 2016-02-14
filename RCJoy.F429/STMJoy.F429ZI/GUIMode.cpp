@@ -1,3 +1,4 @@
+#include <stdint-gcc.h>
 #include "guimode.h"
 #include "GUI.h"
 #include "stm32f429i_discovery_lcd.h"

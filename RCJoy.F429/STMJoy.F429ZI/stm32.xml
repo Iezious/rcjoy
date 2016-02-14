@@ -2,8 +2,10 @@
 <EmbeddedProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
   <BspID>com.visualgdb.bsp.in-place</BspID>
+  <BspVersion>1.0</BspVersion>
   <McuID>STM32F429ZI</McuID>
   <BSPSubdirectory>BSP</BSPSubdirectory>
+  <MCUDefinitionFile>devices\stm32f429xx.xml</MCUDefinitionFile>
   <MCUProperties>
     <Entries />
   </MCUProperties>
@@ -31,8 +33,9 @@
       </AdditionalLibraries>
       <CFLAGS>-mcpu=cortex-m4 -mthumb</CFLAGS>
       <CXXFLAGS>-mcpu=cortex-m4 -mthumb</CXXFLAGS>
-      <LDFLAGS>-mcpu=cortex-m4 -mthumb -TD:/GITRoot/rcjoy.default/RCJoy.F429/STMJoy.F429ZI/BSP/STM32F429xI_flash.lds</LDFLAGS>
+      <LDFLAGS>-mcpu=cortex-m4 -mthumb -TBSP/STM32F429ZI_flash.lds</LDFLAGS>
       <ASFLAGS>-mcpu=cortex-m4 -mthumb</ASFLAGS>
+      <LinkerScript />
       <COMMONFLAGS> -mfloat-abi=hard</COMMONFLAGS>
       <EnableLinkerGroups>true</EnableLinkerGroups>
     </CompilationFlags>
@@ -283,6 +286,7 @@
     <FLASHBase>134217728</FLASHBase>
     <RAMBase>536870912</RAMBase>
     <MCUDefinitionFile>devices\stm32f429xx.xml</MCUDefinitionFile>
+    <AdditionalSourcesRequiredForTesting>false</AdditionalSourcesRequiredForTesting>
   </InPlaceMCU>
   <MCUMakFile>stm32.mak</MCUMakFile>
 </EmbeddedProfile>

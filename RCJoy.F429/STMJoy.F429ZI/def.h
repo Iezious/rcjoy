@@ -1,6 +1,9 @@
 #ifndef __DEF_H__
 #define __DEF_H__
 
+#include <stdint.h>
+#include <stdint-gcc.h>
+
 #if STM32F40XX
 
 #include <stm32f4xx.h>

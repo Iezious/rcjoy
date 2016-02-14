@@ -40,6 +40,7 @@ MemoryUtilizationReport.xml
 *.pdb
 *.pgc
 *.pgd
+*.dll
 *.rsp
 *.sbr
 *.tlb
@@ -167,3 +168,5 @@ $RECYCLE.BIN/
 .DS_Store
 *Debug-Win32*
 *Release-Win32*
+RCJoy.F429/CodeDB/*
+RCJoy.F429/RCJoy.Port.F429.VC.opendb

@@ -2,14 +2,14 @@
   ******************************************************************************
   * @file    stm32f429i_discovery_lcd.c
   * @author  MCD Application Team
-  * @version V2.1.0
-  * @date    19-June-2014
+  * @version V2.1.2
+  * @date    02-March-2015
   * @brief   This file includes the LCD driver for ILI9341 Liquid Crystal 
   *          Display Modules of STM32F429I-Discovery kit (MB1075).
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; COPYRIGHT(c) 2014 STMicroelectronics</center></h2>
+  * <h2><center>&copy; COPYRIGHT(c) 2015 STMicroelectronics</center></h2>
   *
   * Redistribution and use in source and binary forms, with or without modification,
   * are permitted provided that the following conditions are met:
@@ -68,7 +68,7 @@
         function or a complete string line using LCD_DisplayStringAtLine() function.
       o Display a string line on the specified position (x,y in pixel) and align mode
         using LCD_DisplayStringAtLine() function.          
-      o Draw and fill a basic shapes (dot, line, rectangle, cercle, ellipse, .. bitmap) 
+      o Draw and fill a basic shapes (dot, line, rectangle, circle, ellipse, .. bitmap) 
         on LCD using the available set of functions     
  
 ------------------------------------------------------------------------------*/

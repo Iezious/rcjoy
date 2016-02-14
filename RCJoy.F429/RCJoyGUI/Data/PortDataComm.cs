@@ -124,7 +124,7 @@ namespace Tahorg.RCJoyGUI.Data
                 result = buffer;
                 return CommandStatus.OK;
             }
-            catch (TimeoutException)
+            catch
             {
                 return CommandStatus.Error;
             }
