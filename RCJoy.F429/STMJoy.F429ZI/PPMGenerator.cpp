@@ -2,6 +2,7 @@
 
 #include "stm32f4xx.h"
 #include "ComCom.h"
+#include <stdint-gcc.h>
 
 #define PPM_TOTAL_CHANS 16
 #define CHAN_LENGTH 2200UL
