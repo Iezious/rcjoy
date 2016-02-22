@@ -112,6 +112,7 @@ namespace Tahorg.RCJoyGUI.Data
 
                 if (size == 0)
                 {
+                    wait_command = command;
                     result = new byte[0];
                     return CommandStatus.OK;
                 }
