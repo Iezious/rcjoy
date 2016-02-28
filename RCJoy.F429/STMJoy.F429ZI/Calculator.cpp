@@ -15,12 +15,13 @@ extern "C" uint16_t USB_HID_GetReportLength();
 extern "C" uint8_t *USB_HID_GetLastReport();
 extern "C" void GetJoyInfo(uint16_t *pVendor, uint16_t *pProduct);
 
+
 #ifdef DEBUG_USB
 
 extern "C" void  USBStartCollectingDebug();
 extern "C" void USBGetCollectedDebug(uint8_t** b, uint32_t *len);
 extern "C" void USBGetStatuses(uint8_t *b);
-
+extern "C" void USB_HID_SetDebuggerReport(uint8_t *buffer, uint16_t length);
 
 #endif
 
@@ -174,6 +175,17 @@ void GetUSBStateBytes(uint8_t* b, uint32_t l, uint8_t **ab, uint32_t *al)
 	*al = 10;
 }
 
+void SetUSBDebugStateBytes(uint8_t* b, uint32_t l, uint8_t **ab, uint32_t *al)
+{
+	USB_HID_SetDebuggerReport(b, l);
+	
+	static u8 EEPVarAnswer[2];
+	EEPVarAnswer[0] = 1;
+	EEPVarAnswer[0] = 1;
+
+	*ab = EEPVarAnswer;
+	*al = 2;
+}
 
 
 #endif
@@ -215,6 +227,7 @@ void InitCalc()
 	COMCOM.RegisterCommand(0x0B, &StartUSBDebug);
 	COMCOM.RegisterCommand(0x0C, &GetUSBDebugCOllected);
 	COMCOM.RegisterCommand(0x0D, &GetUSBStateBytes);
+	COMCOM.RegisterCommand(0x0E, &SetUSBDebugStateBytes);
 #endif
 }
 

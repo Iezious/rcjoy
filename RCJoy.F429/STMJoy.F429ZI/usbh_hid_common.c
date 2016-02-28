@@ -51,6 +51,8 @@ USBH_StatusTypeDef USBH_HID_CommonInit(USBH_HandleTypeDef *phost)
 	IsMultiReport = 0;
 	CurrentReportShift = 0;
 	data_pid_stored = 0xFF;
+	
+	return USBH_OK;
 }
 
 
@@ -173,6 +175,17 @@ uint8_t *USB_HID_GetLastReport()
 		return usb_input_buffer;
 	else
 		return NULL;
+}
+
+void USB_HID_SetDebuggerReport(uint8_t *buffer, uint16_t length)
+{
+	uint16_t i;
+	for (i = 0; i < length; i++)
+	{
+		usb_input_buffer[i] = buffer[i];
+	}
+	usb_rep_len = length;
+	usb_data_valid = 1;
 }
 
 uint16_t USB_HID_GetReportLength()
