@@ -76,9 +76,7 @@ namespace Tahorg.RCJoyGUI.Dialogs
 
             if (PortDataComm.SendCommand(0x0B, out bytes) != PortDataComm.CommandStatus.OK)
             {
-                MessageBox.Show(this, "Error", "Unable to start data collection", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-
+                MessageBox.Show(this, "Unable to start data collection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -103,8 +101,7 @@ namespace Tahorg.RCJoyGUI.Dialogs
 
                     Invoke(new Action(() =>
                     {
-                        MessageBox.Show(this, "Error", "Unable to retreve collected data", MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
+                        MessageBox.Show(this,  "Unable to retreve collected data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         lblPortState.Text = "Collecting";
                         lblPortState.ForeColor = Color.Red;
