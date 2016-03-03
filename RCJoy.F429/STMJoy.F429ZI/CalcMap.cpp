@@ -14,6 +14,13 @@ union bitmapper
 extern "C" uint8_t *USB_HID_GetLastReport();
 extern "C" uint8_t CheckJoystick(uint16_t vendor, uint16_t product);
 
+uint32_t masks[] = { 
+		0x0000, 
+		0x0001, 0x0003, 0x0007, 0x000F, 
+		0x001F, 0x003F, 0x007F, 0x00FF,
+		0x01FF, 0x03FF, 0x07FF, 0x0FFF,
+		0x1FFF, 0x3FFF, 0x7FFF, 0xFFFF
+};
 
 axis_t ExtractJoysticBits(uint16_t start, uint8_t length)
 {
@@ -31,8 +38,16 @@ axis_t ExtractJoysticBits(uint16_t start, uint8_t length)
 
 	uint32_t res = val.val;
 	res = res >> (start & 0x7);
-	res = res << (32 - length);
-	res = res >> (32 - length);
+	
+	if (length <= 16)
+	{
+		res &= masks[length];
+	}
+	else
+	{
+		res = res << (32 - length);
+		res = res >> (32 - length);
+	}
 
 	return (uint16_t)res;
 }
