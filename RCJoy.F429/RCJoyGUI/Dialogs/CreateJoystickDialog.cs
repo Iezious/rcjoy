@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using Tahorg.RCJoyGUI.Data;
 using Tahorg.RCJoyGUI.JoyDialog;
 
@@ -16,6 +19,7 @@ namespace Tahorg.RCJoyGUI.Dialogs
         private readonly List<BaseControlPanel> __Panels = new List<BaseControlPanel>(32);
         private JoystickConfig _joystickInfo;
         private Guid __ID = Guid.Empty;
+        private string __RepoprtStructure;
 
         public JoystickConfig JoystickInfo
         {
@@ -26,6 +30,7 @@ namespace Tahorg.RCJoyGUI.Dialogs
             set
             {
                 __ID = value.ID;
+                __RepoprtStructure = value.ReportStructure;
                 FillPanels(value);
             }
         }
@@ -183,7 +188,7 @@ namespace Tahorg.RCJoyGUI.Dialogs
 
         private void tbName_Validating(object sender, CancelEventArgs e)
         {
-            e.Cancel = !ValidateControl(tbName, () => !string.IsNullOrWhiteSpace(tbName.Text));
+            ValidateControl(tbName, () => !string.IsNullOrWhiteSpace(tbName.Text));
         }
 
         private void tbCName_Validating(object sender, CancelEventArgs e)
@@ -232,6 +237,7 @@ namespace Tahorg.RCJoyGUI.Dialogs
                     Name = tbName.Text,
                     ProductID = p,
                     VendorID = v,
+                    ReportStructure =  __RepoprtStructure,
                     ID = __ID != Guid.Empty ? __ID : Guid.NewGuid()
                 };
 
@@ -246,6 +252,43 @@ namespace Tahorg.RCJoyGUI.Dialogs
             }
 
             return true;
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if(!CheckJoystick())
+                return;
+
+            if(sfdExport.ShowDialog(this.ParentForm) != DialogResult.OK)
+                return;
+
+            using (var sfw = new StreamWriter(sfdExport.FileName, false, Encoding.UTF8))
+            {
+                var xdoc = new XDocument(_joystickInfo.Serialize());
+                xdoc.Save(sfw);
+            }
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            if(ofdImport.ShowDialog(this.ParentForm) != DialogResult.OK)
+                return;
+
+            using (var ofr = new StreamReader(ofdImport.FileName, Encoding.UTF8))
+            {
+                try
+                {
+                    var cstr = ofr.ReadToEnd();
+                    var xjoy = XDocument.Parse(cstr);
+                    JoystickInfo = new JoystickConfig(xjoy.Root);
+
+                    CheckJoystick();
+                }
+                catch(Exception exx)
+                {
+                    MessageBox.Show(this, exx.Message, "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
