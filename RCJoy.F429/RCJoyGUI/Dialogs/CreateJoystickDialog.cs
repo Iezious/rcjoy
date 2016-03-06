@@ -188,7 +188,7 @@ namespace Tahorg.RCJoyGUI.Dialogs
 
         private void tbName_Validating(object sender, CancelEventArgs e)
         {
-            e.Cancel = !ValidateControl(tbName, () => !string.IsNullOrWhiteSpace(tbName.Text));
+            ValidateControl(tbName, () => !string.IsNullOrWhiteSpace(tbName.Text));
         }
 
         private void tbCName_Validating(object sender, CancelEventArgs e)
@@ -274,11 +274,12 @@ namespace Tahorg.RCJoyGUI.Dialogs
             if(ofdImport.ShowDialog(this.ParentForm) != DialogResult.OK)
                 return;
 
-            using (var ofr = new StreamReader(ofdImport.FileName, Encoding.UTF8, false))
+            using (var ofr = new StreamReader(ofdImport.FileName, Encoding.UTF8))
             {
                 try
                 {
-                    var xjoy = XDocument.Load(ofr, LoadOptions.None);
+                    var cstr = ofr.ReadToEnd();
+                    var xjoy = XDocument.Parse(cstr);
                     JoystickInfo = new JoystickConfig(xjoy.Root);
                 }
                 catch(Exception exx)

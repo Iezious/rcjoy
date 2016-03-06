@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bottomPanel = new System.Windows.Forms.Panel();
+            this.btnImport = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             this.btnAdd = new WindowsFormsToolkit.Controls.SplitButton();
             this.addContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.axisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,8 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.toolTipContainer = new System.Windows.Forms.ToolTip(this.components);
-            this.btnExport = new System.Windows.Forms.Button();
-            this.btnImport = new System.Windows.Forms.Button();
             this.sfdExport = new System.Windows.Forms.SaveFileDialog();
             this.ofdImport = new System.Windows.Forms.OpenFileDialog();
             this.bottomPanel.SuspendLayout();
@@ -66,6 +66,28 @@
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Size = new System.Drawing.Size(487, 46);
             this.bottomPanel.TabIndex = 3;
+            // 
+            // btnImport
+            // 
+            this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImport.Location = new System.Drawing.Point(194, 11);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(75, 23);
+            this.btnImport.TabIndex = 5;
+            this.btnImport.Text = "Import";
+            this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExport.Location = new System.Drawing.Point(113, 11);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 23);
+            this.btnExport.TabIndex = 4;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnAdd
             // 
@@ -206,38 +228,16 @@
             this.lblName.Text = "Joystick name";
             this.toolTipContainer.SetToolTip(this.lblName, "Short name for display");
             // 
-            // btnExport
-            // 
-            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExport.Location = new System.Drawing.Point(113, 11);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(75, 23);
-            this.btnExport.TabIndex = 4;
-            this.btnExport.Text = "Export";
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // btnImport
-            // 
-            this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImport.Location = new System.Drawing.Point(194, 11);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(75, 23);
-            this.btnImport.TabIndex = 5;
-            this.btnImport.Text = "Import";
-            this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
-            // 
             // sfdExport
             // 
             this.sfdExport.DefaultExt = "xml";
-            this.sfdExport.Filter = "*.xml|XML files|*.*|All files";
+            this.sfdExport.Filter = "XML files|*.xml|All files|*.*";
             this.sfdExport.RestoreDirectory = true;
             // 
             // ofdImport
             // 
             this.ofdImport.DefaultExt = "xml";
-            this.ofdImport.Filter = "*.xml|XML files|*.*|All files";
+            this.ofdImport.Filter = "XML files|*.xml|All files|*.*";
             this.ofdImport.RestoreDirectory = true;
             this.ofdImport.ShowReadOnly = true;
             // 

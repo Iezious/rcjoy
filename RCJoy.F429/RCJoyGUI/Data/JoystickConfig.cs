@@ -678,7 +678,7 @@ namespace Tahorg.RCJoyGUI.Data
                 new XAttribute("Code", Code),
                 new XAttribute("VendorID", VendorID.ToString("X4")),
                 new XAttribute("ProductID", ProductID.ToString("X4")),
-                new XAttribute("ReportStructure", ReportStructure),
+                new XAttribute("ReportStructure", ReportStructure??""),
                 new XAttribute("ID", ID));
 
             foreach (var joystickControl in __Controls)
