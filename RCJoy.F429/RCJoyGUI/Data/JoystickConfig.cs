@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml.Linq;
 
@@ -643,11 +644,14 @@ namespace Tahorg.RCJoyGUI.Data
         private readonly List<IJoystickControl> __Controls = new List<IJoystickControl>();
 
         public string Name { get; set; }
+
         public string Code { get; set; }
 
         public UInt16 VendorID { get; set; }
 
         public UInt16 ProductID { get; set; }
+
+        public string ReportStructure { get; set; }
 
         public JoystickConfig()
         {
@@ -674,6 +678,7 @@ namespace Tahorg.RCJoyGUI.Data
                 new XAttribute("Code", Code),
                 new XAttribute("VendorID", VendorID.ToString("X4")),
                 new XAttribute("ProductID", ProductID.ToString("X4")),
+                new XAttribute("ReportStructure", ReportStructure??""),
                 new XAttribute("ID", ID));
 
             foreach (var joystickControl in __Controls)
@@ -688,6 +693,7 @@ namespace Tahorg.RCJoyGUI.Data
             Code = data.Attribute("Code").Value;
             VendorID = UInt16.Parse(data.AttributeValue("VendorID") ?? "0", NumberStyles.HexNumber);
             ProductID = UInt16.Parse(data.AttributeValue("ProductID") ?? "0", NumberStyles.HexNumber);
+            ReportStructure = data.AttributeValue("ReportStructure");
             ID = Guid.Parse(data.AttributeValue("ID") ?? Guid.NewGuid().ToString());
 
             foreach (var xElement in data.Elements())

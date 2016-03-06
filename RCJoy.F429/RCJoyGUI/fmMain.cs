@@ -416,7 +416,7 @@ namespace Tahorg.RCJoyGUI
                 parser.Parse(data.Select(s => uint.Parse(s, NumberStyles.HexNumber)).GetEnumerator());
                 joy.VendorID = dlg.VendorID;
                 joy.ProductID = dlg.ProductID;
-
+                joy.ReportStructure = dlg.DescriptorText;
             }
             catch (Exception exx)
             {
