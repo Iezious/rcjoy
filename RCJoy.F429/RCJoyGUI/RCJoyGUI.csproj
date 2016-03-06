@@ -103,6 +103,12 @@
     <Compile Include="Dialogs\DebugJoyDialog.Designer.cs">
       <DependentUpon>DebugJoyDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\ExportDebugerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportDebugerReport.Designer.cs">
+      <DependentUpon>ExportDebugerReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProgrammingPanels\Buttons\ButtonToValuePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -550,6 +556,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\DebugJoyDialog.resx">
       <DependentUpon>DebugJoyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportDebugerReport.resx">
+      <DependentUpon>ExportDebugerReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgrammingPanels\Buttons\ButtonToValuePanel.resx">
       <DependentUpon>ButtonToValuePanel.cs</DependentUpon>

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tahorg.RCJoyGUI.Data;
 using Tahorg.RCJoyGUI.Properties;
+using Timer = System.Threading.Timer;
 
 namespace Tahorg.RCJoyGUI.Dialogs
 {
@@ -57,97 +58,83 @@ namespace Tahorg.RCJoyGUI.Dialogs
 
             textBox1.Lines = new[]
             {
-                string.Format("Host->gState:{0:X2}", bytes[0]),
-                string.Format("Host->EnumState:{0:X2}", bytes[1]),
-                string.Format("Host->RequestState:{0:X2}", bytes[2]),
-                string.Format("Host->Control.state:{0:X2}", bytes[3]),
-                string.Format("Host->device.speed:{0:X2}", bytes[4]),
-                string.Format("HID->State:{0:X2}", bytes[5]),
-                string.Format("HID->ContrlolState:{0:X2}", bytes[6]),
-                string.Format("ReportLength:{0:0}", bytes[7]),
-                string.Format("MiltiRerport:{0:0}", bytes[8]),
-                string.Format("DataFlow:{0:0}", bytes[9]),
+                $"Host->gState:{bytes[0]:X2}",
+                $"Host->EnumState:{bytes[1]:X2}",
+                $"Host->RequestState:{bytes[2]:X2}",
+                $"Host->Control.state:{bytes[3]:X2}",
+                $"Host->device.speed:{bytes[4]:X2}",
+                $"HID->State:{bytes[5]:X2}",
+                $"HID->ContrlolState:{bytes[6]:X2}",
+                $"ReportLength:{bytes[7]:0}",
+                $"MiltiRerport:{bytes[8]:0}",
+                $"DataFlow:{bytes[9]:0}",
             };
         }
 
-        private void btnComRead_Click(object sender, EventArgs e)
+        private bool IsCollecting = false;
+        private bool StopCollection = false;
+
+        private void ModeNotCollecting()
+        {
+            btnComRead.Text = "Start collecting";
+            btnSave.Enabled = true;
+            lblPortState.ForeColor = Color.Green;
+            IsCollecting = false;
+        }
+
+        private void ModeCollecting()
+        {
+            btnSave.Enabled = false;
+            lblPortState.ForeColor = Color.Blue;
+            btnComRead.Text = "Stop collecting";
+        }
+
+        private void StartCollectionTask()
+        {
+            IsCollecting = true;
+            StopCollection = false;
+
+            ModeCollecting();
+            textBox1.Text = "";
+
+            new Task(ExecuteCollection).Start();
+        }
+
+        private void ExecuteCollection()
         {
             byte[] bytes;
 
-            if (PortDataComm.SendCommand(0x0B, out bytes) != PortDataComm.CommandStatus.OK)
+            while (!StopCollection)
             {
-                MessageBox.Show(this, "Unable to start data collection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            pnlButtons.Enabled = false;
-            lblPortState.ForeColor = Color.Blue;
-            textBox1.Text = "";
-
-            new Task(() =>
-            {
-                for (var t = 0; t < 20; t++)
+                if (PortDataComm.SendCommand(0x08, out bytes) != PortDataComm.CommandStatus.OK)
                 {
-                    Invoke(new Action(() =>
-                    {
-                        lblPortState.Text = "Collecting: " + t;
-                    }));
-                    Thread.Sleep(1000);
-
-                }
-
-                if (PortDataComm.SendCommand(0x0C, out bytes) != PortDataComm.CommandStatus.OK)
-                {
-
-                    Invoke(new Action(() =>
-                    {
-                        MessageBox.Show(this,  "Unable to retreve collected data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                        lblPortState.Text = "Collecting";
-                        lblPortState.ForeColor = Color.Red;
-
-                        EnableAll();
-                    }));
-
+                    Invoke(new Action(ModeNotCollecting));
                     return;
                 }
 
                 Invoke(new Action(() =>
                 {
-                    ParseData(bytes);
-                    lblPortState.Text = "Ready";
-                    lblPortState.ForeColor = Color.Green;
-                    EnableAll();
+                    var line = string.Join(" ", bytes.Select(b => b.ToString("X2")));
+                    textBox1.Lines = textBox1.Lines.Union(new[] {line}).ToArray();
                 }));
 
-            }).Start();
-        }
-
-        private void ParseData(byte[] bytes)
-        {
-            if (bytes.Length == 0) return;
-            var lines = new List<string>(1000);
-
-            int len = bytes[0];
-
-            lines.Add(len.ToString("X2"));
-
-            if (len > 0)
-            {
-                for (int i = 1; i < bytes.Length; i += len)
-                {
-                    lines.Add(string.Join(" ", bytes.Skip(i).Take(len).Select(b => b.ToString("X2"))));
-                }
+                Thread.Sleep(200);
             }
 
-            textBox1.Lines = lines.ToArray();
+            Invoke(new Action(ModeNotCollecting));
         }
 
-        private void EnableAll()
+
+        private void btnComRead_Click(object sender, EventArgs e)
         {
-            pnlButtons.Enabled = true;
+            if (IsCollecting)
+            {
+                StopCollection = true;
+            }
+            else
+            {
+                StartCollectionTask();
+            }
         }
-
-
     }
 }
