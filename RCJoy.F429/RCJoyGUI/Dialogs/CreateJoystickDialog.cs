@@ -281,6 +281,8 @@ namespace Tahorg.RCJoyGUI.Dialogs
                     var cstr = ofr.ReadToEnd();
                     var xjoy = XDocument.Parse(cstr);
                     JoystickInfo = new JoystickConfig(xjoy.Root);
+
+                    CheckJoystick();
                 }
                 catch(Exception exx)
                 {
