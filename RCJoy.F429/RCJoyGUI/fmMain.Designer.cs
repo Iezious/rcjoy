@@ -58,6 +58,7 @@
             this.captureDebugDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteJoystickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createModelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateModelDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,7 +75,6 @@
             this.fbdSelectArduino = new System.Windows.Forms.FolderBrowserDialog();
             this.fsdSave = new System.Windows.Forms.SaveFileDialog();
             this.ofdMain = new System.Windows.Forms.OpenFileDialog();
-            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.statusLine.SuspendLayout();
             this.SuspendLayout();
@@ -317,6 +317,13 @@
             this.deleteJoystickToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.deleteJoystickToolStripMenuItem.Text = "Delete joystick";
             // 
+            // debugToolStripMenuItem
+            // 
+            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.debugToolStripMenuItem.Text = "Debug";
+            this.debugToolStripMenuItem.Click += new System.EventHandler(this.debugToolStripMenuItem_Click);
+            // 
             // modelsToolStripMenuItem
             // 
             this.modelsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -436,14 +443,6 @@
             this.ofdMain.RestoreDirectory = true;
             this.ofdMain.ShowReadOnly = true;
             this.ofdMain.SupportMultiDottedExtensions = true;
-            // 
-            // debugToolStripMenuItem
-            // 
-            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.debugToolStripMenuItem.Text = "Debug";
-            this.debugToolStripMenuItem.Visible = false;
-            this.debugToolStripMenuItem.Click += new System.EventHandler(this.debugToolStripMenuItem_Click);
             // 
             // fmMain
             // 
