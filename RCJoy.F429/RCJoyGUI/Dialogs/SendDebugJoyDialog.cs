@@ -34,7 +34,9 @@ namespace Tahorg.RCJoyGUI.Dialogs
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            if(ofdLog.ShowDialog(this.Parent) != DialogResult.OK) return;
+            if(ofdLog.ShowDialog(this) != DialogResult.OK) return;
+
+            lbLines.Items.Clear();
 
             using (var txtfile = File.OpenText(ofdLog.FileName))
             {
