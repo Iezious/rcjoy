@@ -523,6 +523,7 @@ namespace Tahorg.RCJoyGUI.Data
         public void GenerateSTMCode(STMProgram prg, STMCodeBlock codeBlock, ref ushort BlockStart)
         {
             codeBlock.Add(0x03, (short)BlockStart, (short)Length, (short)_DataIndex, (short)(_DataIndex+1));
+            BlockStart += (ushort) Bits();
         }
 #endif
 
