@@ -24,18 +24,8 @@ uint16_t ProductID;
 uint8_t data_pid_stored;
 
 extern void ParseReportDescriptor(uint8_t *report, uint16_t len, uint16_t* bitlen, uint8_t *mreport);
-
-#ifdef DEBUG_USB
-
-#define DEBUG_BUFFER_LEN 8192
-
-uint8_t debug_buffer[DEBUG_BUFFER_LEN];
-volatile uint32_t debug_buffer_pos = 0;
-volatile uint32_t debug_buffer_active = 0;
-
 extern USBH_HandleTypeDef hUsbHostHS;
 
-#endif
 
 USBH_StatusTypeDef USBH_HID_CommonInit(USBH_HandleTypeDef *phost)
 {
@@ -133,19 +123,6 @@ void USBH_HID_EventCallback(USBH_HandleTypeDef *phost)
 
 	if (CurrentReportShift >= Report_Total_Length)
 		CurrentReportShift = 0;
-
-#ifdef DEBUG_USB
-	if (!debug_buffer_active) return;
-
-	debug_buffer[0] = HID_Handle->length;
-
-	for (i = 0; i < HID_Handle->length && debug_buffer_pos < DEBUG_BUFFER_LEN; i++, debug_buffer_pos++)
-	{
-		debug_buffer[debug_buffer_pos] = usb_buffer[i];
-	}
-
-	debug_buffer_active = (debug_buffer_pos < DEBUG_BUFFER_LEN);
-#endif
 }
 
 void USB_HID_DataTimeoutCallBack(USBH_HandleTypeDef *phost)
@@ -215,25 +192,6 @@ void GetJoyInfo(uint16_t *pVendor, uint16_t *pProduct)
 	*pProduct = ProductID;
 }
 
-#ifdef DEBUG_USB
-
-void  USBStartCollectingDebug()
-{
-	uint16_t i;
-	
-	for (i = 0; i < DEBUG_BUFFER_LEN; i++)
-		debug_buffer[i] = 0;
-
-	debug_buffer_pos = 1;
-	debug_buffer_active = 1;
-}
-
-void USBGetCollectedDebug(uint8_t** b, uint32_t *len)
-{
-	*len = DEBUG_BUFFER_LEN;
-	*b = debug_buffer;
-}
-
 void USBGetStatuses(uint8_t *b)
 {
 	b[0] = hUsbHostHS.gState;
@@ -260,5 +218,3 @@ void USBGetStatuses(uint8_t *b)
 		b[9] = 0;
 	}
 }
-
-#endif
