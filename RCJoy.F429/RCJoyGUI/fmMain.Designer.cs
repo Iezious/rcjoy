@@ -55,8 +55,10 @@
             this.joystickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createFromBoardCaptureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.captureDebugDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteJoystickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createModelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateModelDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,7 +75,6 @@
             this.fbdSelectArduino = new System.Windows.Forms.FolderBrowserDialog();
             this.fsdSave = new System.Windows.Forms.SaveFileDialog();
             this.ofdMain = new System.Windows.Forms.OpenFileDialog();
-            this.captureDebugDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.statusLine.SuspendLayout();
             this.SuspendLayout();
@@ -276,7 +277,8 @@
             this.createFromBoardCaptureToolStripMenuItem,
             this.captureDebugDataToolStripMenuItem,
             this.editConfigToolStripMenuItem,
-            this.deleteJoystickToolStripMenuItem});
+            this.deleteJoystickToolStripMenuItem,
+            this.debugToolStripMenuItem});
             this.joystickToolStripMenuItem.Name = "joystickToolStripMenuItem";
             this.joystickToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.joystickToolStripMenuItem.Text = "&Joystick";
@@ -295,6 +297,13 @@
             this.createFromBoardCaptureToolStripMenuItem.Text = "Capture from board";
             this.createFromBoardCaptureToolStripMenuItem.Click += new System.EventHandler(this.createFromBoardCaptureToolStripMenuItem_Click);
             // 
+            // captureDebugDataToolStripMenuItem
+            // 
+            this.captureDebugDataToolStripMenuItem.Name = "captureDebugDataToolStripMenuItem";
+            this.captureDebugDataToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.captureDebugDataToolStripMenuItem.Text = "Capture debug data";
+            this.captureDebugDataToolStripMenuItem.Click += new System.EventHandler(this.captureDebugDataToolStripMenuItem_Click);
+            // 
             // editConfigToolStripMenuItem
             // 
             this.editConfigToolStripMenuItem.Name = "editConfigToolStripMenuItem";
@@ -307,6 +316,13 @@
             this.deleteJoystickToolStripMenuItem.Name = "deleteJoystickToolStripMenuItem";
             this.deleteJoystickToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.deleteJoystickToolStripMenuItem.Text = "Delete joystick";
+            // 
+            // debugToolStripMenuItem
+            // 
+            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.debugToolStripMenuItem.Text = "Debug";
+            this.debugToolStripMenuItem.Click += new System.EventHandler(this.debugToolStripMenuItem_Click);
             // 
             // modelsToolStripMenuItem
             // 
@@ -428,13 +444,6 @@
             this.ofdMain.ShowReadOnly = true;
             this.ofdMain.SupportMultiDottedExtensions = true;
             // 
-            // captureDebugDataToolStripMenuItem
-            // 
-            this.captureDebugDataToolStripMenuItem.Name = "captureDebugDataToolStripMenuItem";
-            this.captureDebugDataToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.captureDebugDataToolStripMenuItem.Text = "Capture debug data";
-            this.captureDebugDataToolStripMenuItem.Click += new System.EventHandler(this.captureDebugDataToolStripMenuItem_Click);
-            // 
             // fmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,7 +513,7 @@
         private System.Windows.Forms.ToolStripMenuItem deleteJoystickToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripConnection;
         private System.Windows.Forms.ToolStripMenuItem captureDebugDataToolStripMenuItem;
-
+        private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
     }
 }
 

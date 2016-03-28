@@ -9,12 +9,10 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using System.Xml.Linq;
 using Tahorg.RCJoyGUI.Data;
 using Tahorg.RCJoyGUI.Dialogs;
 using Tahorg.RCJoyGUI.Properties;
-using Timer = System.Windows.Forms.Timer;
 
 namespace Tahorg.RCJoyGUI
 {
@@ -69,6 +67,7 @@ namespace Tahorg.RCJoyGUI
 
 #if !DEBUG
             captureDebugDataToolStripMenuItem.Visible = false;
+            debugToolStripMenuItem.Visible = false;
 #endif
 
             ReadLastList();
@@ -887,7 +886,12 @@ namespace Tahorg.RCJoyGUI
 
         private void captureDebugDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            (new DebugJoyDialog()).ShowDialog(this);
+            new DebugJoyDialog().ShowDialog(this);
+        }
+
+        private void debugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new SendDebugJoyDialog().ShowDialog(this);
         }
     }
 }

@@ -19,7 +19,7 @@
 
 #ifdef DEBUG
 
-#define DEBUG_USB
+#define DEBUG_USB 1
 
 #endif 
 

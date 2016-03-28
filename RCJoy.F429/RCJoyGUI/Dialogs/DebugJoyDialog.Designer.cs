@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblPortState = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dlgSave = new System.Windows.Forms.SaveFileDialog();
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.btnReadStates = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnComRead = new System.Windows.Forms.Button();
+            this.lblPortState = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dlgSave = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
             this.pnlButtons.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +54,52 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Read from board";
+            // 
+            // pnlButtons
+            // 
+            this.pnlButtons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlButtons.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlButtons.Controls.Add(this.btnReadStates);
+            this.pnlButtons.Controls.Add(this.btnSave);
+            this.pnlButtons.Controls.Add(this.btnComRead);
+            this.pnlButtons.Location = new System.Drawing.Point(339, 12);
+            this.pnlButtons.Name = "pnlButtons";
+            this.pnlButtons.Size = new System.Drawing.Size(328, 33);
+            this.pnlButtons.TabIndex = 4;
+            // 
+            // btnReadStates
+            // 
+            this.btnReadStates.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReadStates.Location = new System.Drawing.Point(21, 4);
+            this.btnReadStates.Name = "btnReadStates";
+            this.btnReadStates.Size = new System.Drawing.Size(101, 23);
+            this.btnReadStates.TabIndex = 8;
+            this.btnReadStates.Text = "Read USB states";
+            this.btnReadStates.UseVisualStyleBackColor = true;
+            this.btnReadStates.Visible = false;
+            this.btnReadStates.Click += new System.EventHandler(this.btnReadStates_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Location = new System.Drawing.Point(235, 4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(86, 23);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "Save to file";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnComRead
+            // 
+            this.btnComRead.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnComRead.Location = new System.Drawing.Point(128, 4);
+            this.btnComRead.Name = "btnComRead";
+            this.btnComRead.Size = new System.Drawing.Size(101, 23);
+            this.btnComRead.TabIndex = 6;
+            this.btnComRead.Text = "Start collecting";
+            this.btnComRead.UseVisualStyleBackColor = true;
+            this.btnComRead.Click += new System.EventHandler(this.btnComRead_Click);
             // 
             // lblPortState
             // 
@@ -94,51 +140,6 @@
             this.dlgSave.DefaultExt = "txt";
             this.dlgSave.Filter = "Text files (*.txt)|*.txt|All files|*.*";
             this.dlgSave.Title = "Save to file";
-            // 
-            // pnlButtons
-            // 
-            this.pnlButtons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlButtons.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlButtons.Controls.Add(this.btnReadStates);
-            this.pnlButtons.Controls.Add(this.btnSave);
-            this.pnlButtons.Controls.Add(this.btnComRead);
-            this.pnlButtons.Location = new System.Drawing.Point(339, 12);
-            this.pnlButtons.Name = "pnlButtons";
-            this.pnlButtons.Size = new System.Drawing.Size(328, 33);
-            this.pnlButtons.TabIndex = 4;
-            // 
-            // btnReadStates
-            // 
-            this.btnReadStates.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReadStates.Location = new System.Drawing.Point(21, 4);
-            this.btnReadStates.Name = "btnReadStates";
-            this.btnReadStates.Size = new System.Drawing.Size(101, 23);
-            this.btnReadStates.TabIndex = 8;
-            this.btnReadStates.Text = "Read USB states";
-            this.btnReadStates.UseVisualStyleBackColor = true;
-            this.btnReadStates.Click += new System.EventHandler(this.btnReadStates_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(235, 4);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(86, 23);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Save to file";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnComRead
-            // 
-            this.btnComRead.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnComRead.Location = new System.Drawing.Point(128, 4);
-            this.btnComRead.Name = "btnComRead";
-            this.btnComRead.Size = new System.Drawing.Size(101, 23);
-            this.btnComRead.TabIndex = 6;
-            this.btnComRead.Text = "Start collecting";
-            this.btnComRead.UseVisualStyleBackColor = true;
-            this.btnComRead.Click += new System.EventHandler(this.btnComRead_Click);
             // 
             // DebugJoyDialog
             // 
