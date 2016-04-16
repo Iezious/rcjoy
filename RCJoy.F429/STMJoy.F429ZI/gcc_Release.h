@@ -963,8 +963,8 @@
 #ifndef __UFRACT_EPSILON__
 #define __UFRACT_EPSILON__ 0x1P-16UR
 #endif
-#ifndef STM32F427ZI
-#define STM32F427ZI 1
+#ifndef STM32F429ZI
+#define STM32F429ZI 1
 #endif
 #ifndef __INTMAX_TYPE__
 #define __INTMAX_TYPE__ long long int

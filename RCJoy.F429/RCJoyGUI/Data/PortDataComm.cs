@@ -112,6 +112,7 @@ namespace Tahorg.RCJoyGUI.Data
 
                 if (size == 0)
                 {
+                    wait_command = command;
                     result = new byte[0];
                     return CommandStatus.OK;
                 }
@@ -124,7 +125,7 @@ namespace Tahorg.RCJoyGUI.Data
                 result = buffer;
                 return CommandStatus.OK;
             }
-            catch (TimeoutException)
+            catch
             {
                 return CommandStatus.Error;
             }
