@@ -1039,6 +1039,63 @@ static bool MultiHoldSwitch(uint32_t *datapointer)
 	return true;
 }
 
+static bool AxisDelay(uint32_t *datapointer)
+{
+	idx_t idx_input = extract_u16;
+	idx_t idx_speed = extract_u16;
+	idx_t idx_current = extract_u16;
+	idx_t idx_dest = extract_u16;
+
+	axis_t input = get(idx_input);
+	axis_t current = get(idx_current);
+	axis_t speed = get(idx_speed);
+	
+	if (current == input)
+	{
+		set(idx_dest, current);
+	} 
+	else if (abs((int16_t)((int16_t)current - (int16_t)input)) < speed)
+	{
+		set(idx_current, input);
+		set(idx_dest, input);
+	}
+	else
+	{
+		current > input ? current -= speed : current += speed;
+
+		set(idx_current, current);
+		set(idx_dest, current);
+	}
+
+	return true;
+}
+
+static bool AxisDeadZone(uint32_t *datapointer)
+{
+	idx_t idx_input = extract_u16;
+	idx_t idx_width = extract_u16;
+	idx_t idx_center = extract_u16;
+	idx_t idx_dest = extract_u16;
+
+	axis_t input = get(idx_input);
+	axis_t width = get(idx_width);
+	axis_t center = get(idx_center);
+	
+	if (input > center + width)
+	{
+		set(idx_dest, map(input, center + width, AXE_MAX, center, AXE_MAX));
+	}
+	if (input < center - width)
+	{
+		set(idx_dest, map(input, center - width, AXE_MIN, center, AXE_MIN));
+	}
+	else 
+	{
+		set(idx_dest, center);
+	}
+
+	return true;
+}
 
 calcFunc FunctionsMap[] =
 {
@@ -1096,4 +1153,6 @@ calcFunc FunctionsMap[] =
 	LogicalOrButton,        // 0x33
 	CheckJoystickInfo,		// 0x34
 	MultiHoldSwitch,		// 0x35
+	AxisDelay,				// 0x36
+	AxisDeadZone,			// 0x37
 };
