@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBitz_project_file>
+	<EmBitzVersion release="1.11" revision="0" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="STMJoy.F429ZI" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\STMJoy.F429ZI.elf" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="armgcc_eb" />
+				<Option projectAssemblerOptionsRelation="1" />
+				<Option projectIncludeDirsRelation="1" />
+				<Option projectLibDirsRelation="1" />
+				<Device>
+					<Add option="$device=cortex-m4" />
+					<Add option="$fpu=fpv4-sp-d16" />
+					<Add option="$lscript=BSP/STM32F429ZI_flash.lds" />
+					<Add option="$stack=0x0100" />
+					<Add option="$heap=0x0000" />
+				</Device>
+				<Compiler>
+					<Add option="-mfloat-abi=hard" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-Wall" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O0" />
+					<Add option="-g3" />
+					<Add symbol="ARM_MATH_CM4=1" />
+					<Add symbol="stm32_flash_layout" />
+					<Add symbol="STM32F429ZI" />
+					<Add symbol="STM32F429xx" />
+					<Add directory="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc" />
+					<Add directory="." />
+					<Add directory="BSP\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include" />
+					<Add directory="BSP\STM32F4xxxx-HAL\CMSIS\Include" />
+					<Add directory="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc" />
+				</Compiler>
+				<Cpp>
+					<Add option="-mfloat-abi=hard" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-Wall" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O0" />
+					<Add option="-g3" />
+				</Cpp>
+				<Assembler>
+					<Add option="-Wa,--gdwarf-2" />
+				</Assembler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\STMJoy.F429ZI.elf" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g2" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+				</Compiler>
+				<Cpp>
+					<Add option="-O2" />
+					<Add option="-g2" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+				</Cpp>
+				<Assembler>
+					<Add option="-Wa,--no-warn" />
+				</Assembler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+		</Build>
+		<Device>
+			<Add option="$device=cortex-m4" />
+			<Add option="$fpu=fpv4-sp-d16" />
+			<Add option="$lscript=./stm32f429zi_flash.ld" />
+			<Add option="$stack=0x0100" />
+			<Add option="$heap=0x0000" />
+		</Device>
+		<Compiler>
+			<Add option="-mfloat-abi=hard" />
+			<Add option="-fno-strict-aliasing" />
+			<Add symbol="ARM_MATH_CM4" />
+			<Add symbol="__FPU_USED" />
+			<Add symbol="STM32F429ZI" />
+			<Add symbol="STM32F4XX" />
+			<Add directory=".\inc" />
+			<Add directory=".\src" />
+			<Add directory=".\cmsis" />
+		</Compiler>
+		<Linker>
+			<Add option="-eb_lib=n" />
+			<Add option="-eb_start_files" />
+		</Linker>
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f429xx.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\arm_common_tables.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\arm_const_structs.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\arm_math.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\core_cm0.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\core_cm0plus.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\core_cm3.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\core_cm4.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\core_cm4_simd.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\core_cmFunc.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\core_cmInstr.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\core_sc000.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\Include\core_sc300.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\CMSIS\RTOS\cmsis_os.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Class\HID\Inc\usbh_hid.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Class\HID\Inc\usbh_hid_keybd.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Class\HID\Inc\usbh_hid_mouse.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Class\HID\Inc\usbh_hid_parser.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Class\HID\Inc\usbh_hid_usage.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Class\Template\Inc\usbh_template.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_conf_template.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_core.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_ctlreq.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_def.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_ioreq.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc\usbh_pipes.h" />
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_ctlreq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_ioreq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Src\usbh_pipes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\startup_stm32f4xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_can.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_crc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cryp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cryp_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dac_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dcmi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dcmi_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma2d.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dsi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_eth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_fmpi2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_fmpi2c_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_hash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_hash_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_hcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2s.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2s_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_irda.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_iwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_lptim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_ltdc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_ltdc_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_msp_template.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_nand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_nor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pccard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pcd_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_qspi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rng.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sai.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sai_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sdram.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_smartcard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spdifrx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sram.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_wwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fsmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_sdmmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CalcMap.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CalcMap.h" />
+		<Unit filename="Calculator.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Calculator.h" />
+		<Unit filename="cmsis\arm_common_tables.h" />
+		<Unit filename="cmsis\arm_math.h" />
+		<Unit filename="cmsis\core_cm4.h" />
+		<Unit filename="cmsis\core_cm4_simd.h" />
+		<Unit filename="cmsis\core_cmFunc.h" />
+		<Unit filename="cmsis\core_cmInstr.h" />
+		<Unit filename="ComCom.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ComCom.h" />
+		<Unit filename="ComProg.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ComProg.h" />
+		<Unit filename="conf.h" />
+		<Unit filename="ConfirmOverlay.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ConfirmOverlay.h" />
+		<Unit filename="def.h" />
+		<Unit filename="DescriptorParser.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DescriptorParser.h" />
+		<Unit filename="dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dma.h" />
+		<Unit filename="dma2d.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dma2d.h" />
+		<Unit filename="EEPRom.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="EEPRom.h" />
+		<Unit filename="font12.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="font12.h" />
+		<Unit filename="font16.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="font16.h" />
+		<Unit filename="font20.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="font20.h" />
+		<Unit filename="font24.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="font24.h" />
+		<Unit filename="font8.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="font8.h" />
+		<Unit filename="fontPkts.h" />
+		<Unit filename="fonts.h" />
+		<Unit filename="functions.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="functions.h" />
+		<Unit filename="gcc_Debug.h" />
+		<Unit filename="gcc_Release.h" />
+		<Unit filename="gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gpio.h" />
+		<Unit filename="GUI.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUI.h" />
+		<Unit filename="GUIElement.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUIElement.h" />
+		<Unit filename="GUIInit.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUIInit.h" />
+		<Unit filename="GUIModal.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUIModal.h" />
+		<Unit filename="GUIMode.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUIMode.h" />
+		<Unit filename="GUIModeBlock.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUIModeBlock.h" />
+		<Unit filename="GUIModeDebugBlocks.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUIModeDebugBlocks.h" />
+		<Unit filename="GUIModeFlight.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUIModeFlight.h" />
+		<Unit filename="GUIModelListMode.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUIModelListMode.h" />
+		<Unit filename="GUIModeOptions.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUIModeOptions.h" />
+		<Unit filename="GUIModeVars.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUIModeVars.h" />
+		<Unit filename="i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="i2c.h" />
+		<Unit filename="ili9341.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ili9341.h" />
+		<Unit filename="inc\stm32f4xx.h" />
+		<Unit filename="inc\system_stm32f4xx.h" />
+		<Unit filename="io.h" />
+		<Unit filename="lcd.h" />
+		<Unit filename="ltdc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ltdc.h" />
+		<Unit filename="main.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MonitorOverlay.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MonitorOverlay.h" />
+		<Unit filename="NumInputOverlay.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="NumInputOverlay.h" />
+		<Unit filename="Picts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PPMGenerator.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PPMGenerator.h" />
+		<Unit filename="spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="spi.h" />
+		<Unit filename="StaticList.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="StaticList.h" />
+		<Unit filename="StatusBox.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="StatusBox.h" />
+		<Unit filename="stm32.mak" />
+		<Unit filename="stm32f429i_discovery.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f429i_discovery.h" />
+		<Unit filename="stm32f429i_discovery_eeprom.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f429i_discovery_eeprom.h" />
+		<Unit filename="stm32f429i_discovery_gyroscope.h" />
+		<Unit filename="stm32f429i_discovery_io.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f429i_discovery_io.h" />
+		<Unit filename="stm32f429i_discovery_lcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f429i_discovery_lcd.h" />
+		<Unit filename="stm32f429i_discovery_sdram.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f429i_discovery_sdram.h" />
+		<Unit filename="stm32f429i_discovery_ts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f429i_discovery_ts.h" />
+		<Unit filename="stm32f4xx_hal_conf.h" />
+		<Unit filename="stm32f4xx_it.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f4xx_it.h" />
+		<Unit filename="stmpe811.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stmpe811.h" />
+		<Unit filename="tim.h" />
+		<Unit filename="Time.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Time.h" />
+		<Unit filename="ts.h" />
+		<Unit filename="tsensor.h" />
+		<Unit filename="usart.h" />
+		<Unit filename="usb_host.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="usb_host.h" />
+		<Unit filename="usbh_conf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="usbh_conf.h" />
+		<Unit filename="usbh_hid.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="usbh_hid.h" />
+		<Unit filename="usbh_hid_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="usbh_hid_common.h" />
+		<Unit filename="usbh_hid_usage.h" />
+		<Unit filename="wwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="wwdg.h" />
+		<Extensions>
+			<code_completion>
+				<search_path add="BSP\STM32F4xxxx-HAL\CMSIS\Device\ST\STM32F4xx\Include" />
+				<search_path add="BSP/STM32F4xxxx-HAL/CMSIS/Include" />
+				<search_path add="BSP/STM32F4xxxx-HAL/CMSIS/RTOS" />
+				<search_path add="BSP\STM32F4xxxx-HAL\STM32F4xx_HAL_Driver\Inc" />
+				<search_path add="BSP\STM32F4xxxx-HAL\Frameworks\STM32_USB_Host_Library\Core\Inc" />
+			</code_completion>
+			<debugger>
+				<target_debugging_settings target="Debug" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics" gdb_before_conn="" gdb_after_conn="">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
+							<option opt_id="ID_ALL_MODE_DEBUG" opt_value="0" />
+							<option opt_id="ID_DEV_ADDR" opt_value="" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+				<target_debugging_settings target="Release" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics" gdb_before_conn="" gdb_after_conn="">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
+							<option opt_id="ID_ALL_MODE_DEBUG" opt_value="0" />
+							<option opt_id="ID_DEV_ADDR" opt_value="" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+		</Extensions>
+	</Project>
+</EmBitz_project_file>

@@ -168,3 +168,12 @@ $RECYCLE.BIN/
 .DS_Store
 RCJoy.F429/CodeDB/*
 RCJoy.F429/RCJoy.Port.F429.VC.opendb
+/RCJoy.F429/.vs/RCJoy.Port.F429/v15/Browse.VC.db
+/RCJoy.F429/.vs/RCJoy.Port.F429/v15/Browse.VC.opendb
+/RCJoy.F429/.vs/RCJoy.Port.F429/v15/Server/sqlite3/db.lock
+/RCJoy.F429/.vs/RCJoy.Port.F429/v15/Server/sqlite3/storage.ide
+/RCJoy.F429/.vs/RCJoy.Port.F429/v15/Server/sqlite3/storage.ide-shm
+/RCJoy.F429/.vs/RCJoy.Port.F429/v15/Server/sqlite3/storage.ide-wal
+/RCJoy.F429/.vs/RCJoy.Port.F429/v15/Solution.VC.db
+/RCJoy.F429/.vs/RCJoy.Port.F429/v15/Solution.VC.db-shm
+/RCJoy.F429/.vs/RCJoy.Port.F429/v15/Solution.VC.db-wal

@@ -41,12 +41,12 @@ long inline map(long x, long in_min, long in_max, long out_min, long out_max)
 {
 	return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
-
+/*
 int32_t inline abs(int32_t x)
 {
 	return x < 0 ? -x : x;
 }
-
+*/
 int16_t inline abs(int16_t x)
 {
 	return x < 0 ? -x : x;

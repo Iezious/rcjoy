@@ -1,0 +1,1192 @@
+# depslib dependency file v1.0
+1428933004 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\startup_stm32f4xx.c
+
+1459160973 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\calcmap.cpp
+	"CalcMap.h"
+	"Calculator.h"
+	"functions.h"
+	"StatusBox.h"
+	"EEPRom.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\calcmap.h
+	<stdint.h>
+	"conf.h"
+	"def.h"
+
+1459160973 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\conf.h
+
+1452689513 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\def.h
+	<stdint.h>
+	<stdint-gcc.h>
+	<stm32f4xx.h>
+	"conf.h"
+	"I2C.h"
+	"I2C_LCD.h"
+	"GPIO_LCD.h"
+	"PPMGenerator.h"
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f4xx.h
+	"stm32f405xx.h"
+	"stm32f415xx.h"
+	"stm32f407xx.h"
+	"stm32f417xx.h"
+	"stm32f427xx.h"
+	"stm32f437xx.h"
+	"stm32f429xx.h"
+	"stm32f439xx.h"
+	"stm32f401xc.h"
+	"stm32f401xe.h"
+	"stm32f410tx.h"
+	"stm32f410cx.h"
+	"stm32f410rx.h"
+	"stm32f411xe.h"
+	"stm32f446xx.h"
+	"stm32f469xx.h"
+	"stm32f479xx.h"
+	"stm32f4xx_hal.h"
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f405xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1428933004 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\include\core_cm4.h
+	<stdint.h>
+	<core_cmInstr.h>
+	<core_cmFunc.h>
+	<core_cm4_simd.h>
+
+1428933004 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\include\core_cminstr.h
+	<cmsis_iar.h>
+	<cmsis_ccs.h>
+
+1428933004 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\include\core_cmfunc.h
+	<cmsis_iar.h>
+	<cmsis_ccs.h>
+
+1428933004 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\include\core_cm4_simd.h
+	<cmsis_iar.h>
+	<cmsis_ccs.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\system_stm32f4xx.h
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f415xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f407xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f417xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f427xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f437xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f429xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f439xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f401xc.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f401xe.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f410tx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f410cx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f410rx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f411xe.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f446xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f469xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444291457 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\include\stm32f479xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal.h
+	"stm32f4xx_hal_conf.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f4xx_hal_conf.h
+	"stm32f4xx_hal_rcc.h"
+	"stm32f4xx_hal_gpio.h"
+	"stm32f4xx_hal_dma.h"
+	"stm32f4xx_hal_cortex.h"
+	"stm32f4xx_hal_adc.h"
+	"stm32f4xx_hal_can.h"
+	"stm32f4xx_hal_crc.h"
+	"stm32f4xx_hal_cryp.h"
+	"stm32f4xx_hal_dma2d.h"
+	"stm32f4xx_hal_dac.h"
+	"stm32f4xx_hal_dcmi.h"
+	"stm32f4xx_hal_eth.h"
+	"stm32f4xx_hal_flash.h"
+	"stm32f4xx_hal_sram.h"
+	"stm32f4xx_hal_nor.h"
+	"stm32f4xx_hal_nand.h"
+	"stm32f4xx_hal_pccard.h"
+	"stm32f4xx_hal_sdram.h"
+	"stm32f4xx_hal_hash.h"
+	"stm32f4xx_hal_i2c.h"
+	"stm32f4xx_hal_i2s.h"
+	"stm32f4xx_hal_iwdg.h"
+	"stm32f4xx_hal_ltdc.h"
+	"stm32f4xx_hal_pwr.h"
+	"stm32f4xx_hal_rng.h"
+	"stm32f4xx_hal_rtc.h"
+	"stm32f4xx_hal_sai.h"
+	"stm32f4xx_hal_sd.h"
+	"stm32f4xx_hal_spi.h"
+	"stm32f4xx_hal_tim.h"
+	"stm32f4xx_hal_uart.h"
+	"stm32f4xx_hal_usart.h"
+	"stm32f4xx_hal_irda.h"
+	"stm32f4xx_hal_smartcard.h"
+	"stm32f4xx_hal_wwdg.h"
+	"stm32f4xx_hal_pcd.h"
+	"stm32f4xx_hal_hcd.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_rcc.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_rcc_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_def.h
+	"stm32f4xx.h"
+	"Legacy/stm32_hal_legacy.h"
+	<stdio.h>
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\legacy\stm32_hal_legacy.h
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_rcc_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_gpio.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_gpio_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_gpio_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_dma.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_dma_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_dma_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_cortex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_adc.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_adc_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_adc_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_can.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_crc.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_cryp.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_cryp_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_cryp_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_dma2d.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_dac.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_dac_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_dac_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_dcmi.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_dcmi_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_dcmi_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_eth.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_flash.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_flash_ex.h"
+	"stm32f4xx_hal_flash_ramfunc.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_flash_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_flash_ramfunc.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_sram.h
+	"stm32f4xx_ll_fsmc.h"
+	"stm32f4xx_ll_fmc.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_ll_fsmc.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_ll_fmc.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_nor.h
+	"stm32f4xx_ll_fsmc.h"
+	"stm32f4xx_ll_fmc.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_nand.h
+	"stm32f4xx_ll_fsmc.h"
+	"stm32f4xx_ll_fmc.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_pccard.h
+	"stm32f4xx_ll_fsmc.h"
+	"stm32f4xx_ll_fmc.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_sdram.h
+	"stm32f4xx_ll_fmc.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_hash.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_hash_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_hash_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_i2c.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_i2c_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_i2c_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_i2s.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_i2s_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_i2s_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_iwdg.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_ltdc.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_ltdc_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_ltdc_ex.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_dsi.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_dsi.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_pwr.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_pwr_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_pwr_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_rng.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_rtc.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_rtc_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_rtc_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_sai.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_sai_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_sai_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_sd.h
+	"stm32f4xx_ll_sdmmc.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_ll_sdmmc.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_spi.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_tim.h
+	"stm32f4xx_hal_def.h"
+	"stm32f4xx_hal_tim_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_tim_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_uart.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_usart.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_irda.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_smartcard.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_wwdg.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_pcd.h
+	"stm32f4xx_ll_usb.h"
+	"stm32f4xx_hal_pcd_ex.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_ll_usb.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_pcd_ex.h
+	"stm32f4xx_hal_def.h"
+
+1444241087 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\inc\stm32f4xx_hal_hcd.h
+	"stm32f4xx_ll_usb.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\i2c.h
+	"stm32f4xx_hal.h"
+
+1452689471 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\ppmgenerator.h
+	<stdint.h>
+	"stm32f4xx_hal.h"
+	<inttypes.h>
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\calculator.h
+	<stdint.h>
+	"conf.h"
+	"def.h"
+	"CalcMap.h"
+
+1519996185 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\functions.h
+	"conf.h"
+	"def.h"
+	"Calculator.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\statusbox.h
+	"conf.h"
+	"def.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\eeprom.h
+	<inttypes.h>
+
+1459160973 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\calculator.cpp
+	<stdint.h>
+	"conf.h"
+	"def.h"
+	"Calculator.h"
+	"PPMGenerator.h"
+	"EEPRom.h"
+	"StatusBox.h"
+	"ComCom.h"
+	"functions.h"
+
+1457010631 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\comcom.h
+	<stdint.h>
+	"stm32f4xx_hal.h"
+
+1457010631 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\comcom.cpp
+	<stdio.h>
+	<stdint.h>
+	"stm32f4xx_hal.h"
+	"stm32f4xx_hal_uart.h"
+	"stm32f4xx_hal_dma.h"
+	"stm32f4xx_hal_rcc.h"
+	"conf.h"
+	"def.h"
+	"ComCom.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\comprog.cpp
+	"ComCom.h"
+	"ComProg.h"
+	"EEPRom.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\comprog.h
+	<inttypes.h>
+	"def.h"
+	"conf.h"
+	"Calculator.h"
+	"stm32f4xx_hal_flash_ex.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\confirmoverlay.cpp
+	<inttypes.h>
+	<math.h>
+	<stdio.h>
+	<inttypes.h>
+	"conf.h"
+	"def.h"
+	"gui.h"
+	"guimodal.h"
+	"ConfirmOverlay.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\gui.h
+	"stm32f4xx.h"
+	"inttypes.h"
+	"stm32f4xx_hal_rcc.h"
+	"stm32f429i_discovery.h"
+	"stm32f429i_discovery_lcd.h"
+	"stm32f429i_discovery_ts.h"
+	"fonts.h"
+	"fontPkts.h"
+	"GUIMode.h"
+	"GUIModal.h"
+
+1425316484 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery.h
+	"stm32f4xx_hal.h"
+
+1449063068 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery_lcd.h
+	"stm32f429i_discovery.h"
+	"stm32f429i_discovery_sdram.h"
+	"fonts.h"
+	"ili9341.h"
+
+1425316484 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery_sdram.h
+	"stm32f429i_discovery.h"
+
+1449063637 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\fonts.h
+	<stdint.h>
+	<inttypes.h>
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\ili9341.h
+	"lcd.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\lcd.h
+	<stdint.h>
+
+1449063106 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery_ts.h
+	"stm32f429i_discovery.h"
+	"stmpe811.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stmpe811.h
+	"ts.h"
+	"io.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\ts.h
+	<stdint.h>
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\io.h
+	<stdint.h>
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\fontpkts.h
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimode.h
+	<inttypes.h>
+	"guielement.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guielement.h
+	<inttypes.h>
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodal.h
+	<inttypes.h>
+	"GUIElement.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\confirmoverlay.h
+	<inttypes.h>
+	"def.h"
+	"gui.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\descriptorparser.cpp
+	"def.h"
+	"DescriptorParser.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\descriptorparser.h
+	<inttypes.h>
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\dma.c
+	"dma.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\dma.h
+	"stm32f4xx_hal.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\dma2d.c
+	"dma2d.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\dma2d.h
+	"stm32f4xx_hal.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\eeprom.cpp
+	"EEPRom.h"
+	"stm32f4xx_hal.h"
+	"stm32f4xx_hal_sram.h"
+	"stm32f4xx_hal_flash_ex.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\font12.c
+	"fonts.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\font16.c
+	"fonts.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\font20.c
+	"fonts.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\font24.c
+	"fonts.h"
+
+1449063674 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\font8.c
+	"fonts.h"
+	"stdint.h"
+	"inttypes.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\gpio.c
+	"gpio.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\gpio.h
+	"stm32f4xx_hal.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\gui.cpp
+	<inttypes.h>
+	"stm32f4xx.h"
+	"stm32f4xx_hal_rcc.h"
+	"stm32f429i_discovery.h"
+	"stm32f429i_discovery_lcd.h"
+	"stm32f429i_discovery_ts.h"
+	"def.h"
+	"conf.h"
+	"GUI.h"
+	"functions.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guielement.cpp
+	<inttypes.h>
+	"GUI.h"
+	"guielement.h"
+	"def.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodal.cpp
+	<inttypes.h>
+	"gui.h"
+	"def.h"
+	"conf.h"
+	"guimodal.h"
+	"guielement.h"
+
+1452689541 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimode.cpp
+	<stdint-gcc.h>
+	"guimode.h"
+	"GUI.h"
+	"stm32f429i_discovery_lcd.h"
+
+1449062514 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\main.cpp
+	<stm32f4xx_hal.h>
+	"stm32f4xx.h"
+	"inttypes.h"
+	"stm32f4xx_hal_rcc.h"
+	"stm32f429i_discovery.h"
+	"usb_host.h"
+	"gpio.h"
+	"fonts.h"
+	"font12.h"
+	"font20.h"
+	"font24.h"
+	"fontPkts.h"
+	"Time.h"
+	"PPMGenerator.h"
+	"Calculator.h"
+	"CalcMap.h"
+	"EEPRom.h"
+	"ComCom.h"
+	"GUI.h"
+	"GUIInit.h"
+	"GUIModeFlight.h"
+	"GUIModelListMode.h"
+	"GUIModeVars.h"
+	"GUIModeOptions.h"
+	"ComProg.h"
+	"GUIModeDebugBlocks.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\usb_host.h
+	"stm32f4xx.h"
+	"stm32f4xx_hal.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\font12.h
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\font20.h
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\font24.h
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\time.h
+	"stdint.h"
+	"stm32f4xx_hal.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guiinit.h
+	"GUI.h"
+	"GUIElement.h"
+	"GUIModeFlight.h"
+
+1519994550 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodeflight.h
+	<inttypes.h>
+	<stdint.h>
+	<stdint-gcc.h>
+	"guimode.h"
+	"guielement.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodellistmode.h
+	"def.h"
+	"conf.h"
+	"gui.h"
+	"GUIMode.h"
+	"GUIElement.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodevars.h
+	<inttypes.h>
+	"GUI.h"
+	"GUIMode.h"
+	"GUIElement.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodeoptions.h
+	"def.h"
+	"conf.h"
+	"gui.h"
+	"GUIMode.h"
+	"GUIElement.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodedebugblocks.h
+	<inttypes.h>
+	"GUI.h"
+	"GUIMode.h"
+	"GUIElement.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\functions.cpp
+	"conf.h"
+	"def.h"
+	"functions.h"
+	"Calculator.h"
+	"PPMGenerator.h"
+	"EEPRom.h"
+	<math.h>
+	"functions.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guiinit.cpp
+	"GUIInit.h"
+
+1449071661 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodeblock.cpp
+	"guimodeblock.h"
+	"functions.h"
+	"NumInputOverlay.h"
+	"EEPRom.h"
+	"GUIElement.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodeblock.h
+	<inttypes.h>
+	<math.h>
+	<stdio.h>
+	<inttypes.h>
+	"conf.h"
+	"def.h"
+	"gui.h"
+	"guimodal.h"
+	"calculator.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\numinputoverlay.h
+	<inttypes.h>
+	"def.h"
+	"conf.h"
+	"gui.h"
+	"guielement.h"
+	"guimodal.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodedebugblocks.cpp
+	<stdio.h>
+	<inttypes.h>
+	"GUIModeDebugBlocks.h"
+	"def.h"
+	"conf.h"
+	"GUIModeBlock.h"
+	"Calculator.h"
+	"functions.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodeflight.cpp
+	<stdio.h>
+	"fonts.h"
+	"font12.h"
+	"fontPkts.h"
+	"font16.h"
+	"font20.h"
+	"stm32f429i_discovery_lcd.h"
+	"stm32f4xx_hal.h"
+	"def.h"
+	"GUI.h"
+	"guimodeflight.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\font16.h
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodellistmode.cpp
+	<stdio.h>
+	"def.h"
+	"GUIModelListMode.h"
+	"GUIModeFlight.h"
+	"Calculator.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodeoptions.cpp
+	<stdio.h>
+	<inttypes.h>
+	"GUIModeOptions.h"
+	"def.h"
+	"conf.h"
+	"GUIModeFlight.h"
+	"ConfirmOverlay.h"
+	"MonitorOverlay.h"
+	"eeprom.h"
+	"Calculator.h"
+	"CalcMap.h"
+	"functions.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\monitoroverlay.h
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\guimodevars.cpp
+	<stdio.h>
+	<inttypes.h>
+	"GUIModeVars.h"
+	"def.h"
+	"conf.h"
+	"GUIModeFlight.h"
+	"NumInputOverlay.h"
+	"Calculator.h"
+	"functions.h"
+	"EEPRom.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\i2c.c
+	"i2c.h"
+	"gpio.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\ili9341.c
+	"ili9341.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\ltdc.c
+	"ltdc.h"
+	"gpio.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\ltdc.h
+	"stm32f4xx_hal.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\monitoroverlay.cpp
+	<inttypes.h>
+	<math.h>
+	<stdio.h>
+	<inttypes.h>
+	"conf.h"
+	"def.h"
+	"gui.h"
+	"guimodal.h"
+	"ppmgenerator.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\numinputoverlay.cpp
+	<inttypes.h>
+	<math.h>
+	<stdio.h>
+	<inttypes.h>
+	"conf.h"
+	"def.h"
+	"gui.h"
+	"guimodal.h"
+	"NumInputOverlay.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\picts.c
+	"fonts.h"
+
+1452689527 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\ppmgenerator.cpp
+	"PPMGenerator.h"
+	"stm32f4xx.h"
+	"ComCom.h"
+	<stdint-gcc.h>
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\spi.c
+	"spi.h"
+	"gpio.h"
+	"dma.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\spi.h
+	"stm32f4xx_hal.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\staticlist.cpp
+	"StaticList.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\staticlist.h
+	<inttypes.h>
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\statusbox.cpp
+	<stdio.h>
+	"StatusBox.h"
+	"GUIModeFlight.h"
+
+1425317582 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery.c
+	"stm32f429i_discovery.h"
+
+1425316484 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery_eeprom.c
+	"stm32f429i_discovery_eeprom.h"
+
+1425316484 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery_eeprom.h
+	"stm32f429i_discovery.h"
+
+1425316484 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery_io.c
+	"stm32f429i_discovery_io.h"
+
+1449063167 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery_io.h
+	"stm32f429i_discovery.h"
+	"stmpe811.h"
+
+1449063481 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery_lcd.c
+	"stm32f429i_discovery_lcd.h"
+	"fonts.h"
+
+1425316484 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery_sdram.c
+	"stm32f429i_discovery_sdram.h"
+
+1425316484 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f429i_discovery_ts.c
+	"stm32f429i_discovery_ts.h"
+	"stm32f429i_discovery_io.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f4xx_it.c
+	"stm32f4xx_hal.h"
+	"stm32f4xx.h"
+	"stm32f4xx_it.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stm32f4xx_it.h
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\stmpe811.c
+	"stmpe811.h"
+
+1457010631 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\time.cpp
+	"inttypes.h"
+	"stm32f4xx_hal_rcc.h"
+	"stm32f4xx_hal.h"
+	"stm32f4xx.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\usart.c
+	"usart.h"
+	"gpio.h"
+	"dma.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\usart.h
+	"stm32f4xx_hal.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\usb_host.c
+	"usb_host.h"
+	"usbh_core.h"
+	"usbh_hid.h"
+	"usbh_def.h"
+
+1428933004 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\frameworks\stm32_usb_host_library\core\inc\usbh_core.h
+	"usbh_conf.h"
+	"usbh_def.h"
+	"usbh_ioreq.h"
+	"usbh_pipes.h"
+	"usbh_ctlreq.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\usbh_conf.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"stm32f4xx.h"
+	"stm32f4xx_hal.h"
+	"cmsis_os.h"
+
+1428933004 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\rtos\cmsis_os.h
+	<cmsis_os.h>
+	"osObjects.h"
+	"osObjects.h"
+	<stdint.h>
+	<stddef.h>
+
+1428933004 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\frameworks\stm32_usb_host_library\core\inc\usbh_def.h
+	"usbh_conf.h"
+
+1428933004 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\frameworks\stm32_usb_host_library\core\inc\usbh_ioreq.h
+	"usbh_conf.h"
+	"usbh_core.h"
+
+1428933004 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\frameworks\stm32_usb_host_library\core\inc\usbh_pipes.h
+	"usbh_core.h"
+
+1428933004 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\frameworks\stm32_usb_host_library\core\inc\usbh_ctlreq.h
+	"usbh_core.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\usbh_hid.h
+	"usbh_core.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\usbh_conf.c
+	"stm32f4xx.h"
+	"stm32f4xx_hal.h"
+	"usbh_core.h"
+
+1459160973 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\usbh_hid.c
+	"usbh_hid.h"
+	"usbh_hid_common.h"
+
+1459160973 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\usbh_hid_common.h
+	"usbh_hid.h"
+	"conf.h"
+	"stdint-gcc.h"
+
+1459160973 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\usbh_hid_common.c
+	"usbh_hid_common.h"
+	"inttypes.h"
+	"usbh_def.h"
+
+1426414608 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\wwdg.c
+	"wwdg.h"
+
+1426414608 d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\wwdg.h
+	"stm32f4xx_hal.h"
+
+1444291457 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\cmsis\device\st\stm32f4xx\source\templates\system_stm32f4xx.c
+	"stm32f4xx.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_adc.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_adc_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_can.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_cec.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_cortex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_crc.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_cryp.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_cryp_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_dac.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_dac_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_dcmi.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_dcmi_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_dma.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_dma2d.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_dma_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_dsi.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_eth.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_flash.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_flash_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_flash_ramfunc.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_fmpi2c.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_fmpi2c_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_gpio.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_hash.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_hash_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_hcd.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_i2c.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_i2c_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_i2s.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_i2s_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_irda.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_iwdg.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_lptim.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_ltdc.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_ltdc_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_msp_template.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_nand.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_nor.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_pccard.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_pcd.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_pcd_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_pwr.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_pwr_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_qspi.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_rcc.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_rcc_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_rng.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_rtc.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_rtc_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_sai.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_sai_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_sd.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_sdram.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_smartcard.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_spdifrx.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_spi.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_sram.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_tim.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_tim_ex.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_uart.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_usart.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_hal_wwdg.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_ll_fmc.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_ll_fsmc.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_ll_sdmmc.c
+	"stm32f4xx_hal.h"
+
+1444241087 source:d:\gitroot\rcjoy.github\rcjoy.f429\stmjoy.f429zi\bsp\stm32f4xxxx-hal\stm32f4xx_hal_driver\src\stm32f4xx_ll_usb.c
+	"stm32f4xx_hal.h"
+
